@@ -1,0 +1,60 @@
+{
+  "_note": "All configs: same 92 chunks (Day 6 index B), same questions, user-provided chapter filter applied when the question has one. Context budget in characters (incl. chunk header). Top-3 is always exported for Hit@1 / Evidence Hit@3.",
+  "M1_dense": {
+    "kind": "method",
+    "method": "dense",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "hypothesis": "Baseline = Day 6 retrieval (bge-small + pgvector cosine)."
+  },
+  "M2_bm25": {
+    "kind": "method",
+    "method": "bm25",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "hypothesis": "Questions reuse exact method names (find(), count(), split()); lexical match may rank the defining chunk higher than dense."
+  },
+  "M3_hybrid": {
+    "kind": "method",
+    "method": "hybrid",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "rrf_k": 60,
+    "candidates": 20,
+    "hypothesis": "RRF of dense + BM25 recovers chunks found by only one of them -> higher Evidence Hit@3 than either."
+  },
+  "I1_hybrid_rerank": {
+    "kind": "improvement",
+    "method": "hybrid+rerank",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "rrf_k": 60,
+    "candidates": 20,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "hypothesis": "Day 6 errors q15/t01 were ranking errors (right page, wrong chunk first); a cross-encoder reading query+chunk together should raise Hit@1."
+  },
+  "I2_neighbors": {
+    "kind": "improvement",
+    "method": "BEST_OF_ABOVE",
+    "top_k": 3,
+    "context_budget": 4000,
+    "neighbors": 1,
+    "hypothesis": "Day 6 B chunks split one topic across neighbours (Filtering intro 0085 vs syntax 0086, t01 explanation 0003 vs table 0004); adding same-section neighbours raises Context Evidence Rate without changing ranking."
+  },
+  "I3_rerank_maxseg": {
+    "kind": "improvement",
+    "method": "hybrid+rerank_maxseg",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "rrf_k": 60,
+    "candidates": 20,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "segment_chars": 350,
+    "hypothesis": "Dev error q03: the gold chunk 0021 is a for-loop quiz with the count() definition only in its last lines (Day 6 chunking flaw); whole-chunk cross-encoder scores are diluted. Scoring 350-char segments and taking the max should keep such chunks in the top-3 without re-indexing."
+  }
+}

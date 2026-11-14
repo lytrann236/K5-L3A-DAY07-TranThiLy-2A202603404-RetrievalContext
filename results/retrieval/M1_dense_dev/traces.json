@@ -1,0 +1,943 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "answerable": true,
+    "question": "What does find() return if the substring does not exist in the string?",
+    "query_sent": "What does find() return if the substring does not exist in the string?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0023",
+        "score": 0.8402193975187126,
+        "pages": [
+          207
+        ],
+        "section": "8.3",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0055",
+        "score": 0.8017849202668857,
+        "pages": [
+          218,
+          219
+        ],
+        "section": "8.6",
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0019",
+        "score": 0.7786093486184394,
+        "pages": [
+          204
+        ],
+        "section": "8.3",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0023",
+      "B-openstax-intro-python-0055",
+      "B-openstax-intro-python-0019"
+    ],
+    "context_chars": 2184,
+    "context": "[B-openstax-intro-python-0023 | pdf page 207 | section 8.3]\nCONCEPTS IN PRACTICE\nUsing find() to locate a substring\n10 . What is the output of \"banana\".find(\"a\")?\na. 1\nb. 3\nc. 5\n11 . What is the output of \"banana\".find(\"c\")?\na. 0\nb. -1\nc. ValueError\n12 . What is the output of \"b\".find(\"banana\")?\na. -1\nb. 0\nc. ValueError\nindex()\nThe index() method performs similarly to the find() method in which the method returns the index of the\nfirst occurrence of a substring in a given string. The index() method assumes that the substring exists in the\ngiven string; otherwise, throws a ValueError.\nEXAMPLE 8.4\n\n[B-openstax-intro-python-0055 | pdf page 218,219 | section 8.6]\nTRY IT\nMethod Description\nlen() Returns the string length.\nupper() Returns uppercase characters.\nlower() Returns lowercase characters.\ncount() Returns the number of a given substring in a string.\nfind() Returns the index of the first occurrence of a given substring in a string. If the substring\ndoes not exist in the string, -1 is returned.\nindex() Returns the index of the first occurrence of a given substring in a string. If the substring does not exist in the string, a ValueError is returned.\nformat() Used to create strings with specified patterns using arguments.\njoin() Takes a list of string values and combines string values into one string by placing a given\nseparator between values.\n\n[B-openstax-intro-python-0019 | pdf page 204 | section 8.3]\n8.3 Searching/testing strings\nLearning objectives\nBy the end of this section you should be able to\n• Use the in operator to identify whether a given string contains a substring.\n• Call the count() method to count the number of substrings in a given string.\n• Search a string to find a substring using the find() method.\n• Use the index() method to find the index of the first occurrence of a substring in a given string.\n• Write a for loop on strings using in operator.\nin operator\nThe in Boolean operator can be used to check if a string contains another string. in returns True if the first\nstring exists in the second string, False otherwise.\nCHECKPOINT\nWhat is in the phrase?\nWhat is the phrase?; ch 8, video 3 (https://www.openstax.org/r/what-in-phrase)",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 215.0
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "answerable": true,
+    "question": "What happens if index() is called with a substring that is not in the string?",
+    "query_sent": "What happens if index() is called with a substring that is not in the string?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0023",
+        "score": 0.7958420758435693,
+        "pages": [
+          207
+        ],
+        "section": "8.3",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0055",
+        "score": 0.7875621825308364,
+        "pages": [
+          218,
+          219
+        ],
+        "section": "8.6",
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0012",
+        "score": 0.7680255727706974,
+        "pages": [
+          201
+        ],
+        "section": "8.2",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0023",
+      "B-openstax-intro-python-0055",
+      "B-openstax-intro-python-0012"
+    ],
+    "context_chars": 2181,
+    "context": "[B-openstax-intro-python-0023 | pdf page 207 | section 8.3]\nCONCEPTS IN PRACTICE\nUsing find() to locate a substring\n10 . What is the output of \"banana\".find(\"a\")?\na. 1\nb. 3\nc. 5\n11 . What is the output of \"banana\".find(\"c\")?\na. 0\nb. -1\nc. ValueError\n12 . What is the output of \"b\".find(\"banana\")?\na. -1\nb. 0\nc. ValueError\nindex()\nThe index() method performs similarly to the find() method in which the method returns the index of the\nfirst occurrence of a substring in a given string. The index() method assumes that the substring exists in the\ngiven string; otherwise, throws a ValueError.\nEXAMPLE 8.4\n\n[B-openstax-intro-python-0055 | pdf page 218,219 | section 8.6]\nTRY IT\nMethod Description\nlen() Returns the string length.\nupper() Returns uppercase characters.\nlower() Returns lowercase characters.\ncount() Returns the number of a given substring in a string.\nfind() Returns the index of the first occurrence of a given substring in a string. If the substring\ndoes not exist in the string, -1 is returned.\nindex() Returns the index of the first occurrence of a given substring in a string. If the substring does not exist in the string, a ValueError is returned.\nformat() Used to create strings with specified patterns using arguments.\njoin() Takes a list of string values and combines string values into one string by placing a given\nseparator between values.\n\n[B-openstax-intro-python-0012 | pdf page 201 | section 8.2]\nCONCEPTS IN PRACTICE\nAccessing characters in a string using indexing\n1 . Which character is at index 1 in the string \"hello\"?\na. \"h\"\nb. \"e\"\nc. \"o\"\n2 . What is the character at index -2 in the string \"Blue\"?\na. \"e\"\nb. \"u\"\nc. \"l\"\n3 . What is the output of the following code?\nword = \"chance\"\nprint(word[-1] == word[5])\na. True\nb. False\nString slicing\nString slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing\noperator can be used. When [a:b] is used with the name of a string variable, a sequence of characters\nstarting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. If a or b are not\nprovided, the default values are 0 and len(string), respectively.\nEXAMPLE 8.2",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 12.2
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "answerable": true,
+    "question": "What value does count() return when the substring is not found?",
+    "query_sent": "What value does count() return when the substring is not found?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0055",
+        "score": 0.8323006829857071,
+        "pages": [
+          218,
+          219
+        ],
+        "section": "8.6",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0022",
+        "score": 0.7937101598805298,
+        "pages": [
+          206,
+          207
+        ],
+        "section": "8.3",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0023",
+        "score": 0.7783852815628052,
+        "pages": [
+          207
+        ],
+        "section": "8.3",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0055",
+      "B-openstax-intro-python-0022",
+      "B-openstax-intro-python-0023"
+    ],
+    "context_chars": 2209,
+    "context": "[B-openstax-intro-python-0055 | pdf page 218,219 | section 8.6]\nTRY IT\nMethod Description\nlen() Returns the string length.\nupper() Returns uppercase characters.\nlower() Returns lowercase characters.\ncount() Returns the number of a given substring in a string.\nfind() Returns the index of the first occurrence of a given substring in a string. If the substring\ndoes not exist in the string, -1 is returned.\nindex() Returns the index of the first occurrence of a given substring in a string. If the substring does not exist in the string, a ValueError is returned.\nformat() Used to create strings with specified patterns using arguments.\njoin() Takes a list of string values and combines string values into one string by placing a given\nseparator between values.\n\n[B-openstax-intro-python-0022 | pdf page 206,207 | section 8.3]\nCHECKPOINT\nCounting the number of occurrences of a substring\nCounting the number of occurrences of a substring; ch 8, video 5 (https://www.openstax.org/r/counting-\nsubstrings)\nCONCEPTS IN PRACTICE\nUsing count() to count the number of substrings\n7 . What is the output of (aaa\".count(\"a\"))?\na. True\nb. 1\nc. 3\n8 . What is the output of (\"weather\".count(\"b\"))?\na. 0\nb. -1\nc. False\n9 . What is the output of (\"aaa\".count(\"aa\"))?\na. 1\nb. 2\nc. 3\nfind()\nThe find() method returns the index of the first occurrence of a substring in a given string. If the substring\ndoes not exist in the given string, the value of -1 is returned.\nCHECKPOINT\nFinding the first index of a substring\nFinding the first index of a substring; ch 8, video 6 (https://www.openstax.org/r/finding-substring-index)\n\n[B-openstax-intro-python-0023 | pdf page 207 | section 8.3]\nCONCEPTS IN PRACTICE\nUsing find() to locate a substring\n10 . What is the output of \"banana\".find(\"a\")?\na. 1\nb. 3\nc. 5\n11 . What is the output of \"banana\".find(\"c\")?\na. 0\nb. -1\nc. ValueError\n12 . What is the output of \"b\".find(\"banana\")?\na. -1\nb. 0\nc. ValueError\nindex()\nThe index() method performs similarly to the find() method in which the method returns the index of the\nfirst occurrence of a substring in a given string. The index() method assumes that the substring exists in the\ngiven string; otherwise, throws a ValueError.\nEXAMPLE 8.4",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "elapsed_ms": 13.2
+  },
+  {
+    "query_id": "q04",
+    "split": "dev",
+    "answerable": true,
+    "question": "Can I change one character of an existing string object directly?",
+    "query_sent": "Can I change one character of an existing string object directly?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0017",
+        "score": 0.7754019036649537,
+        "pages": [
+          203
+        ],
+        "section": "8.2",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0016",
+        "score": 0.7492845803925658,
+        "pages": [
+          202,
+          203
+        ],
+        "section": "8.2",
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0006",
+        "score": 0.7112433486435814,
+        "pages": [
+          198,
+          199
+        ],
+        "section": "8.1",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0017",
+      "B-openstax-intro-python-0016",
+      "B-openstax-intro-python-0006"
+    ],
+    "context_chars": 2236,
+    "context": "[B-openstax-intro-python-0017 | pdf page 203 | section 8.2]\nModifying string content\n7 . What is the correct way of replacing the first character in a string to character \"*\" in a new string?\na. x = \"string\"\nx[0] = \"*\"\nb. x = \"string\"\nx = \"*\" + x[1:]\nc. x = \"string\"\nx = \"*\" + x\n8 . What type of error will result from the following code?\nstring_variable = \"example\"\nstring_variable[-1] = \"\"\na. TypeError\nb. IndexError\nc. NameError\n9 . What is the output of the following code?\nstr = \"morning\"\nstr = str[1]\nprint(str)\na. TypeError\nb. m\nc. o\nChanging the greeting message\nGiven the string \"Hello my fellow classmates\" containing a greeting message, print the first word by\ngetting the beginning of the string up to (and including) the 5th character. Change the first word in the\nstring to \"Hi\" instead of \"hello\" and print the greeting message again.\n\n[B-openstax-intro-python-0016 | pdf page 202,203 | section 8.2]\ngreeting = \"hi Leila\"\nname = greeting[3:]\na. \" Leila\"\nb. \"Leila\"\nc. \"ila\"\nString immutability\nString objects are immutable meaning that string objects cannot be modified or changed once created. Once\na string object is created, the string's contents cannot be altered by directly modifying individual characters or\nelements within the string. Instead, to make changes to a string, a new string object with the desired changes\nis created, leaving the original string unchanged.\nCHECKPOINT\nStrings are immutable\nStrings are immutable; ch 8, video 2 (https://www.openstax.org/r/strings-are-immutable)\nCONCEPTS IN PRACTICE\n\n[B-openstax-intro-python-0006 | pdf page 198,199 | section 8.1]\nCONCEPTS IN PRACTICE\nUsing logical and membership operators to compare string values\n1 . What is the output of (\"aaa\" < \"aab\")?\na. True\nb. False\n2 . What is the output of (\"aa\" < \"a\")?\na. True\nb. False\n3 . What is the output of (\"aples\" in \"apples\")?\na. undefined\nb. True\nc. False\nlower() and upper()\nPython has many useful methods for modifying strings, two of which are lower() and upper() methods. The\nlower() method returns the converted alphabetical characters to lowercase, and the upper() method returns\nthe converted alphabetical characters to uppercase. Both the lower() and upper() methods do not modify\nthe string.\nEXAMPLE 8.1",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 11.7
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "answerable": true,
+    "question": "In slicing s[a:b], what are the defaults when a or b is omitted?",
+    "query_sent": "In slicing s[a:b], what are the defaults when a or b is omitted?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0012",
+        "score": 0.7482585761084731,
+        "pages": [
+          201
+        ],
+        "section": "8.2",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0015",
+        "score": 0.6966834429879852,
+        "pages": [
+          202
+        ],
+        "section": "8.2",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0061",
+        "score": 0.6961007480501237,
+        "pages": [
+          222
+        ],
+        "section": "9.1",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0012",
+      "B-openstax-intro-python-0015",
+      "B-openstax-intro-python-0061"
+    ],
+    "context_chars": 1697,
+    "context": "[B-openstax-intro-python-0012 | pdf page 201 | section 8.2]\nCONCEPTS IN PRACTICE\nAccessing characters in a string using indexing\n1 . Which character is at index 1 in the string \"hello\"?\na. \"h\"\nb. \"e\"\nc. \"o\"\n2 . What is the character at index -2 in the string \"Blue\"?\na. \"e\"\nb. \"u\"\nc. \"l\"\n3 . What is the output of the following code?\nword = \"chance\"\nprint(word[-1] == word[5])\na. True\nb. False\nString slicing\nString slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing\noperator can be used. When [a:b] is used with the name of a string variable, a sequence of characters\nstarting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. If a or b are not\nprovided, the default values are 0 and len(string), respectively.\nEXAMPLE 8.2\n\n[B-openstax-intro-python-0015 | pdf page 202 | section 8.2]\nCONCEPTS IN PRACTICE\nGetting a substring using string slicing\n4 . What is the output of the following code?\na_string = \"Hello world\"\nprint(a_string[2:4])\na. \"el\"\nb. \"ll\"\nc. \"llo\"\n5 . What is the output of the following code?\nlocation = \"classroom\"\nprint(location[-3:-1])\na. \"ro\"\nb. \"oo\"\nc. \"oom\"\n6 . What is the output of the following code?\n\n[B-openstax-intro-python-0061 | pdf page 222 | section 9.1]\n12 student_list.remove(\"Jamie\")\n13 print(student_list)\n14\n15 # Suppose \"Ming\" had to be removed from the list.\n16 # A pop() operation can be used since Ming is last in the list.\n17 student_list.pop()\n18 print(student_list)\nThe above code's output is:\n['Jamie', 'Vicky', 'DeShawn', 'Tae']\n['Jamie', 'Vicky', 'DeShawn', 'Tae', 'Ming']\n['Vicky', 'DeShawn', 'Tae', 'Ming']\n['Vicky', 'DeShawn', 'Tae']\nCONCEPTS IN PRACTICE",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 11.6
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "answerable": true,
+    "question": "With negative indexing, what index does the right-most character of a string have?",
+    "query_sent": "With negative indexing, what index does the right-most character of a string have?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0011",
+        "score": 0.8526133982769625,
+        "pages": [
+          200
+        ],
+        "section": "8.2",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0012",
+        "score": 0.7389379610530221,
+        "pages": [
+          201
+        ],
+        "section": "8.2",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0054",
+        "score": 0.712779675390759,
+        "pages": [
+          218
+        ],
+        "section": "8.6",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0011",
+      "B-openstax-intro-python-0012",
+      "B-openstax-intro-python-0054"
+    ],
+    "context_chars": 2200,
+    "context": "[B-openstax-intro-python-0011 | pdf page 200 | section 8.2]\nString indexing\nA string is a type of sequence. A string is made up of a sequence of characters indexed from left to right,\nstarting at 0. For a string variable s, the left-most character is indexed 0 and the right-most character is\nindexed len(s) - 1. Ex: The length of the string \"Cloud\" is 5, so the last index is 4.\nNegative indexing can also be used to refer to characters from right to left starting at -1. For a string variable\ns, the left-most character is indexed -len(s) and the right-most character is indexed -1. Ex: The length of the\nstring \"flower\" is 6, so the index of the first character with negative indexing is -6.\nCHECKPOINT\nString indexing\nString indexing; ch 8, video 1 (https://www.openstax.org/r/string-indexing)\nTRY IT\nTRY IT\n\n[B-openstax-intro-python-0012 | pdf page 201 | section 8.2]\nCONCEPTS IN PRACTICE\nAccessing characters in a string using indexing\n1 . Which character is at index 1 in the string \"hello\"?\na. \"h\"\nb. \"e\"\nc. \"o\"\n2 . What is the character at index -2 in the string \"Blue\"?\na. \"e\"\nb. \"u\"\nc. \"l\"\n3 . What is the output of the following code?\nword = \"chance\"\nprint(word[-1] == word[5])\na. True\nb. False\nString slicing\nString slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing\noperator can be used. When [a:b] is used with the name of a string variable, a sequence of characters\nstarting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. If a or b are not\nprovided, the default values are 0 and len(string), respectively.\nEXAMPLE 8.2\n\n[B-openstax-intro-python-0054 | pdf page 218 | section 8.6]\n8.6 Chapter summary\nHighlights from this chapter include:\n• A string is a sequence of characters.\n• Logical operators can be used to compare two string values. String comparison is done by comparing\ncorresponding ASCII values of characters in the order of appearance in the string.\n• String indexing is used to access a character or a sequence of characters in the string.\n• String objects are immutable.\n• String splicing.\nAt this point, you should be able to write programs dealing with string values.\nTRY IT",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 12.1
+  },
+  {
+    "query_id": "q07",
+    "split": "dev",
+    "answerable": true,
+    "question": "Can the same labelled placeholder be used several times in one format template?",
+    "query_sent": "Can the same labelled placeholder be used several times in one format template?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0029",
+        "score": 0.7364393786860305,
+        "pages": [
+          209
+        ],
+        "section": "8.4",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0033",
+        "score": 0.7148221985035556,
+        "pages": [
+          211
+        ],
+        "section": "8.4",
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0031",
+        "score": 0.7004664301316275,
+        "pages": [
+          210
+        ],
+        "section": "8.4",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0029",
+      "B-openstax-intro-python-0033",
+      "B-openstax-intro-python-0031"
+    ],
+    "context_chars": 1946,
+    "context": "[B-openstax-intro-python-0029 | pdf page 209 | section 8.4]\nString values from the same template\nDear John, I'd like to take a programming course with Prof. Potter.\nDear Kishwar, I'd like to take a math course with Prof. Robinson.\nIn the example above, replacement fields are 1) the name of the individual the request is being made to, 2)\ntitle of the course, and 3) the name of the instructor. To create a template, replacement fields can be added\nwith {} to show a placeholder for user input. The format() method is used to pass inputs for replacement\nfields in a string template.\nEXAMPLE 8.6\n\n[B-openstax-intro-python-0033 | pdf page 211 | section 8.4]\nMULTIPLE USE OF A NAMED ARGUMENT\nSince named replacement fields are referred to using a name key, a named replacement field can appear\nand be used more than once in the template. Also, positional ordering is not necessary when named\nreplacement fields are used.\ns = \"Weather in {season} is {temperature}; very very {temperature}.\"\nprint(s)\nprint(s.format(season = \"summer\", temperature = \"hot\"))\nprint(s.format(temperature = \"cold\", season = \"winter\"))\nThe above code's output is:\nWeather in {season} is {temperature}; very very {temperature}.\nWeather in summer is hot; very very hot.\nWeather in winter is cold; very very cold.\nCONCEPTS IN PRACTICE\n\n[B-openstax-intro-python-0031 | pdf page 210 | section 8.4]\nCONCEPTS IN PRACTICE\nString template and formatting\n1 . What is the output of print(\"Hello {}!\".format(\"Ana\"))?\na. Ana\nb. Hello Ana\nc. Hello Ana!\n2 . What is the output of print(\"{}:{}\".format(\"One\", \"1\"))?\na. One1\nb. One:1\nc. 1:One\n3 . What is the output of print(\"{}\".format(\"one\", \"two\", \"three\"))?\na. one\nb. two\nc. onetwothree\nNamed replacement fields\nReplacement fields can be tagged with a label, called named replacement fields, for ease of access and code\nreadability. The example below illustrates how named replacement fields can be used in string templates.\nEXAMPLE 8.7",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 12.3
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "answerable": true,
+    "question": "What happens when a string is shorter than the field width in a format specification?",
+    "query_sent": "What happens when a string is shorter than the field width in a format specification?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0039",
+        "score": 0.8878271713462926,
+        "pages": [
+          213
+        ],
+        "section": "8.4",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0040",
+        "score": 0.8103343474466445,
+        "pages": [
+          213
+        ],
+        "section": "8.4",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0045",
+        "score": 0.7729222123808355,
+        "pages": [
+          215
+        ],
+        "section": "8.4",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0039",
+      "B-openstax-intro-python-0040",
+      "B-openstax-intro-python-0045"
+    ],
+    "context_chars": 1805,
+    "context": "[B-openstax-intro-python-0039 | pdf page 213 | section 8.4]\nThe field width in string format specification is used to specify the minimum length of the given string. If the\nstring is shorter than the given minimum length, the string will be padded by space characters. A field width\nis included in the format specification field using an integer after a colon. Ex: {name:15} specifies that the\nminimum length of the string values that are passed to the name field is 15.\n\n[B-openstax-intro-python-0040 | pdf page 213 | section 8.4]\nSince the field width can be used to specify the minimum length of a string, the string can be padded with\nspace characters from right, left, or both to be left-aligned, right-aligned, and centered, respectively. The\nstring alignment type is specified using <, >, or ^characters after the colon when field length is specified. Ex:\n{name:^20} specifies a named replacement field with the minimum length of 20 characters that is center-\naligned.\n\n[B-openstax-intro-python-0045 | pdf page 215 | section 8.4]\nExample Output Explanation\nprint(\"{:+.2f}\".format(4)) +4.00\nThe format specification .2 shows the output\nmust have two decimal places. The f specification\nis an identifier of floating-point formatting. The +\nsign before the precision specification adds a sign\ncharacter to the output.\nprint(\"{:0>5d}\".format(5)) 00005\nThe format specification 0>5 defines the width\nfield as 5, and thus the output must have a\nminimum length of 5. And, if the number has\nfewer than five digits, the number must be\npadded with 0's from the left side. The d\nspecification is an identifier of a decimal number\nformatting.\nprint(\"{:.3s}\".format(\"12.50\")) 12.\nThe format specification .3 shows the output will\nhave three characters. The s specification is an\nidentifier of string formatting.",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 13.1
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "answerable": true,
+    "question": "Which characters specify left, right and centre alignment in a format field?",
+    "query_sent": "Which characters specify left, right and centre alignment in a format field?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0040",
+        "score": 0.8035950894838522,
+        "pages": [
+          213
+        ],
+        "section": "8.4",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0041",
+        "score": 0.78129964042012,
+        "pages": [
+          213
+        ],
+        "section": "8.4",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0042",
+        "score": 0.7558719661312244,
+        "pages": [
+          213,
+          214
+        ],
+        "section": "8.4",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0040",
+      "B-openstax-intro-python-0041",
+      "B-openstax-intro-python-0042"
+    ],
+    "context_chars": 1717,
+    "context": "[B-openstax-intro-python-0040 | pdf page 213 | section 8.4]\nSince the field width can be used to specify the minimum length of a string, the string can be padded with\nspace characters from right, left, or both to be left-aligned, right-aligned, and centered, respectively. The\nstring alignment type is specified using <, >, or ^characters after the colon when field length is specified. Ex:\n{name:^20} specifies a named replacement field with the minimum length of 20 characters that is center-\naligned.\n\n[B-openstax-intro-python-0041 | pdf page 213 | section 8.4]\nAlignment\nType Symbol Example Output\nLeft-\naligned\n<\ntemplate = \"{hex:<7}{name:<10}\"\nprint(template.format(hex = \"#FF0000\",\nname = \"Red\")) print(template.format(hex\n= \"#00FF00\", name = \"green\"))\n#FF0000Red\n#00FF00green\nRight-\naligned\n>\ntemplate = \"{hex:>7}{name:>10}\"\nprint(template.format(hex = \"#FF0000\",\nname = \"Red\")) print(template.format(hex\n= \"#00FF00\", name = \"green\"))\n#FF0000 Red\n#00FF00 green\nCentered ^\ntemplate = \"{hex:^7}{name:^10}\"\nprint(template.format(hex = \"#FF0000\",\nname = \"Red\")) print(template.format(hex\n= \"#00FF00\", name = \"green\"))\n#FF0000 Red\n#00FF00 green\nTable 8.2 String alignment formatting.\n\n[B-openstax-intro-python-0042 | pdf page 213,214 | section 8.4]\nCONCEPTS IN PRACTICE\nSpecifying field width and alignment\n7 . What is the output of the following code?\ntemplate = \"{name:12}\"\nformatted_name = template.format(name = \"Alice\")\nprint(len(formatted_name))\na. 5\nb. 12\nc. \"Alice\"\n8 . What is the output of the following code?\ntemplate = \"{greeting:>6}\"\nformatted_greeting = template.format(greeting = \"Hello\")\nprint(formatted_greeting[0])\na. H\nb. \" Hello\"\nc. Space character\n9 . What is the output of the following code?",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 12.9
+  },
+  {
+    "query_id": "q10",
+    "split": "dev",
+    "answerable": true,
+    "question": "What delimiter does split() use when called without arguments?",
+    "query_sent": "What delimiter does split() use when called without arguments?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0047",
+        "score": 0.7945166230201721,
+        "pages": [
+          216
+        ],
+        "section": "8.5",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0048",
+        "score": 0.7740374476865052,
+        "pages": [
+          216
+        ],
+        "section": "8.5",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0056",
+        "score": 0.7728099362367443,
+        "pages": [
+          219,
+          221
+        ],
+        "section": "8.6",
+        "hit": true
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0047",
+      "B-openstax-intro-python-0048",
+      "B-openstax-intro-python-0056"
+    ],
+    "context_chars": 1883,
+    "context": "[B-openstax-intro-python-0047 | pdf page 216 | section 8.5]\n8.5 Splitting/joining strings\nLearning objectives\nBy the end of this section you should be able to\n• Use the split() method to split a string into substrings.\n• Combine objects in a list into a string using join() method.\nsplit()\nA string in Python can be broken into substrings given a delimiter. A delimiter is also referred to as a\nseparator. The split() method, when applied to a string, splits the string into substrings by using the given\nargument as a delimiter. Ex: \"1-2\".split('-') returns a list of substrings [\"1\", \"2\"]. When no arguments\nare given to the split() method, blank space characters are used as delimiters. Ex: \"1\\t2\\n3 4\".split()\nreturns [\"1\", \"2\", \"3\", \"4\"].\n\n[B-openstax-intro-python-0048 | pdf page 216 | section 8.5]\nCHECKPOINT\nsplit() for breaking down the string into tokens\nsplit() for breaking down the string into tokens; ch 8, video 7 (https://www.openstax.org/r/split-function)\nCONCEPTS IN PRACTICE\nExamples of string delimiters and split() method\n1 . What is the output of print(\"1*2*3*\".split('*'))?\na. [\"1\", \"*\", \"2\", \"*\", \"3\", \"*\"]\nb. [\"1\", \"2', \"3\"]\nc. [1, 2, 3]\n2 . What is the output of print(\"a year includes 12 months\".split())?\na. [\"a year includes 12 months\"]\nb. [\"a\", \"year\", \"includes\", 12, \"months\"]\nc. [\"a\", \"year\", \"includes\", \"12\", \"months\"]\n3 . What is the output of the following code?\n\n[B-openstax-intro-python-0056 | pdf page 219,221 | section 8.6]\nsplit() Separates a string into tokens based on a given separator string. If no separator string is\nprovided, blank space characters are used as separators.\nOperator Description\nin Checks if a substring exists in a string.\nin operator in\na for loop for character in string:\n# loop body\nTable 8.4 Chapter 8 reference.\nFigure 9.1 credit: modification of work \"Budget and Bills\" by Alabama Extension/Flickr, Public Domain",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 13.6
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "answerable": true,
+    "question": "What is the difference between remove() and pop() on a list?",
+    "query_sent": "What is the difference between remove() and pop() on a list?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0061",
+        "score": 0.8272753070696653,
+        "pages": [
+          222
+        ],
+        "section": "9.1",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0062",
+        "score": 0.8180513598857747,
+        "pages": [
+          222,
+          223
+        ],
+        "section": "9.1",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0059",
+        "score": 0.8040023796554139,
+        "pages": [
+          221,
+          222
+        ],
+        "section": "9.1",
+        "hit": true
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0061",
+      "B-openstax-intro-python-0062",
+      "B-openstax-intro-python-0059"
+    ],
+    "context_chars": 1300,
+    "context": "[B-openstax-intro-python-0061 | pdf page 222 | section 9.1]\n12 student_list.remove(\"Jamie\")\n13 print(student_list)\n14\n15 # Suppose \"Ming\" had to be removed from the list.\n16 # A pop() operation can be used since Ming is last in the list.\n17 student_list.pop()\n18 print(student_list)\nThe above code's output is:\n['Jamie', 'Vicky', 'DeShawn', 'Tae']\n['Jamie', 'Vicky', 'DeShawn', 'Tae', 'Ming']\n['Vicky', 'DeShawn', 'Tae', 'Ming']\n['Vicky', 'DeShawn', 'Tae']\nCONCEPTS IN PRACTICE\n\n[B-openstax-intro-python-0062 | pdf page 222,223 | section 9.1]\nModifying lists\n1 . Which operation can be used to add an element to the end of a list?\na. add()\nb. append()\nc. pop()\n2 . What is the correct syntax to remove the element 23 from a list called number_list?\na. remove()\nb. number_list.remove()\nc. number_list.remove(23)\n3 . Which operation can be used to remove an element from the end of a list?\na. only pop()\nb. only remove()\nc. either pop() or remove()\n\n[B-openstax-intro-python-0059 | pdf page 221,222 | section 9.1]\nUsing list operations to modify a list\nAn append() operation is used to add an element to the end of a list. In programming, append means add to\nthe end. A remove() operation removes the specified element from a list. A pop() operation removes the last\nitem of a list.\nLists\n9\nEXAMPLE 9.1",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 14.2
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "answerable": true,
+    "question": "Why might sort() put \"Gail\" before \"apple\"?",
+    "query_sent": "Why might sort() put \"Gail\" before \"apple\"?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0068",
+        "score": 0.7768128184303317,
+        "pages": [
+          225
+        ],
+        "section": "9.2",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0066",
+        "score": 0.6901553457882806,
+        "pages": [
+          224,
+          225
+        ],
+        "section": "9.2",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0067",
+        "score": 0.6788914608294655,
+        "pages": [
+          225
+        ],
+        "section": "9.2",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0068",
+      "B-openstax-intro-python-0066",
+      "B-openstax-intro-python-0067"
+    ],
+    "context_chars": 1672,
+    "context": "[B-openstax-intro-python-0068 | pdf page 225 | section 9.2]\n• The sort() method arranges the elements of a list in ascending order. For strings, ASCII values are used\nand uppercase characters come before lowercase characters, leading to unexpected results. Ex: \"A\" is\nordered before \"a\" in ascending order but so is \"G\"; thus, \"Gail\" comes before \"apple\".\n• The reverse() method reverses the elements in a list.\n\n[B-openstax-intro-python-0066 | pdf page 224,225 | section 9.2]\n9.2 Sorting and reversing lists\nLearning objectives\nBy the end of this section you should be able to\n• Understand the concept of sorting.\n• Use built-in sort() and reverse() methods.\nSorting\nOrdering elements in a sequence is often useful. Sorting is the task of arranging elements in a sequence in\nascending or descending order.\nSorting can work on numerical or non-numerical data. When ordering text, dictionary order is used. Ex: \"bat\"\ncomes before \"cat\" because \"b\" comes before \"c\".\nCHECKPOINT\nSorting\nSorting; ch 9, video 2 (https://www.openstax.org/r/sorting)\nTRY IT\nTRY IT\nCONCEPTS IN PRACTICE\n\n[B-openstax-intro-python-0067 | pdf page 225 | section 9.2]\nSorting\n1 . What would be the last element of the following list if it is sorted in descending order?\n[12, 3, 19, 25, 16, -3, 5]\na. 25\nb. -3\nc. 5\n2 . Arrange the following list in ascending order.\n[\"cat\", \"bat\", \"dog\", \"coyote\", \"wolf\"]\na. [\"bat\", \"cat\", \"coyote\", \"dog\", \"wolf\"]\nb. [\"wolf\", \"coyote\", \"dog\", \"cat\", \"bat\"]\n3 . How are the words \"flask\" and \"flash\" related in Python?\na. \"flask\" < \"flash\"\nb. \"flask\" == \"flash\"\nc. \"flask\" > \"flash\"\nUsing sort() and reverse()\nPython provides methods for arranging elements in a list.",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 13.8
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "answerable": true,
+    "question": "Under what condition do max() and min() work on a list?",
+    "query_sent": "Under what condition do max() and min() work on a list?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0071",
+        "score": 0.8360048727983448,
+        "pages": [
+          226,
+          227
+        ],
+        "section": "9.3",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0072",
+        "score": 0.8020819900558689,
+        "pages": [
+          227,
+          228
+        ],
+        "section": "9.3",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0091",
+        "score": 0.7657525818642931,
+        "pages": [
+          236
+        ],
+        "section": "9.6",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0071",
+      "B-openstax-intro-python-0072",
+      "B-openstax-intro-python-0091"
+    ],
+    "context_chars": 1945,
+    "context": "[B-openstax-intro-python-0071 | pdf page 226,227 | section 9.3]\n9.3 Common list operations\nLearning objectives\nBy the end of this section you should be able to\nTRY IT\n• Use built-in functions max(), min(), and sum().\n• Demonstrate how to copy a list.\nUsing built-in operations\nThe max() function called on a list returns the largest element in the list. The min() function called on a list\nreturns the smallest element in the list. The max() and min() functions work for lists as long as elements\nwithin the list are comparable.\nThe sum() function called on a list of numbers returns the sum of all elements in the list.\n\n[B-openstax-intro-python-0072 | pdf page 227,228 | section 9.3]\nEXAMPLE 9.3\nCommon list operations\n\"\"\"Common list operations.\"\"\"\n# Set up a list of number\nsnum_list = [28, 92, 17, 3, -5, 999, 1]\n# Set up a list of words\ncity_list = [\"New York\", \"Missoula\", \"Chicago\", \"Bozeman\",\n\"Birmingham\", \"Austin\", \"Sacramento\"]\n# Usage of the max() funtion\nprint(max(num_list))\n# max() function works for strings as well\nprint(max(city_list))\n# Usage of the min() funtion which also works for strings\nprint(min(num_list))\nprint(min(city_list))\n# sum() only works for a list of numbers\nprint(sum(num_list))\nThe above code's output is:\n999\nSacramento\n-5\nAustin\n1135\nCONCEPTS IN PRACTICE\n\n[B-openstax-intro-python-0091 | pdf page 236 | section 9.6]\nFunction Description\nappend(element) Adds the specified element to the end of a list.\nremove(element) Removes the specified element from the list if the element exists.\npop() Removes the last element of a list.\nmax(list) Returns the maximum element of the list specified.\nmin(list) Returns the maximum element of the list specified.\nsum(list) Returns the summation of a list composed of numbers.\nsort() Sorts a list on which the method is called in ascending order.\nreverse() Reverses the order of elements in a list.\ncopy() Makes a complete copy of a list.\nTable 9.1 Chapter 9 reference.",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 14.6
+  },
+  {
+    "query_id": "q14",
+    "split": "dev",
+    "answerable": true,
+    "question": "How do you loop over each element with a for loop using the in operator?",
+    "query_sent": "How do you loop over each element with a for loop using the in operator?",
+    "filter": {
+      "chapter": 8
+    },
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0020",
+        "score": 0.801925539970398,
+        "pages": [
+          204,
+          205
+        ],
+        "section": "8.3",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0021",
+        "score": 0.7473010420799255,
+        "pages": [
+          205,
+          206
+        ],
+        "section": "8.3",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0019",
+        "score": 0.7327627380348897,
+        "pages": [
+          204
+        ],
+        "section": "8.3",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0020",
+      "B-openstax-intro-python-0021",
+      "B-openstax-intro-python-0019"
+    ],
+    "context_chars": 2245,
+    "context": "[B-openstax-intro-python-0020 | pdf page 204,205 | section 8.3]\nCONCEPTS IN PRACTICE\nUsing in operator to find substrings\n1 . What is the output of (\"a\" in \"an umbrella\")?\na. 2\nTRY IT\nb. False\nc. True\nd. 1\n2 . What is the output of (\"ab\" in \"arbitrary\")?\na. True\nb. False\n3 . What is the output of (\"\" in \"string\")?\na. True\nb. False\nFor loop using in operator\nThe in operator can be used to iterate over characters in a string using a for loop. In each for loop iteration,\none character is read and will be the loop variable for that iteration.\nCHECKPOINT\nfor loop using in operator\nFor loop using in operator; ch 8, video 4 (https://www.openstax.org/r/for-loop-in-operator)\n\n[B-openstax-intro-python-0021 | pdf page 205,206 | section 8.3]\nCONCEPTS IN PRACTICE\nUsing in operator within for loop\n4 . What is the output of the following code?\nfor c in \"string\":\nprint(c, end = \"\")\na. string\nb. s\nt\nr\ni\nn\ng\nc. s t r i n g\n5 . What is the output of the following code?\ncount = 0\nfor c in \"abca\":\nif c == \"a\":\ncount += 1\nprint(count)\na. 0\nb. 1\nc. 2\n6 . What is the output of the following code?\nword = \"cab\"\nfor i in word:\nif i == \"a\":\nprint(\"A\", end = \"\")\nif i == \"b\":\nprint(\"B\", end = \"\")\nif i == \"c\":\nprint(\"C\", end = \"\")\na. cab\nb. abc\nc. CAB\nd. ABC\ncount()\nThe count() method counts the number of occurrences of a substring in a given string. If the given substring\ndoes not exist in the given string, the value 0 is returned.\n\n[B-openstax-intro-python-0019 | pdf page 204 | section 8.3]\n8.3 Searching/testing strings\nLearning objectives\nBy the end of this section you should be able to\n• Use the in operator to identify whether a given string contains a substring.\n• Call the count() method to count the number of substrings in a given string.\n• Search a string to find a substring using the find() method.\n• Use the index() method to find the index of the first occurrence of a substring in a given string.\n• Write a for loop on strings using in operator.\nin operator\nThe in Boolean operator can be used to check if a string contains another string. in returns True if the first\nstring exists in the second string, False otherwise.\nCHECKPOINT\nWhat is in the phrase?\nWhat is the phrase?; ch 8, video 3 (https://www.openstax.org/r/what-in-phrase)",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 14.4
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "answerable": true,
+    "question": "Can the contents of this kind of sequence be changed after it is created?",
+    "query_sent": "Can the contents of this kind of sequence be changed after it is created?",
+    "filter": {
+      "chapter": 9
+    },
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0088",
+        "score": 0.6531947449801789,
+        "pages": [
+          235
+        ],
+        "section": "9.5",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0090",
+        "score": 0.6497907832202552,
+        "pages": [
+          235,
+          236
+        ],
+        "section": "9.6",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0060",
+        "score": 0.6450371934484602,
+        "pages": [
+          222
+        ],
+        "section": "9.1",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0088",
+      "B-openstax-intro-python-0090",
+      "B-openstax-intro-python-0060"
+    ],
+    "context_chars": 2036,
+    "context": "[B-openstax-intro-python-0088 | pdf page 235 | section 9.5]\n6 . new_list = [r for r in range (0, 21, 2) if r%2 != 0]\na. []\nb. [21]\nc. [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\nSelecting five-letter words\nWrite a program that creates a list of only five-letter words from the given list and prints the new list.\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/9-5-list-\ncomprehensions)\nBooks starting with \"A\"\nWrite a program that selects words that begin with an \"A\" in the given list. Make sure the new list is then\nsorted in dictionary order. Finally, print the new sorted list.\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/9-5-list-\ncomprehensions)\n\n[B-openstax-intro-python-0090 | pdf page 235,236 | section 9.6]\nTRY IT\n• The reverse() operation reverses a list.\n• The copy() method is used to create a copy of a list.\n• Lists have built-in functions for finding the maximum, minimum, and summation of a list for lists with only\nnumeric values.\n• Lists can be nested to represent multidimensional data.\n• A list comprehension is a compact way of creating a new list, which can be used to filter items from an\nexisting list.\nAt this point, you should be able to write programs using lists.\n\n[B-openstax-intro-python-0060 | pdf page 222 | section 9.1]\nSimple operations to modify a list\nThe code below demonstrates simple operations for modifying a list.\nLine 8 shows the append() operation, line 12 shows the remove() operation, and line 17 shows the pop()\noperation. Since the pop() operation removes the last element, no parameter is needed.\n1 \"\"\"Operations for adding and removing elements from a list.\"\"\"\n2\n3 # Create a list of students working on a project\n4 student_list = [\"Jamie\", \"Vicky\", \"DeShawn\", \"Tae\"]\n5 print(student_list)\n6\n7 # Another student joins the project. The student must be added to\nthe list.\n8 student_list.append(\"Ming\")\n9 print(student_list)\n10\n11 # \"Jamie\" withdraws from the project. Jamie must be removed from\nthe list.",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "elapsed_ms": 14.1
+  },
+  {
+    "query_id": "u01",
+    "split": "dev",
+    "answerable": false,
+    "question": "What does the strip() method do to a string?",
+    "query_sent": "What does the strip() method do to a string?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0012",
+        "score": 0.7292279762489926,
+        "pages": [
+          201
+        ],
+        "section": "8.2",
+        "hit": null
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0006",
+        "score": 0.7284843163778983,
+        "pages": [
+          198,
+          199
+        ],
+        "section": "8.1",
+        "hit": null
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0049",
+        "score": 0.7227847030268347,
+        "pages": [
+          217
+        ],
+        "section": "8.5",
+        "hit": null
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0012",
+      "B-openstax-intro-python-0006",
+      "B-openstax-intro-python-0049"
+    ],
+    "context_chars": 2144,
+    "context": "[B-openstax-intro-python-0012 | pdf page 201 | section 8.2]\nCONCEPTS IN PRACTICE\nAccessing characters in a string using indexing\n1 . Which character is at index 1 in the string \"hello\"?\na. \"h\"\nb. \"e\"\nc. \"o\"\n2 . What is the character at index -2 in the string \"Blue\"?\na. \"e\"\nb. \"u\"\nc. \"l\"\n3 . What is the output of the following code?\nword = \"chance\"\nprint(word[-1] == word[5])\na. True\nb. False\nString slicing\nString slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing\noperator can be used. When [a:b] is used with the name of a string variable, a sequence of characters\nstarting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. If a or b are not\nprovided, the default values are 0 and len(string), respectively.\nEXAMPLE 8.2\n\n[B-openstax-intro-python-0006 | pdf page 198,199 | section 8.1]\nCONCEPTS IN PRACTICE\nUsing logical and membership operators to compare string values\n1 . What is the output of (\"aaa\" < \"aab\")?\na. True\nb. False\n2 . What is the output of (\"aa\" < \"a\")?\na. True\nb. False\n3 . What is the output of (\"aples\" in \"apples\")?\na. undefined\nb. True\nc. False\nlower() and upper()\nPython has many useful methods for modifying strings, two of which are lower() and upper() methods. The\nlower() method returns the converted alphabetical characters to lowercase, and the upper() method returns\nthe converted alphabetical characters to uppercase. Both the lower() and upper() methods do not modify\nthe string.\nEXAMPLE 8.1\n\n[B-openstax-intro-python-0049 | pdf page 217 | section 8.5]\ns = \"\"\"This is a test\"\"\"\nout = s.split()\nprint(out)\na. Error\nb. ['This', 'is', 'a', 'test']\nc. >['This', 'is a', 'test']\njoin()\nThe join() method is the inverse of the split() method: a list of string values are concatenated together to\nform one output string. When joining string elements in the list, the delimiter is added in-between elements.\nEx: ','.join([\"this\", \"is\", \"great\"]) returns \"this,is,great\".\nCHECKPOINT\njoin() for combining tokens into one string\njoin() for combing tokens into one string; ch 8, video 8 (https://www.openstax.org/r/join-function)",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "elapsed_ms": 14.1
+  },
+  {
+    "query_id": "u02",
+    "split": "dev",
+    "answerable": false,
+    "question": "What is the difference between the append() and extend() methods of a list?",
+    "query_sent": "What is the difference between the append() and extend() methods of a list?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0059",
+        "score": 0.8283550143241941,
+        "pages": [
+          221,
+          222
+        ],
+        "section": "9.1",
+        "hit": null
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0062",
+        "score": 0.7884056442025702,
+        "pages": [
+          222,
+          223
+        ],
+        "section": "9.1",
+        "hit": null
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0060",
+        "score": 0.7648179986964477,
+        "pages": [
+          222
+        ],
+        "section": "9.1",
+        "hit": null
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0059",
+      "B-openstax-intro-python-0062",
+      "B-openstax-intro-python-0060"
+    ],
+    "context_chars": 1582,
+    "context": "[B-openstax-intro-python-0059 | pdf page 221,222 | section 9.1]\nUsing list operations to modify a list\nAn append() operation is used to add an element to the end of a list. In programming, append means add to\nthe end. A remove() operation removes the specified element from a list. A pop() operation removes the last\nitem of a list.\nLists\n9\nEXAMPLE 9.1\n\n[B-openstax-intro-python-0062 | pdf page 222,223 | section 9.1]\nModifying lists\n1 . Which operation can be used to add an element to the end of a list?\na. add()\nb. append()\nc. pop()\n2 . What is the correct syntax to remove the element 23 from a list called number_list?\na. remove()\nb. number_list.remove()\nc. number_list.remove(23)\n3 . Which operation can be used to remove an element from the end of a list?\na. only pop()\nb. only remove()\nc. either pop() or remove()\n\n[B-openstax-intro-python-0060 | pdf page 222 | section 9.1]\nSimple operations to modify a list\nThe code below demonstrates simple operations for modifying a list.\nLine 8 shows the append() operation, line 12 shows the remove() operation, and line 17 shows the pop()\noperation. Since the pop() operation removes the last element, no parameter is needed.\n1 \"\"\"Operations for adding and removing elements from a list.\"\"\"\n2\n3 # Create a list of students working on a project\n4 student_list = [\"Jamie\", \"Vicky\", \"DeShawn\", \"Tae\"]\n5 print(student_list)\n6\n7 # Another student joins the project. The student must be added to\nthe list.\n8 student_list.append(\"Ming\")\n9 print(student_list)\n10\n11 # \"Jamie\" withdraws from the project. Jamie must be removed from\nthe list.",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "elapsed_ms": 14.5
+  }
+]

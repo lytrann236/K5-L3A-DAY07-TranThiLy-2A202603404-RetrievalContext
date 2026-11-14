@@ -1,0 +1,23 @@
+{
+  "config": "M2_bm25",
+  "method": "bm25",
+  "split": "dev",
+  "N_answerable": 15,
+  "N_unanswerable": 2,
+  "hit1": 11,
+  "hit3": 13,
+  "context_hit": 13,
+  "avg_context_chars": 1888,
+  "avg_context_chunks": 3,
+  "median_ms_per_query": 0.1,
+  "setup_seconds": 0.0,
+  "cost_usd": 0,
+  "config_params": {
+    "kind": "method",
+    "method": "bm25",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "hypothesis": "Questions reuse exact method names (find(), count(), split()); lexical match may rank the defining chunk higher than dense."
+  }
+}

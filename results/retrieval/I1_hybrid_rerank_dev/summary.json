@@ -1,0 +1,26 @@
+{
+  "config": "I1_hybrid_rerank",
+  "method": "hybrid+rerank",
+  "split": "dev",
+  "N_answerable": 15,
+  "N_unanswerable": 2,
+  "hit1": 14,
+  "hit3": 14,
+  "context_hit": 14,
+  "avg_context_chars": 1816,
+  "avg_context_chunks": 2.82,
+  "median_ms_per_query": 93.0,
+  "setup_seconds": 15.93,
+  "cost_usd": 0,
+  "config_params": {
+    "kind": "improvement",
+    "method": "hybrid+rerank",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "rrf_k": 60,
+    "candidates": 20,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "hypothesis": "Day 6 errors q15/t01 were ranking errors (right page, wrong chunk first); a cross-encoder reading query+chunk together should raise Hit@1."
+  }
+}

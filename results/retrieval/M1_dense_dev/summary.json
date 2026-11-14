@@ -1,0 +1,23 @@
+{
+  "config": "M1_dense",
+  "method": "dense",
+  "split": "dev",
+  "N_answerable": 15,
+  "N_unanswerable": 2,
+  "hit1": 9,
+  "hit3": 13,
+  "context_hit": 13,
+  "avg_context_chars": 1940,
+  "avg_context_chunks": 3,
+  "median_ms_per_query": 13.6,
+  "setup_seconds": 24.47,
+  "cost_usd": 0,
+  "config_params": {
+    "kind": "method",
+    "method": "dense",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "hypothesis": "Baseline = Day 6 retrieval (bge-small + pgvector cosine)."
+  }
+}

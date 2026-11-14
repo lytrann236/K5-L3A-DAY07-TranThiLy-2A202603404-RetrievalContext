@@ -1,0 +1,25 @@
+{
+  "config": "M3_hybrid",
+  "method": "hybrid",
+  "split": "dev",
+  "N_answerable": 15,
+  "N_unanswerable": 2,
+  "hit1": 10,
+  "hit3": 14,
+  "context_hit": 14,
+  "avg_context_chars": 1937,
+  "avg_context_chunks": 3,
+  "median_ms_per_query": 13.6,
+  "setup_seconds": 0.0,
+  "cost_usd": 0,
+  "config_params": {
+    "kind": "method",
+    "method": "hybrid",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "rrf_k": 60,
+    "candidates": 20,
+    "hypothesis": "RRF of dense + BM25 recovers chunks found by only one of them -> higher Evidence Hit@3 than either."
+  }
+}

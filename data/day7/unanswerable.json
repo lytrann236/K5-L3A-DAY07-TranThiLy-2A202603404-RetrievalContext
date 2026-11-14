@@ -1,0 +1,14 @@
+[
+  {"id": "u01", "split": "dev", "question": "What does the strip() method do to a string?",
+   "answerable": false, "expected_behavior": "search_and_abstain",
+   "absence_reason": "Ch.8 (Strings) never mentions strip(); search of normalized text of all 39 counted pages: 'strip' = 0 hits."},
+  {"id": "u02", "split": "dev", "question": "What is the difference between the append() and extend() methods of a list?",
+   "answerable": false, "expected_behavior": "search_and_abstain",
+   "absence_reason": "append() is covered (Ch.9) but extend() is never mentioned ('extend' = 0 hits), so the difference cannot be answered from the corpus."},
+  {"id": "u03", "split": "test", "question": "How do you reverse a string using slicing with a step value, such as s[::-1]?",
+   "answerable": false, "expected_behavior": "search_and_abstain",
+   "absence_reason": "Section 8.2 covers s[a:b] only; no third (step) slice argument: '::' = 0 hits, 'step' only appears inside the word 'stepping'."},
+  {"id": "u04", "split": "test", "question": "How do you insert an element at a specific index of a list using insert()?",
+   "answerable": false, "expected_behavior": "search_and_abstain",
+   "absence_reason": "Ch.9 lists append(), remove(), pop(), sort(), reverse(), copy() but not insert(): 'insert(' = 0 hits; 'insert' appears once only in an unrelated code comment."}
+]

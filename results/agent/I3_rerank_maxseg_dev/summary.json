@@ -1,0 +1,32 @@
+{
+  "retrieval_config": "I3_rerank_maxseg",
+  "split": "dev",
+  "model": "gemini-3.5-flash-lite",
+  "agent_params": {
+    "max_searches": 3,
+    "top_k": 3,
+    "budget": 4000
+  },
+  "n_traces": 17,
+  "errors": 0,
+  "status": {
+    "answered": 15,
+    "abstain": 2,
+    "error": 0
+  },
+  "tool_use": "17/17",
+  "searches_distribution": {
+    "1": 12,
+    "2": 1,
+    "3": 4
+  },
+  "agent_context_evidence": "15/15",
+  "answerable_abstained": "0/15",
+  "unanswerable_abstained": "2/2",
+  "model_calls_total": 43,
+  "prompt_tokens_total": 34968,
+  "output_tokens_total": 2203,
+  "median_wall_seconds": 8.71,
+  "cost_usd": 0.0,
+  "cost_note": "Gemini API free tier"
+}

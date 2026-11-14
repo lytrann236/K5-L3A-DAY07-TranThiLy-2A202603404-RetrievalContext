@@ -1,0 +1,2184 @@
+[
+  {
+    "id": "B-openstax-intro-python-0000",
+    "text": "Figure 8.1 credit: modification of work \"Project 366 #65: 050316 A Night On The Tiles\", by Pete/Flickr, CC BY 2.0\nChapter Outline\n8.1 String operations\n8.2 String slicing\n8.3 Searching/testing strings\n8.4 String formatting\n8.5 Splitting/joining strings\n8.6 Chapter summary",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 197,
+    "metadata": {
+      "pages": [
+        197
+      ],
+      "book_pages": [
+        187
+      ],
+      "chapter": 8,
+      "section": "8.0",
+      "char_len": 272,
+      "content_hash": "0856463e07f85796",
+      "char_start": 0,
+      "char_end": 273,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0001",
+    "text": "Introduction\nA string is a sequence of characters. Python provides useful methods for processing string values. In this\nchapter, string methods will be demonstrated including comparing string values, string slicing, searching,\ntesting, formatting, and modifying.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 197,
+    "metadata": {
+      "pages": [
+        197
+      ],
+      "book_pages": [
+        187
+      ],
+      "chapter": 8,
+      "section": "8.0",
+      "char_len": 262,
+      "content_hash": "bf4f2939b6dffdd4",
+      "char_start": 273,
+      "char_end": 536,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0002",
+    "text": "8.1 String operations\nLearning objectives\nBy the end of this section you should be able to\n• Compare strings using logical and membership operators.\n• Use lower() and upper() string methods to convert string values to lowercase and uppercase\ncharacters.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 197,
+    "metadata": {
+      "pages": [
+        197
+      ],
+      "book_pages": [
+        187
+      ],
+      "chapter": 8,
+      "section": "8.1",
+      "char_len": 253,
+      "content_hash": "75349ef286c56cd3",
+      "char_start": 536,
+      "char_end": 790,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0003",
+    "text": "String comparison\nString values can be compared using logical operators (<, <=, >, >=, ==, !=) and membership operators (in and\nnot in). When comparing two string values, the matching characters in two string values are compared\nsequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical\noperators.\nStrings\n8\nOperator Description Example Output Explanation\n> or >=\nChecks whether the\nfirst string value is\ngreater than (or greater\nthan or equal to) the\nsecond string value.\n\"c\" >\n\"d\" False\nWhen comparing \"c\" operand to \"d\"\noperand, the ASCII value for \"c\" is smaller\nthan the ASCII value for \"d\". Therefore, \"c\"\n< \"d\". The expression \"c\" > \"d\"\nevaluates to False.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 197,
+    "metadata": {
+      "pages": [
+        197,
+        198
+      ],
+      "book_pages": [
+        187,
+        188
+      ],
+      "chapter": 8,
+      "section": "8.1",
+      "char_len": 716,
+      "content_hash": "0a87aef1abe1ad89",
+      "char_start": 790,
+      "char_end": 1507,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0004",
+    "text": "< or <=\nChecks whether the\nfirst string value is less\nthan (or less than or\nequal to) the second\nstring value.\n\"ab\" <\n\"ac\" True\nWhen comparing \"ab\" operand to \"ac\"\noperand, the first characters are the same,\nbut the second character of \"ab\" is less\nthan the second character in \"ac\" and as\nsuch \"ab\" < \"ac\".\n== Checks whether two\nstring values are equal.\n\"aa\" ==\n\"aa\" True\nSince all characters in the first operand and\nthe second operand are the same, the two\nstring values are equal.\n!=\nChecks whether two\nstring values are not\nequal.\n\"a\" !=\n\"b\" True\nThe two operands contain different string\nvalues (\"a\" vs. \"b\"), and the result of\nchecking whether the two are not the same\nevaluates to True.\nin\nChecks whether the\nsecond operand\ncontains the first\noperand.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 198,
+    "metadata": {
+      "pages": [
+        198
+      ],
+      "book_pages": [
+        188
+      ],
+      "chapter": 8,
+      "section": "8.1",
+      "char_len": 759,
+      "content_hash": "05cfb34b64c54e86",
+      "char_start": 1507,
+      "char_end": 2267,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0005",
+    "text": "\"a\" in\n\"bc\" False\nSince string \"bc\" does not contain string\n\"a\", the output of \"a\" in \"bc\" evaluates\nto False.\nnot in\nChecks whether the\nsecond operand does\nnot contain the first\noperand.\n\"a\" not\nin \"bc\" True\nSince string \"bc\" does not contain string\n\"a\", the output of \"a\" not in \"bc\"\nevaluates to True.\nTable 8.1 Comparing string values.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 198,
+    "metadata": {
+      "pages": [
+        198
+      ],
+      "book_pages": [
+        188
+      ],
+      "chapter": 8,
+      "section": "8.1",
+      "char_len": 339,
+      "content_hash": "943868fd7a9a808c",
+      "char_start": 2267,
+      "char_end": 2607,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0006",
+    "text": "CONCEPTS IN PRACTICE\nUsing logical and membership operators to compare string values\n1 . What is the output of (\"aaa\" < \"aab\")?\na. True\nb. False\n2 . What is the output of (\"aa\" < \"a\")?\na. True\nb. False\n3 . What is the output of (\"aples\" in \"apples\")?\na. undefined\nb. True\nc. False\nlower() and upper()\nPython has many useful methods for modifying strings, two of which are lower() and upper() methods. The\nlower() method returns the converted alphabetical characters to lowercase, and the upper() method returns\nthe converted alphabetical characters to uppercase. Both the lower() and upper() methods do not modify\nthe string.\nEXAMPLE 8.1",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 198,
+    "metadata": {
+      "pages": [
+        198,
+        199
+      ],
+      "book_pages": [
+        188,
+        189
+      ],
+      "chapter": 8,
+      "section": "8.1",
+      "char_len": 637,
+      "content_hash": "185745b202ebbdea",
+      "char_start": 2607,
+      "char_end": 3245,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0007",
+    "text": "Converting characters in a string\nIn the example below, the lower() and upper() string methods are called on the string variable x to\nconvert all characters to lowercase and uppercase, respectively.\nx = \"Apples\"\n# The lower() method converts a string to all lowercase characters\nprint(x.lower())\n# The upper() method converts a string to all uppercase characters\nprint(x.upper())\nThe above code's output is:\napples\nAPPLES",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 199,
+    "metadata": {
+      "pages": [
+        199
+      ],
+      "book_pages": [
+        189
+      ],
+      "chapter": 8,
+      "section": "8.1",
+      "char_len": 421,
+      "content_hash": "e0395b39a766ccce",
+      "char_start": 3245,
+      "char_end": 3667,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0008",
+    "text": "CONCEPTS IN PRACTICE\nUsing lower() and upper()\n4 . What is the output of \"aBbA\".lower()?\na. abba\nb. ABBA\nc. abbA\n5 . What is the output of \"aBbA\".upper()?\na. abba\nb. ABBA\nc. ABbA\nd. aBBA\n6 . What is the output of (\"a\".upper() == \"A\")?\na. True\nb. False\nNumber of characters in the string\nA string variable, s_input, is defined. Use lower() and upper() to convert the string to lowercase and\nuppercase, and print the results in the output. Also, print the number of characters in the string, including\nspace characters.\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-1-string-operations)\nWhat is my character?",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 199,
+    "metadata": {
+      "pages": [
+        199,
+        200
+      ],
+      "book_pages": [
+        189,
+        190
+      ],
+      "chapter": 8,
+      "section": "8.1",
+      "char_len": 654,
+      "content_hash": "3eb29b6ff582be0b",
+      "char_start": 3667,
+      "char_end": 4322,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0009",
+    "text": "Given the string, s_input, which is a one-character string object, if the character is between \"a\" and \"t\"\nor \"A\" and \"T\", print True. Otherwise, print False.\nHint: You can convert s_input to lowercase and check if s_input is between \"a\" and \"t\".\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-1-string-operations)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 200,
+    "metadata": {
+      "pages": [
+        200
+      ],
+      "book_pages": [
+        190
+      ],
+      "chapter": 8,
+      "section": "8.1",
+      "char_len": 361,
+      "content_hash": "02143934fabb5b76",
+      "char_start": 4322,
+      "char_end": 4684,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0010",
+    "text": "8.2 String slicing\nLearning objectives\nBy the end of this section you should be able to\n• Use string indexing to access characters in the string.\n• Use string slicing to get a substring from a string.\n• Identify immutability characteristics of strings.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 200,
+    "metadata": {
+      "pages": [
+        200
+      ],
+      "book_pages": [
+        190
+      ],
+      "chapter": 8,
+      "section": "8.2",
+      "char_len": 252,
+      "content_hash": "85a73be875e55212",
+      "char_start": 4684,
+      "char_end": 4937,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0011",
+    "text": "String indexing\nA string is a type of sequence. A string is made up of a sequence of characters indexed from left to right,\nstarting at 0. For a string variable s, the left-most character is indexed 0 and the right-most character is\nindexed len(s) - 1. Ex: The length of the string \"Cloud\" is 5, so the last index is 4.\nNegative indexing can also be used to refer to characters from right to left starting at -1. For a string variable\ns, the left-most character is indexed -len(s) and the right-most character is indexed -1. Ex: The length of the\nstring \"flower\" is 6, so the index of the first character with negative indexing is -6.\nCHECKPOINT\nString indexing\nString indexing; ch 8, video 1 (https://www.openstax.org/r/string-indexing)\nTRY IT\nTRY IT",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 200,
+    "metadata": {
+      "pages": [
+        200
+      ],
+      "book_pages": [
+        190
+      ],
+      "chapter": 8,
+      "section": "8.2",
+      "char_len": 751,
+      "content_hash": "eb6071950f97c371",
+      "char_start": 4937,
+      "char_end": 5689,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0012",
+    "text": "CONCEPTS IN PRACTICE\nAccessing characters in a string using indexing\n1 . Which character is at index 1 in the string \"hello\"?\na. \"h\"\nb. \"e\"\nc. \"o\"\n2 . What is the character at index -2 in the string \"Blue\"?\na. \"e\"\nb. \"u\"\nc. \"l\"\n3 . What is the output of the following code?\nword = \"chance\"\nprint(word[-1] == word[5])\na. True\nb. False\nString slicing\nString slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing\noperator can be used. When [a:b] is used with the name of a string variable, a sequence of characters\nstarting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. If a or b are not\nprovided, the default values are 0 and len(string), respectively.\nEXAMPLE 8.2",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 201,
+    "metadata": {
+      "pages": [
+        201
+      ],
+      "book_pages": [
+        191
+      ],
+      "chapter": 8,
+      "section": "8.2",
+      "char_len": 755,
+      "content_hash": "ea9ccae4f09a1b76",
+      "char_start": 5689,
+      "char_end": 6445,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0013",
+    "text": "Getting the minutes\nConsider a time value is given as \"hh:mm\" with \"hh\" representing the hour and \"mm\" representing the\nminutes. To retrieve only the string's minutes portion, the following code can be used:\ntime_string = \"13:46\"\nminutes = time_string[3:5]\nprint(minutes)\nThe above code's output is:\n46\nEXAMPLE 8.3",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 201,
+    "metadata": {
+      "pages": [
+        201,
+        202
+      ],
+      "book_pages": [
+        191,
+        192
+      ],
+      "chapter": 8,
+      "section": "8.2",
+      "char_len": 314,
+      "content_hash": "7e95e3b9e70ff5ec",
+      "char_start": 6445,
+      "char_end": 6760,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0014",
+    "text": "Getting the hour\nConsider a time value is given as \"hh:mm\" with \"hh\" representing the hour and \"mm\" representing the\nminutes. To retrieve only the string's hour portion, the following code can be used:\ntime_string = \"14:50\"\nhour = time_string[:2]\nprint(hour)\nThe above code's output is:\n14",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 202,
+    "metadata": {
+      "pages": [
+        202
+      ],
+      "book_pages": [
+        192
+      ],
+      "chapter": 8,
+      "section": "8.2",
+      "char_len": 289,
+      "content_hash": "c48f58da0352e615",
+      "char_start": 6760,
+      "char_end": 7050,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0015",
+    "text": "CONCEPTS IN PRACTICE\nGetting a substring using string slicing\n4 . What is the output of the following code?\na_string = \"Hello world\"\nprint(a_string[2:4])\na. \"el\"\nb. \"ll\"\nc. \"llo\"\n5 . What is the output of the following code?\nlocation = \"classroom\"\nprint(location[-3:-1])\na. \"ro\"\nb. \"oo\"\nc. \"oom\"\n6 . What is the output of the following code?",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 202,
+    "metadata": {
+      "pages": [
+        202
+      ],
+      "book_pages": [
+        192
+      ],
+      "chapter": 8,
+      "section": "8.2",
+      "char_len": 341,
+      "content_hash": "d83caa7f0dbb5b3b",
+      "char_start": 7050,
+      "char_end": 7392,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0016",
+    "text": "greeting = \"hi Leila\"\nname = greeting[3:]\na. \" Leila\"\nb. \"Leila\"\nc. \"ila\"\nString immutability\nString objects are immutable meaning that string objects cannot be modified or changed once created. Once\na string object is created, the string's contents cannot be altered by directly modifying individual characters or\nelements within the string. Instead, to make changes to a string, a new string object with the desired changes\nis created, leaving the original string unchanged.\nCHECKPOINT\nStrings are immutable\nStrings are immutable; ch 8, video 2 (https://www.openstax.org/r/strings-are-immutable)\nCONCEPTS IN PRACTICE",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 202,
+    "metadata": {
+      "pages": [
+        202,
+        203
+      ],
+      "book_pages": [
+        192,
+        193
+      ],
+      "chapter": 8,
+      "section": "8.2",
+      "char_len": 618,
+      "content_hash": "15cafc608e6aa8bd",
+      "char_start": 7392,
+      "char_end": 8011,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0017",
+    "text": "Modifying string content\n7 . What is the correct way of replacing the first character in a string to character \"*\" in a new string?\na. x = \"string\"\nx[0] = \"*\"\nb. x = \"string\"\nx = \"*\" + x[1:]\nc. x = \"string\"\nx = \"*\" + x\n8 . What type of error will result from the following code?\nstring_variable = \"example\"\nstring_variable[-1] = \"\"\na. TypeError\nb. IndexError\nc. NameError\n9 . What is the output of the following code?\nstr = \"morning\"\nstr = str[1]\nprint(str)\na. TypeError\nb. m\nc. o\nChanging the greeting message\nGiven the string \"Hello my fellow classmates\" containing a greeting message, print the first word by\ngetting the beginning of the string up to (and including) the 5th character. Change the first word in the\nstring to \"Hi\" instead of \"hello\" and print the greeting message again.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 203,
+    "metadata": {
+      "pages": [
+        203
+      ],
+      "book_pages": [
+        193
+      ],
+      "chapter": 8,
+      "section": "8.2",
+      "char_len": 789,
+      "content_hash": "cb563f5531889e16",
+      "char_start": 8011,
+      "char_end": 8801,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0018",
+    "text": "Access multimedia content (http://openstax.org/books/introduction-python-programming/pages/\nTRY IT\n8-2-string-slicing)\nEditing the string at specified locations\nGiven a string variable, string_variable, and a list of indexes, remove characters at the specified indexes\nand print the resulting string.\nInput:\nstring_variable = \"great\"\nindices = [0, 1]\nPrints:\neat\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-2-string-slicing)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 203,
+    "metadata": {
+      "pages": [
+        203,
+        204
+      ],
+      "book_pages": [
+        193,
+        194
+      ],
+      "chapter": 8,
+      "section": "8.2",
+      "char_len": 474,
+      "content_hash": "d1c6c6c3985804fa",
+      "char_start": 8801,
+      "char_end": 9276,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0019",
+    "text": "8.3 Searching/testing strings\nLearning objectives\nBy the end of this section you should be able to\n• Use the in operator to identify whether a given string contains a substring.\n• Call the count() method to count the number of substrings in a given string.\n• Search a string to find a substring using the find() method.\n• Use the index() method to find the index of the first occurrence of a substring in a given string.\n• Write a for loop on strings using in operator.\nin operator\nThe in Boolean operator can be used to check if a string contains another string. in returns True if the first\nstring exists in the second string, False otherwise.\nCHECKPOINT\nWhat is in the phrase?\nWhat is the phrase?; ch 8, video 3 (https://www.openstax.org/r/what-in-phrase)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 204,
+    "metadata": {
+      "pages": [
+        204
+      ],
+      "book_pages": [
+        194
+      ],
+      "chapter": 8,
+      "section": "8.3",
+      "char_len": 758,
+      "content_hash": "23d83a4c03828b06",
+      "char_start": 9276,
+      "char_end": 10035,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0020",
+    "text": "CONCEPTS IN PRACTICE\nUsing in operator to find substrings\n1 . What is the output of (\"a\" in \"an umbrella\")?\na. 2\nTRY IT\nb. False\nc. True\nd. 1\n2 . What is the output of (\"ab\" in \"arbitrary\")?\na. True\nb. False\n3 . What is the output of (\"\" in \"string\")?\na. True\nb. False\nFor loop using in operator\nThe in operator can be used to iterate over characters in a string using a for loop. In each for loop iteration,\none character is read and will be the loop variable for that iteration.\nCHECKPOINT\nfor loop using in operator\nFor loop using in operator; ch 8, video 4 (https://www.openstax.org/r/for-loop-in-operator)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 204,
+    "metadata": {
+      "pages": [
+        204,
+        205
+      ],
+      "book_pages": [
+        194,
+        195
+      ],
+      "chapter": 8,
+      "section": "8.3",
+      "char_len": 610,
+      "content_hash": "1755c6aa7449d64d",
+      "char_start": 10035,
+      "char_end": 10646,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0021",
+    "text": "CONCEPTS IN PRACTICE\nUsing in operator within for loop\n4 . What is the output of the following code?\nfor c in \"string\":\nprint(c, end = \"\")\na. string\nb. s\nt\nr\ni\nn\ng\nc. s t r i n g\n5 . What is the output of the following code?\ncount = 0\nfor c in \"abca\":\nif c == \"a\":\ncount += 1\nprint(count)\na. 0\nb. 1\nc. 2\n6 . What is the output of the following code?\nword = \"cab\"\nfor i in word:\nif i == \"a\":\nprint(\"A\", end = \"\")\nif i == \"b\":\nprint(\"B\", end = \"\")\nif i == \"c\":\nprint(\"C\", end = \"\")\na. cab\nb. abc\nc. CAB\nd. ABC\ncount()\nThe count() method counts the number of occurrences of a substring in a given string. If the given substring\ndoes not exist in the given string, the value 0 is returned.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 205,
+    "metadata": {
+      "pages": [
+        205,
+        206
+      ],
+      "book_pages": [
+        195,
+        196
+      ],
+      "chapter": 8,
+      "section": "8.3",
+      "char_len": 685,
+      "content_hash": "fec0afbdc3cdf67f",
+      "char_start": 10646,
+      "char_end": 11332,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0022",
+    "text": "CHECKPOINT\nCounting the number of occurrences of a substring\nCounting the number of occurrences of a substring; ch 8, video 5 (https://www.openstax.org/r/counting-\nsubstrings)\nCONCEPTS IN PRACTICE\nUsing count() to count the number of substrings\n7 . What is the output of (aaa\".count(\"a\"))?\na. True\nb. 1\nc. 3\n8 . What is the output of (\"weather\".count(\"b\"))?\na. 0\nb. -1\nc. False\n9 . What is the output of (\"aaa\".count(\"aa\"))?\na. 1\nb. 2\nc. 3\nfind()\nThe find() method returns the index of the first occurrence of a substring in a given string. If the substring\ndoes not exist in the given string, the value of -1 is returned.\nCHECKPOINT\nFinding the first index of a substring\nFinding the first index of a substring; ch 8, video 6 (https://www.openstax.org/r/finding-substring-index)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 206,
+    "metadata": {
+      "pages": [
+        206,
+        207
+      ],
+      "book_pages": [
+        196,
+        197
+      ],
+      "chapter": 8,
+      "section": "8.3",
+      "char_len": 779,
+      "content_hash": "5e8f4d00a1160979",
+      "char_start": 11332,
+      "char_end": 12112,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0023",
+    "text": "CONCEPTS IN PRACTICE\nUsing find() to locate a substring\n10 . What is the output of \"banana\".find(\"a\")?\na. 1\nb. 3\nc. 5\n11 . What is the output of \"banana\".find(\"c\")?\na. 0\nb. -1\nc. ValueError\n12 . What is the output of \"b\".find(\"banana\")?\na. -1\nb. 0\nc. ValueError\nindex()\nThe index() method performs similarly to the find() method in which the method returns the index of the\nfirst occurrence of a substring in a given string. The index() method assumes that the substring exists in the\ngiven string; otherwise, throws a ValueError.\nEXAMPLE 8.4",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 207,
+    "metadata": {
+      "pages": [
+        207
+      ],
+      "book_pages": [
+        197
+      ],
+      "chapter": 8,
+      "section": "8.3",
+      "char_len": 542,
+      "content_hash": "fec649be9f792f59",
+      "char_start": 12112,
+      "char_end": 12655,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0024",
+    "text": "Getting the time's minute portion\nConsider a time value is given as part of a string using the format of \"hh:mm\" with \"hh\" representing the\nhour and \"mm\" representing the minutes. To retrieve only the string's minute portion, the following code\ncan be used:\ntime_string = \"The time is 12:50\"\nindex = time_string.index(\":\")\nprint(time_string[index+1:index+3])\nThe above code's output is:\n50",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 207,
+    "metadata": {
+      "pages": [
+        207,
+        208
+      ],
+      "book_pages": [
+        197,
+        198
+      ],
+      "chapter": 8,
+      "section": "8.3",
+      "char_len": 389,
+      "content_hash": "c1df4cde2d61a50c",
+      "char_start": 12655,
+      "char_end": 13045,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0025",
+    "text": "CONCEPTS IN PRACTICE\nUsing index() to locate a substring\n13 . What is the output of \"school\".index(\"o\")?\na. 3\nb. 4\nc. -3\n14 . What is the output of \"school\".index(\"ooo\")?\na. 3\nb. 4\nc. ValueError\n15 . What is the output of the following code?\nsentence = \"This is a sentence\"\nindex = sentence.index(\" \")\nprint(sentence[:index])\na. \"This\"\nb. \"This \"\nc. \"sentence\"\nFinding all spaces\nWrite a program that, given a string, counts the number of space characters in the string. Also, print the\ngiven string with all spaces removed.\nInput: \"This is great\"\nPrints:\n2\nThisisgreat\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-3-searching-testing-strings)\nTRY IT",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 208,
+    "metadata": {
+      "pages": [
+        208
+      ],
+      "book_pages": [
+        198
+      ],
+      "chapter": 8,
+      "section": "8.3",
+      "char_len": 699,
+      "content_hash": "7a0636f1accfdacb",
+      "char_start": 13045,
+      "char_end": 13745,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0026",
+    "text": "8.4 String formatting\nLearning objectives\nBy the end of this section you should be able to\n• Format a string template using input arguments.\n• Use format() to generate numerical formats based on a given template.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 209,
+    "metadata": {
+      "pages": [
+        209
+      ],
+      "book_pages": [
+        199
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 212,
+      "content_hash": "4293e7dcebdf577a",
+      "char_start": 13745,
+      "char_end": 13958,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0027",
+    "text": "String format specification\nPython provides string substitutions syntax for formatting strings with input arguments. Formatting string\nincludes specifying string pattern rules and modifying the string according to the formatting specification.\nExamples of formatting strings include using patterns for building different string values and specifying\nmodification rules for the string's length and alignment.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 209,
+    "metadata": {
+      "pages": [
+        209
+      ],
+      "book_pages": [
+        199
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 407,
+      "content_hash": "5bee414ffee53a94",
+      "char_start": 13958,
+      "char_end": 14366,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0028",
+    "text": "String formatting with replacement fields\nReplacement fields are used to define a pattern for creating multiple string values that comply with a given\nformat. The example below shows two string values that use the same template for making requests to\ndifferent individuals for taking different courses.\nEXAMPLE 8.5",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 209,
+    "metadata": {
+      "pages": [
+        209
+      ],
+      "book_pages": [
+        199
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 314,
+      "content_hash": "41cb4f765724b9b5",
+      "char_start": 14366,
+      "char_end": 14681,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0029",
+    "text": "String values from the same template\nDear John, I'd like to take a programming course with Prof. Potter.\nDear Kishwar, I'd like to take a math course with Prof. Robinson.\nIn the example above, replacement fields are 1) the name of the individual the request is being made to, 2)\ntitle of the course, and 3) the name of the instructor. To create a template, replacement fields can be added\nwith {} to show a placeholder for user input. The format() method is used to pass inputs for replacement\nfields in a string template.\nEXAMPLE 8.6",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 209,
+    "metadata": {
+      "pages": [
+        209
+      ],
+      "book_pages": [
+        199
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 534,
+      "content_hash": "a41a7248f9314098",
+      "char_start": 14681,
+      "char_end": 15216,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0030",
+    "text": "String template formatting for course enrollment requests\nA string template with replacement fields is defined below to create string values with different input\narguments. The format() method is used to pass inputs to the template in the same order.\ns = \"Dear {}, I'd like to take a {} course with Prof. {}.\"\nprint(s)\nprint(s.format(\"John\", \"programming\", \"Potter\"))\nprint(s.format(\"Kishwar\", \"math\", \"Robinson\"))\nThe above code's output is:\nDear {}, I'd like to take a {} course with Prof. {}.\nDear John, I'd like to take a programming course with Prof. Potter.\nDear Kishwar, I'd like to take a math course with Prof. Robinson.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 209,
+    "metadata": {
+      "pages": [
+        209,
+        210
+      ],
+      "book_pages": [
+        199,
+        200
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 629,
+      "content_hash": "0b3f4c8b6369ae9d",
+      "char_start": 15216,
+      "char_end": 15846,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0031",
+    "text": "CONCEPTS IN PRACTICE\nString template and formatting\n1 . What is the output of print(\"Hello {}!\".format(\"Ana\"))?\na. Ana\nb. Hello Ana\nc. Hello Ana!\n2 . What is the output of print(\"{}:{}\".format(\"One\", \"1\"))?\na. One1\nb. One:1\nc. 1:One\n3 . What is the output of print(\"{}\".format(\"one\", \"two\", \"three\"))?\na. one\nb. two\nc. onetwothree\nNamed replacement fields\nReplacement fields can be tagged with a label, called named replacement fields, for ease of access and code\nreadability. The example below illustrates how named replacement fields can be used in string templates.\nEXAMPLE 8.7",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 210,
+    "metadata": {
+      "pages": [
+        210
+      ],
+      "book_pages": [
+        200
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 580,
+      "content_hash": "e65e412082789c60",
+      "char_start": 15846,
+      "char_end": 16427,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0032",
+    "text": "Season weather template using named replacement fields\nA named replacement argument is a convenient way of assigning name tags to replacement fields and\npassing values associated with replacement fields using corresponding names (instead of passing values in\norder).\ns = \"Weather in {season} is {temperature}.\"\nprint(s)\nprint(s.format(season = \"summer\", temperature = \"hot\"))\nprint(s.format(season = \"winter\", temperature = \"cold\"))\nThe above code's output is:\nWeather in {season} is {temperature}.\nWeather in summer is hot.\nWeather in winter is cold.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 210,
+    "metadata": {
+      "pages": [
+        210,
+        211
+      ],
+      "book_pages": [
+        200,
+        201
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 551,
+      "content_hash": "cf6b58075202e6e4",
+      "char_start": 16427,
+      "char_end": 16979,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0033",
+    "text": "MULTIPLE USE OF A NAMED ARGUMENT\nSince named replacement fields are referred to using a name key, a named replacement field can appear\nand be used more than once in the template. Also, positional ordering is not necessary when named\nreplacement fields are used.\ns = \"Weather in {season} is {temperature}; very very {temperature}.\"\nprint(s)\nprint(s.format(season = \"summer\", temperature = \"hot\"))\nprint(s.format(temperature = \"cold\", season = \"winter\"))\nThe above code's output is:\nWeather in {season} is {temperature}; very very {temperature}.\nWeather in summer is hot; very very hot.\nWeather in winter is cold; very very cold.\nCONCEPTS IN PRACTICE",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 211,
+    "metadata": {
+      "pages": [
+        211
+      ],
+      "book_pages": [
+        201
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 648,
+      "content_hash": "8d709c8fa2d70815",
+      "char_start": 16979,
+      "char_end": 17628,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0034",
+    "text": "Named replacement field examples\n4 . What is the output of print(\"Hey {name}!\".format(name = \"Bengio\"))?\na. Hey name!\nb. Hey Bengio\nc. Hey Bengio!\n5 . What is the output of print(\"Hey {name}!\".format(\"Bengio\"))?\na. Hey name!\nb. KeyError\nc. Hey Bengio!\n6 . What is the output of the following code?",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 211,
+    "metadata": {
+      "pages": [
+        211
+      ],
+      "book_pages": [
+        201
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 297,
+      "content_hash": "624adf6720edfa2e",
+      "char_start": 17628,
+      "char_end": 17926,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0035",
+    "text": "greeting = \"Hi\"\nname = \"Jess\"\nprint(\"{greeting} {name}\".format(greeting = greeting, name = name))\na. greeting name\nb. Hi Jess\nc. Jess Hi\nNumbered replacement fields\nPython's string format() method can use positional ordering to match the numbered arguments. The\nreplacement fields that use the positional ordering of arguments are called numbered replacement fields.\nThe indexing of the arguments starts from 0. Ex: print(\"{1}{0}\".format(\"Home\", \"Welcome\")) outputs\nthe string value \"Welcome Home\" as the first argument. \"Home\" is at index 0, and the second argument,\n\"Welcome\", is at index 1. Replacing these arguments in the order of \"{1}{0}\" creates the string \"Welcome\nHome\".",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 211,
+    "metadata": {
+      "pages": [
+        211,
+        212
+      ],
+      "book_pages": [
+        201,
+        202
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 679,
+      "content_hash": "9f3186e7fcade5de",
+      "char_start": 17926,
+      "char_end": 18606,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0036",
+    "text": "Numbered replacement fields can use argument's values for multiple replacement fields by using the same\nargument index. The example below illustrates how an argument is used for more than one numbered\nreplacement field.\nEXAMPLE 8.8",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 212,
+    "metadata": {
+      "pages": [
+        212
+      ],
+      "book_pages": [
+        202
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 231,
+      "content_hash": "3f9595eedf2a748f",
+      "char_start": 18606,
+      "char_end": 18838,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0037",
+    "text": "Numbered replacement field to build a phrase\nNumbered replacement fields are used in this example to build phrases like \"very very cold\" or \"very\nhot\".\ntemplate1 = \"{0} {0} {1}\"\ntemplate2 = \"{0} {1}\"\nprint(template1.format(\"very\", \"cold\"))\nprint(template2.format(\"very\", \"hot\"))\nThe above code's output is:\nvery very cold\nvery hot\nString length and alignment formatting\nFormatting the string length may be needed for standardizing the output style when multiple string values of\nthe same context are being created and printed. The example below shows a use case of string formatting in\nprinting a table with minimum-length columns and specific alignment.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 212,
+    "metadata": {
+      "pages": [
+        212
+      ],
+      "book_pages": [
+        202
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 654,
+      "content_hash": "bb40e48e72011880",
+      "char_start": 18838,
+      "char_end": 19493,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0038",
+    "text": "EXAMPLE 8.9\nA formatted table of a class roster\nA formatted table of a class roster\nStudent Name Major Grade\n----------------------------------------------\nManoj Sara Computer Science A-\nGabriel Wang Electrical Engineering A\nAlex Narayanan Social Sciences A+\nIn the example above, the table is formatted into three columns. The first column takes up 15 characters and is\nleft-aligned. The second column uses 25 characters and is center-aligned, and the last column uses two\ncharacters and is right aligned. Alignment and length format specifications controls are used to create the\nformatted table.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 212,
+    "metadata": {
+      "pages": [
+        212,
+        213
+      ],
+      "book_pages": [
+        202,
+        203
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 598,
+      "content_hash": "821777f217af10b1",
+      "char_start": 19493,
+      "char_end": 20092,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0039",
+    "text": "The field width in string format specification is used to specify the minimum length of the given string. If the\nstring is shorter than the given minimum length, the string will be padded by space characters. A field width\nis included in the format specification field using an integer after a colon. Ex: {name:15} specifies that the\nminimum length of the string values that are passed to the name field is 15.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 213,
+    "metadata": {
+      "pages": [
+        213
+      ],
+      "book_pages": [
+        203
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 410,
+      "content_hash": "ac467eb9d032fc9f",
+      "char_start": 20092,
+      "char_end": 20503,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0040",
+    "text": "Since the field width can be used to specify the minimum length of a string, the string can be padded with\nspace characters from right, left, or both to be left-aligned, right-aligned, and centered, respectively. The\nstring alignment type is specified using <, >, or ^characters after the colon when field length is specified. Ex:\n{name:^20} specifies a named replacement field with the minimum length of 20 characters that is center-\naligned.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 213,
+    "metadata": {
+      "pages": [
+        213
+      ],
+      "book_pages": [
+        203
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 443,
+      "content_hash": "c63f4040c791b13b",
+      "char_start": 20503,
+      "char_end": 20947,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0041",
+    "text": "Alignment\nType Symbol Example Output\nLeft-\naligned\n<\ntemplate = \"{hex:<7}{name:<10}\"\nprint(template.format(hex = \"#FF0000\",\nname = \"Red\")) print(template.format(hex\n= \"#00FF00\", name = \"green\"))\n#FF0000Red\n#00FF00green\nRight-\naligned\n>\ntemplate = \"{hex:>7}{name:>10}\"\nprint(template.format(hex = \"#FF0000\",\nname = \"Red\")) print(template.format(hex\n= \"#00FF00\", name = \"green\"))\n#FF0000 Red\n#00FF00 green\nCentered ^\ntemplate = \"{hex:^7}{name:^10}\"\nprint(template.format(hex = \"#FF0000\",\nname = \"Red\")) print(template.format(hex\n= \"#00FF00\", name = \"green\"))\n#FF0000 Red\n#00FF00 green\nTable 8.2 String alignment formatting.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 213,
+    "metadata": {
+      "pages": [
+        213
+      ],
+      "book_pages": [
+        203
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 621,
+      "content_hash": "44e685edb558ef1b",
+      "char_start": 20947,
+      "char_end": 21569,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0042",
+    "text": "CONCEPTS IN PRACTICE\nSpecifying field width and alignment\n7 . What is the output of the following code?\ntemplate = \"{name:12}\"\nformatted_name = template.format(name = \"Alice\")\nprint(len(formatted_name))\na. 5\nb. 12\nc. \"Alice\"\n8 . What is the output of the following code?\ntemplate = \"{greeting:>6}\"\nformatted_greeting = template.format(greeting = \"Hello\")\nprint(formatted_greeting[0])\na. H\nb. \" Hello\"\nc. Space character\n9 . What is the output of the following code?",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 213,
+    "metadata": {
+      "pages": [
+        213,
+        214
+      ],
+      "book_pages": [
+        203,
+        204
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 465,
+      "content_hash": "837a8fb684ceeb45",
+      "char_start": 21569,
+      "char_end": 22035,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0043",
+    "text": "template = \"{:5}\"\nprint(template.format(\"123456789\"))\na. 56789\nb. 123456\nc. 123456789\nFormatting numbers\nThe format() method can be used to format numerical values. Numerical values can be padded to have a\ngiven minimum length, precision, and sign character. The syntax for modifying numeric values follows the\n{[index]:[width][.precision][type]} structure. In the given syntax,\n• The index field refers to the index of the argument.\n• The width field refers to the minimum length of the string.\n• The precision field refers to the floating-point precision of the given number.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 214,
+    "metadata": {
+      "pages": [
+        214
+      ],
+      "book_pages": [
+        204
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 577,
+      "content_hash": "a5706b70b6a04007",
+      "char_start": 22035,
+      "char_end": 22613,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0044",
+    "text": "• The type field shows the type of the input that is passed to the format() method. Floating-point and\ndecimal inputs are identified by \"f\" and \"d\", respectively. String values are also identified by \"s\".\nThe table below summarizes formatting options for modifying numeric values.\nExample Output Explanation\nprint(\"{:.7f}\".format(0.9795)) 0.9795000\nThe format specification .7 shows the output\nmust have seven decimal places. The f\nspecification is an identifier of floating-point\nformatting.\nprint(\"{:.3f}\".format(12)) 12.000\nThe format specification .3 shows the output\nmust have three decimal places. The f\nspecification is an identifier of floating-point\nformatting.\nTable 8.3 Numerical formatting options.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 214,
+    "metadata": {
+      "pages": [
+        214
+      ],
+      "book_pages": [
+        204
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 710,
+      "content_hash": "387537c0a5f472d8",
+      "char_start": 22613,
+      "char_end": 23324,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0045",
+    "text": "Example Output Explanation\nprint(\"{:+.2f}\".format(4)) +4.00\nThe format specification .2 shows the output\nmust have two decimal places. The f specification\nis an identifier of floating-point formatting. The +\nsign before the precision specification adds a sign\ncharacter to the output.\nprint(\"{:0>5d}\".format(5)) 00005\nThe format specification 0>5 defines the width\nfield as 5, and thus the output must have a\nminimum length of 5. And, if the number has\nfewer than five digits, the number must be\npadded with 0's from the left side. The d\nspecification is an identifier of a decimal number\nformatting.\nprint(\"{:.3s}\".format(\"12.50\")) 12.\nThe format specification .3 shows the output will\nhave three characters. The s specification is an\nidentifier of string formatting.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 215,
+    "metadata": {
+      "pages": [
+        215
+      ],
+      "book_pages": [
+        205
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 768,
+      "content_hash": "fcc37403169b6683",
+      "char_start": 23324,
+      "char_end": 24093,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0046",
+    "text": "Table 8.3 Numerical formatting options.\nCONCEPTS IN PRACTICE\nNumeric value formatting examples\n10 . What is the output of print('{0:.3f}'.format(3.141592))?\na. 3.141592\nb. 3.1\nc. 3.142\n11 . What is the output of print('{:1>3d}'.format(3))?\na. 113\nb. 311\nc. 3.000\n12 . What is the output of print('{:+d}'.format(123))?\na. 123\nb. +123\nc. :+123\nFormatting a list of numbers\nGiven a list of numbers (floating-point or integer), print numbers with two decimal place precision and at\nTRY IT\nleast six characters.\nInput: [12.5, 2]\nPrints: 012.50\n002:00\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-4-string-formatting)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 215,
+    "metadata": {
+      "pages": [
+        215,
+        216
+      ],
+      "book_pages": [
+        205,
+        206
+      ],
+      "chapter": 8,
+      "section": "8.4",
+      "char_len": 660,
+      "content_hash": "0b2286a7111fd49d",
+      "char_start": 24093,
+      "char_end": 24754,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0047",
+    "text": "8.5 Splitting/joining strings\nLearning objectives\nBy the end of this section you should be able to\n• Use the split() method to split a string into substrings.\n• Combine objects in a list into a string using join() method.\nsplit()\nA string in Python can be broken into substrings given a delimiter. A delimiter is also referred to as a\nseparator. The split() method, when applied to a string, splits the string into substrings by using the given\nargument as a delimiter. Ex: \"1-2\".split('-') returns a list of substrings [\"1\", \"2\"]. When no arguments\nare given to the split() method, blank space characters are used as delimiters. Ex: \"1\\t2\\n3 4\".split()\nreturns [\"1\", \"2\", \"3\", \"4\"].",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 216,
+    "metadata": {
+      "pages": [
+        216
+      ],
+      "book_pages": [
+        206
+      ],
+      "chapter": 8,
+      "section": "8.5",
+      "char_len": 683,
+      "content_hash": "359332f0bebcedea",
+      "char_start": 24754,
+      "char_end": 25438,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0048",
+    "text": "CHECKPOINT\nsplit() for breaking down the string into tokens\nsplit() for breaking down the string into tokens; ch 8, video 7 (https://www.openstax.org/r/split-function)\nCONCEPTS IN PRACTICE\nExamples of string delimiters and split() method\n1 . What is the output of print(\"1*2*3*\".split('*'))?\na. [\"1\", \"*\", \"2\", \"*\", \"3\", \"*\"]\nb. [\"1\", \"2', \"3\"]\nc. [1, 2, 3]\n2 . What is the output of print(\"a year includes 12 months\".split())?\na. [\"a year includes 12 months\"]\nb. [\"a\", \"year\", \"includes\", 12, \"months\"]\nc. [\"a\", \"year\", \"includes\", \"12\", \"months\"]\n3 . What is the output of the following code?",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 216,
+    "metadata": {
+      "pages": [
+        216
+      ],
+      "book_pages": [
+        206
+      ],
+      "chapter": 8,
+      "section": "8.5",
+      "char_len": 594,
+      "content_hash": "0812b294929a8bb2",
+      "char_start": 25438,
+      "char_end": 26033,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0049",
+    "text": "s = \"\"\"This is a test\"\"\"\nout = s.split()\nprint(out)\na. Error\nb. ['This', 'is', 'a', 'test']\nc. >['This', 'is a', 'test']\njoin()\nThe join() method is the inverse of the split() method: a list of string values are concatenated together to\nform one output string. When joining string elements in the list, the delimiter is added in-between elements.\nEx: ','.join([\"this\", \"is\", \"great\"]) returns \"this,is,great\".\nCHECKPOINT\njoin() for combining tokens into one string\njoin() for combing tokens into one string; ch 8, video 8 (https://www.openstax.org/r/join-function)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 217,
+    "metadata": {
+      "pages": [
+        217
+      ],
+      "book_pages": [
+        207
+      ],
+      "chapter": 8,
+      "section": "8.5",
+      "char_len": 564,
+      "content_hash": "a37514a5c22dc9d0",
+      "char_start": 26033,
+      "char_end": 26598,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0050",
+    "text": "CONCEPTS IN PRACTICE\nApplying join() method on list of string values\n4 . What is the output of the following code?\nelements = ['A', 'beautiful', 'day', 'for', 'learning']\nprint(\",\".join(elements))\na. 'A beautiful day for learning'\nb. ['A, beautiful, day, for, learning']\nc. 'A,beautiful,day,for,learning'\n5 . What is the length of the string \"sss\".join([\"1\",\"2\"])?\na. 2\nb. 5\nc. 8\n6 . What is the value stored in the variable out?\ns = [\"1\", \"2\"]\nout = \"\".join(s)\na. 12\nb. \"12\"\nc. \"1 2\"\nUnique and comma-separated words\nWrite a program that accepts a comma-separated sequence of words as input, and prints words in separate\nlines. Ex: Given the string \"happy,smiling,face\", the output would be:",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 217,
+    "metadata": {
+      "pages": [
+        217,
+        218
+      ],
+      "book_pages": [
+        207,
+        208
+      ],
+      "chapter": 8,
+      "section": "8.5",
+      "char_len": 692,
+      "content_hash": "88221553ff72936e",
+      "char_start": 26598,
+      "char_end": 27291,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0051",
+    "text": "happy\nsmiling\nface\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-5-splitting-joining-strings)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 218,
+    "metadata": {
+      "pages": [
+        218
+      ],
+      "book_pages": [
+        208
+      ],
+      "chapter": 8,
+      "section": "8.5",
+      "char_len": 141,
+      "content_hash": "e32de3e2cfecd824",
+      "char_start": 27291,
+      "char_end": 27433,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0052",
+    "text": "Lunch order\nUse the join() method to repeat back a user's order at a restaurant, separated by commas. The user will\ninput each food item on a separate line. When finished ordering, the user will enter a blank line. The output\ndepends on how many items the user orders:\n• If the user inputs nothing, the program outputs:\nYou ordered nothing.\n• If the user inputs one item (Ex: eggs), the program outputs:\nYou ordered eggs.\n• If the user inputs two items (Ex: eggs, ham), the program outputs:\nYou ordered eggs and ham.\n• If the user inputs three or more items (Ex: eggs, ham, toast), the program outputs:\nYou ordered eggs, ham, and toast.\nIn the general case with three or more items, each item should be separated by a comma and a space. The\nword \"and\" should be added before the last item.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 218,
+    "metadata": {
+      "pages": [
+        218
+      ],
+      "book_pages": [
+        208
+      ],
+      "chapter": 8,
+      "section": "8.5",
+      "char_len": 789,
+      "content_hash": "f70b0f4547256068",
+      "char_start": 27433,
+      "char_end": 28223,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0053",
+    "text": "Access multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-5-splitting-joining-strings)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 218,
+    "metadata": {
+      "pages": [
+        218
+      ],
+      "book_pages": [
+        208
+      ],
+      "chapter": 8,
+      "section": "8.5",
+      "char_len": 122,
+      "content_hash": "5ea4256e8cab7801",
+      "char_start": 28223,
+      "char_end": 28346,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0054",
+    "text": "8.6 Chapter summary\nHighlights from this chapter include:\n• A string is a sequence of characters.\n• Logical operators can be used to compare two string values. String comparison is done by comparing\ncorresponding ASCII values of characters in the order of appearance in the string.\n• String indexing is used to access a character or a sequence of characters in the string.\n• String objects are immutable.\n• String splicing.\nAt this point, you should be able to write programs dealing with string values.\nTRY IT",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 218,
+    "metadata": {
+      "pages": [
+        218
+      ],
+      "book_pages": [
+        208
+      ],
+      "chapter": 8,
+      "section": "8.6",
+      "char_len": 510,
+      "content_hash": "4f8e9b8a24e65563",
+      "char_start": 28346,
+      "char_end": 28857,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0055",
+    "text": "TRY IT\nMethod Description\nlen() Returns the string length.\nupper() Returns uppercase characters.\nlower() Returns lowercase characters.\ncount() Returns the number of a given substring in a string.\nfind() Returns the index of the first occurrence of a given substring in a string. If the substring\ndoes not exist in the string, -1 is returned.\nindex() Returns the index of the first occurrence of a given substring in a string. If the substring does not exist in the string, a ValueError is returned.\nformat() Used to create strings with specified patterns using arguments.\njoin() Takes a list of string values and combines string values into one string by placing a given\nseparator between values.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 218,
+    "metadata": {
+      "pages": [
+        218,
+        219
+      ],
+      "book_pages": [
+        208,
+        209
+      ],
+      "chapter": 8,
+      "section": "8.6",
+      "char_len": 696,
+      "content_hash": "cc82774267664239",
+      "char_start": 28857,
+      "char_end": 29554,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0056",
+    "text": "split() Separates a string into tokens based on a given separator string. If no separator string is\nprovided, blank space characters are used as separators.\nOperator Description\nin Checks if a substring exists in a string.\nin operator in\na for loop for character in string:\n# loop body\nTable 8.4 Chapter 8 reference.\nFigure 9.1 credit: modification of work \"Budget and Bills\" by Alabama Extension/Flickr, Public Domain",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 219,
+    "metadata": {
+      "pages": [
+        219,
+        221
+      ],
+      "book_pages": [
+        209,
+        211
+      ],
+      "chapter": 8,
+      "section": "8.6",
+      "char_len": 418,
+      "content_hash": "5383d26c1cfaf88f",
+      "char_start": 29554,
+      "char_end": 29973,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0057",
+    "text": "Chapter Outline\n9.1 Modifying and iterating lists\n9.2 Sorting and reversing lists\n9.3 Common list operations\n9.4 Nested lists\n9.5 List comprehensions\n9.6 Chapter summary\nIntroduction\nProgrammers often work on collections of data. Lists are a useful way of collecting data elements. Python lists\nare extremely flexible, and, unlike strings, a list's contents can be changed.\nThe Objects chapter introduced lists. This chapter explores operations that can be performed on lists.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 221,
+    "metadata": {
+      "pages": [
+        221
+      ],
+      "book_pages": [
+        211
+      ],
+      "chapter": 9,
+      "section": "9.0",
+      "char_len": 476,
+      "content_hash": "056c9759445d83b5",
+      "char_start": 29973,
+      "char_end": 30450,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0058",
+    "text": "9.1 Modifying and iterating lists\nLearning objectives\nBy the end of this section you should be able to\n• Modify a list using append(), remove(), and pop() list operations.\n• Search a list using a for loop.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 221,
+    "metadata": {
+      "pages": [
+        221
+      ],
+      "book_pages": [
+        211
+      ],
+      "chapter": 9,
+      "section": "9.1",
+      "char_len": 205,
+      "content_hash": "16280bd9411399e2",
+      "char_start": 30450,
+      "char_end": 30656,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0059",
+    "text": "Using list operations to modify a list\nAn append() operation is used to add an element to the end of a list. In programming, append means add to\nthe end. A remove() operation removes the specified element from a list. A pop() operation removes the last\nitem of a list.\nLists\n9\nEXAMPLE 9.1",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 221,
+    "metadata": {
+      "pages": [
+        221,
+        222
+      ],
+      "book_pages": [
+        211,
+        212
+      ],
+      "chapter": 9,
+      "section": "9.1",
+      "char_len": 288,
+      "content_hash": "f02f9f7680da2dc4",
+      "char_start": 30656,
+      "char_end": 30945,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0060",
+    "text": "Simple operations to modify a list\nThe code below demonstrates simple operations for modifying a list.\nLine 8 shows the append() operation, line 12 shows the remove() operation, and line 17 shows the pop()\noperation. Since the pop() operation removes the last element, no parameter is needed.\n1 \"\"\"Operations for adding and removing elements from a list.\"\"\"\n2\n3 # Create a list of students working on a project\n4 student_list = [\"Jamie\", \"Vicky\", \"DeShawn\", \"Tae\"]\n5 print(student_list)\n6\n7 # Another student joins the project. The student must be added to\nthe list.\n8 student_list.append(\"Ming\")\n9 print(student_list)\n10\n11 # \"Jamie\" withdraws from the project. Jamie must be removed from\nthe list.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 222,
+    "metadata": {
+      "pages": [
+        222
+      ],
+      "book_pages": [
+        212
+      ],
+      "chapter": 9,
+      "section": "9.1",
+      "char_len": 699,
+      "content_hash": "ecf10bf089730c37",
+      "char_start": 30945,
+      "char_end": 31645,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0061",
+    "text": "12 student_list.remove(\"Jamie\")\n13 print(student_list)\n14\n15 # Suppose \"Ming\" had to be removed from the list.\n16 # A pop() operation can be used since Ming is last in the list.\n17 student_list.pop()\n18 print(student_list)\nThe above code's output is:\n['Jamie', 'Vicky', 'DeShawn', 'Tae']\n['Jamie', 'Vicky', 'DeShawn', 'Tae', 'Ming']\n['Vicky', 'DeShawn', 'Tae', 'Ming']\n['Vicky', 'DeShawn', 'Tae']\nCONCEPTS IN PRACTICE",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 222,
+    "metadata": {
+      "pages": [
+        222
+      ],
+      "book_pages": [
+        212
+      ],
+      "chapter": 9,
+      "section": "9.1",
+      "char_len": 417,
+      "content_hash": "188e18b4d9121767",
+      "char_start": 31645,
+      "char_end": 32063,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0062",
+    "text": "Modifying lists\n1 . Which operation can be used to add an element to the end of a list?\na. add()\nb. append()\nc. pop()\n2 . What is the correct syntax to remove the element 23 from a list called number_list?\na. remove()\nb. number_list.remove()\nc. number_list.remove(23)\n3 . Which operation can be used to remove an element from the end of a list?\na. only pop()\nb. only remove()\nc. either pop() or remove()",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 222,
+    "metadata": {
+      "pages": [
+        222,
+        223
+      ],
+      "book_pages": [
+        212,
+        213
+      ],
+      "chapter": 9,
+      "section": "9.1",
+      "char_len": 403,
+      "content_hash": "96ccdcf906e7278d",
+      "char_start": 32063,
+      "char_end": 32467,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0063",
+    "text": "Iterating lists\nAn iterative for loop can be used to iterate through a list. Alternatively, lists can be iterated using list indexes\nwith a counting for loop. The animation below shows both ways of iterating a list.\nCHECKPOINT\nUsing len() to get the length of a list\nUsing len() to get the length of a list; ch 9, video 1 (https://www.openstax.org/r/len-function)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 223,
+    "metadata": {
+      "pages": [
+        223
+      ],
+      "book_pages": [
+        213
+      ],
+      "chapter": 9,
+      "section": "9.1",
+      "char_len": 363,
+      "content_hash": "a563840ea541f83a",
+      "char_start": 32467,
+      "char_end": 32831,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0064",
+    "text": "CONCEPTS IN PRACTICE\nIterating lists\nFor the following questions, consider the list:\nmy_list = [2, 3, 5, 7, 9]\n4 . How many times will the following for loop execute?\nfor element in my_list:\na. 5\nb. 4\n5 . What is the final value of i for the following counting for loop?\nfor i in range(0, len(my_list)):\na. 9\nb. 4\nc. 5\n6 . What is the output of the code below?\nfor i in range(0, len(my_list), 2):\nprint(my_list[i], end=' ')\na. 2 5 9\nb. 2 3 5 7 9\nc. 2\n5\n9\nSports list\nCreate a list of sports played on a college campus. The sports to be included are baseball, football, tennis,\nand table tennis.\nNext, add volleyball to the list.\nNext, remove \"football\" from the list and add \"soccer\" to the list.\nShow the list contents after each modification.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 223,
+    "metadata": {
+      "pages": [
+        223,
+        224
+      ],
+      "book_pages": [
+        213,
+        214
+      ],
+      "chapter": 9,
+      "section": "9.1",
+      "char_len": 744,
+      "content_hash": "eee690e3e8c7d5e9",
+      "char_start": 32831,
+      "char_end": 33576,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0065",
+    "text": "Access multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n9-1-modifying-and-iterating-lists)\nSimple Searching\nWrite a program that prints \"found!\" if \"soccer\" is found in the given list.\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n9-1-modifying-and-iterating-lists)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 224,
+    "metadata": {
+      "pages": [
+        224
+      ],
+      "book_pages": [
+        214
+      ],
+      "chapter": 9,
+      "section": "9.1",
+      "char_len": 347,
+      "content_hash": "ecc0bcd95de17bd0",
+      "char_start": 33576,
+      "char_end": 33924,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0066",
+    "text": "9.2 Sorting and reversing lists\nLearning objectives\nBy the end of this section you should be able to\n• Understand the concept of sorting.\n• Use built-in sort() and reverse() methods.\nSorting\nOrdering elements in a sequence is often useful. Sorting is the task of arranging elements in a sequence in\nascending or descending order.\nSorting can work on numerical or non-numerical data. When ordering text, dictionary order is used. Ex: \"bat\"\ncomes before \"cat\" because \"b\" comes before \"c\".\nCHECKPOINT\nSorting\nSorting; ch 9, video 2 (https://www.openstax.org/r/sorting)\nTRY IT\nTRY IT\nCONCEPTS IN PRACTICE",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 224,
+    "metadata": {
+      "pages": [
+        224,
+        225
+      ],
+      "book_pages": [
+        214,
+        215
+      ],
+      "chapter": 9,
+      "section": "9.2",
+      "char_len": 601,
+      "content_hash": "ce12b3d5fc85bb2c",
+      "char_start": 33924,
+      "char_end": 34526,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0067",
+    "text": "Sorting\n1 . What would be the last element of the following list if it is sorted in descending order?\n[12, 3, 19, 25, 16, -3, 5]\na. 25\nb. -3\nc. 5\n2 . Arrange the following list in ascending order.\n[\"cat\", \"bat\", \"dog\", \"coyote\", \"wolf\"]\na. [\"bat\", \"cat\", \"coyote\", \"dog\", \"wolf\"]\nb. [\"wolf\", \"coyote\", \"dog\", \"cat\", \"bat\"]\n3 . How are the words \"flask\" and \"flash\" related in Python?\na. \"flask\" < \"flash\"\nb. \"flask\" == \"flash\"\nc. \"flask\" > \"flash\"\nUsing sort() and reverse()\nPython provides methods for arranging elements in a list.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 225,
+    "metadata": {
+      "pages": [
+        225
+      ],
+      "book_pages": [
+        215
+      ],
+      "chapter": 9,
+      "section": "9.2",
+      "char_len": 532,
+      "content_hash": "40ba75dbba4dc8bd",
+      "char_start": 34526,
+      "char_end": 35059,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0068",
+    "text": "• The sort() method arranges the elements of a list in ascending order. For strings, ASCII values are used\nand uppercase characters come before lowercase characters, leading to unexpected results. Ex: \"A\" is\nordered before \"a\" in ascending order but so is \"G\"; thus, \"Gail\" comes before \"apple\".\n• The reverse() method reverses the elements in a list.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 225,
+    "metadata": {
+      "pages": [
+        225
+      ],
+      "book_pages": [
+        215
+      ],
+      "chapter": 9,
+      "section": "9.2",
+      "char_len": 351,
+      "content_hash": "62764b54583ff913",
+      "char_start": 35059,
+      "char_end": 35411,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0069",
+    "text": "EXAMPLE 9.2\nSorting and reversing lists\n# Setup a list of numbers\nnum_list = [38, 92, 23, 16]\nprint(num_list)\n# Sort the list\nnum_list.sort()\nprint(num_list)\n# Setup a list of words\ndance_list = [\"Stepping\", \"Ballet\", \"Salsa\", \"Kathak\", \"Hopak\", \"Flamenco\", \"Dabke\"]\n# Reverse the list\ndance_list.reverse()\nprint(dance_list)\n# Sort the list\ndance_list.sort()\nprint(dance_list)\nThe above code's output is:\n[38, 92, 23, 16]\n[16, 23, 38, 92]\n[\"Dabke\", \"Flamenco\", \"Hopak\", \"Kathak\", \"Salsa\", \"Ballet\", \"Stepping\"]\n[\"Ballet\", \"Dabke\", \"Flamenco\", \"Hopak\", \"Kathak\", \"Salsa\", \"Stepping\"]",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 225,
+    "metadata": {
+      "pages": [
+        225,
+        226
+      ],
+      "book_pages": [
+        215,
+        216
+      ],
+      "chapter": 9,
+      "section": "9.2",
+      "char_len": 582,
+      "content_hash": "5ad1e77955f2d86b",
+      "char_start": 35411,
+      "char_end": 35994,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0070",
+    "text": "CONCEPTS IN PRACTICE\nsort() and reverse() methods\nUse the following list for the questions below.\nboard_games = [\"go\", \"chess\", \"scrabble\", \"checkers\"]\n4 . What is the correct way to sort the list board_games in ascending order?\na. sort(board_games)\nb. board_games.sort()\nc. board_games.sort('ascending')\n5 . What is the correct way to reverse the list board_games?\na. board_games.reverse()\nb. reverse(board_games)\n6 . What would be the last element of board_games after the reverse() method has been applied?\na. 'go'\nb. 'checkers'\nc. 'scrabble'\nSorting and reversing\nComplete the program below to arrange and print the numbers in ascending and descending order.\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n9-2-sorting-and-reversing-lists)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 226,
+    "metadata": {
+      "pages": [
+        226
+      ],
+      "book_pages": [
+        216
+      ],
+      "chapter": 9,
+      "section": "9.2",
+      "char_len": 787,
+      "content_hash": "a7079e43a9ae33f0",
+      "char_start": 35994,
+      "char_end": 36782,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0071",
+    "text": "9.3 Common list operations\nLearning objectives\nBy the end of this section you should be able to\nTRY IT\n• Use built-in functions max(), min(), and sum().\n• Demonstrate how to copy a list.\nUsing built-in operations\nThe max() function called on a list returns the largest element in the list. The min() function called on a list\nreturns the smallest element in the list. The max() and min() functions work for lists as long as elements\nwithin the list are comparable.\nThe sum() function called on a list of numbers returns the sum of all elements in the list.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 226,
+    "metadata": {
+      "pages": [
+        226,
+        227
+      ],
+      "book_pages": [
+        216,
+        217
+      ],
+      "chapter": 9,
+      "section": "9.3",
+      "char_len": 556,
+      "content_hash": "fb0449d1742e3e90",
+      "char_start": 36782,
+      "char_end": 37339,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0072",
+    "text": "EXAMPLE 9.3\nCommon list operations\n\"\"\"Common list operations.\"\"\"\n# Set up a list of number\nsnum_list = [28, 92, 17, 3, -5, 999, 1]\n# Set up a list of words\ncity_list = [\"New York\", \"Missoula\", \"Chicago\", \"Bozeman\",\n\"Birmingham\", \"Austin\", \"Sacramento\"]\n# Usage of the max() funtion\nprint(max(num_list))\n# max() function works for strings as well\nprint(max(city_list))\n# Usage of the min() funtion which also works for strings\nprint(min(num_list))\nprint(min(city_list))\n# sum() only works for a list of numbers\nprint(sum(num_list))\nThe above code's output is:\n999\nSacramento\n-5\nAustin\n1135\nCONCEPTS IN PRACTICE",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 227,
+    "metadata": {
+      "pages": [
+        227,
+        228
+      ],
+      "book_pages": [
+        217,
+        218
+      ],
+      "chapter": 9,
+      "section": "9.3",
+      "char_len": 609,
+      "content_hash": "aa686556251b498c",
+      "char_start": 37339,
+      "char_end": 37949,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0073",
+    "text": "List operations\n1 . What is the correct way to get the minimum of a list named nums_list?\na. min(nums_list)\nb. nums_list.min()\nc. minimum(nums_list)\n2 . What is the minimum of the following list?\n[\"Lollapalooza\", \"Coachella\", \"Newport Jazz festival\", \"Hardly Strictly\nBluegrass\", \"Austin City Limits\"]\na. Coachella\nb. Austin City Limits\nc. The minimum doesn't exist.\n3 . What value does the function call return?\nsum([1.2, 2.1, 3.2, 5.9])\na. sum() only works for integers.\nb. 11\nc. 12.4\nCopying a list\nThe copy() method is used to create a copy of a list.\nCHECKPOINT\nCopying a list\nCopying a list; ch 9, video 3 (https://www.openstax.org/r/copying-list)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 228,
+    "metadata": {
+      "pages": [
+        228
+      ],
+      "book_pages": [
+        218
+      ],
+      "chapter": 9,
+      "section": "9.3",
+      "char_len": 653,
+      "content_hash": "936917abd7bbd3b8",
+      "char_start": 37949,
+      "char_end": 38603,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0074",
+    "text": "CONCEPTS IN PRACTICE\nCopying a list\n4 . What is the output of the following code?\nmy_list = [1, 2, 3]\nlist2 = my_list\nlist2[0] = 13\nprint(sum(my_list))\na. 6\nb. 13\nc. 18\n5 . What is the output of the following code?\nmy_list = [1, 2, 3]\nlist2 = my_list.copy()\nlist2[0] = 13\nprint(max(my_list))\na. 3\nb. 13\nc. 18\n6 . What is the output of the following code?\nmy_list = [\"Cat\", \"Dog\", \"Hamster\"]\nlist2 = my_list\nlist2[2] = \"Pigeon\"\nprint(sum(my_list))\na. CatDogPigeon\nb. Error\nCopy\nMake a copy of word_list called wisdom. Sort the list called wisdom. Create a sentence using the words in\neach list and print those sentences (no need to add periods at the end of the sentences).\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n9-3-common-list-operations)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 228,
+    "metadata": {
+      "pages": [
+        228,
+        229
+      ],
+      "book_pages": [
+        218,
+        219
+      ],
+      "chapter": 9,
+      "section": "9.3",
+      "char_len": 792,
+      "content_hash": "8332dad43e082a4a",
+      "char_start": 38603,
+      "char_end": 39396,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0075",
+    "text": "9.4 Nested lists\nLearning objectives\nBy the end of this section you should be able to\n• Demonstrate the use of a list-of-lists to structure data.\n• Demonstrate individual element addressing using multi-dimensional indexing.\n• Use nested loops to iterate a list-of-lists.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 229,
+    "metadata": {
+      "pages": [
+        229
+      ],
+      "book_pages": [
+        219
+      ],
+      "chapter": 9,
+      "section": "9.4",
+      "char_len": 270,
+      "content_hash": "8bca1674db9b6617",
+      "char_start": 39396,
+      "char_end": 39667,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0076",
+    "text": "List-of-lists\nLists can be made of any type of element. A list element can also be a list. Ex: [2, [3, 5], 17] is a valid list\nwith the list [3, 5] being the element at index 1.\nWhen a list is an element inside a larger list, it is called a nested list. Nested lists are useful for expressing\nmultidimensional data. When each of the elements of a larger list is a smaller list, the larger list is called a list-\nof-lists.\nEx: A table can be stored as a two-dimensional list-of-lists, where each row of data is a list in the list-of-lists.\nTRY IT\nCHECKPOINT\nList-of-lists\nList-of-lists; ch 9, video 4 (https://www.openstax.org/r/list-of-lists)\nCONCEPTS IN PRACTICE",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 229,
+    "metadata": {
+      "pages": [
+        229,
+        230
+      ],
+      "book_pages": [
+        219,
+        220
+      ],
+      "chapter": 9,
+      "section": "9.4",
+      "char_len": 663,
+      "content_hash": "cbe3b17fca40a574",
+      "char_start": 39667,
+      "char_end": 40331,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0077",
+    "text": "Lists\nFor each of the questions below, consider the following matrix:\n1 . What would be the correct way to represent matA in Python?\na. [[7, 4, 5], [3, 9, 6], [1, 2, 8]]\nb. [7, 4, 5\n3, 9, 6\n1, 2, 8]\nc. [[7, 3, 1], [4, 9, 2], [1, 2, 8]\n2 . What would be the correct index for the number 6 in the above list?\na. [5]\nb. [2][1]\nc. [1][2]\n3 . What would be the result of the following code:\nprint(matA[0])\na. Error\nb. 7\nc. [7, 4, 5]\nUsing nested loops to iterate nested lists\nA nested loop structure can be used to iterate a list-of-lists. For a two-dimensional list-of-lists, an outer for\nloop can be used for rows, and an inner for loop can be used for columns.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 230,
+    "metadata": {
+      "pages": [
+        230
+      ],
+      "book_pages": [
+        220
+      ],
+      "chapter": 9,
+      "section": "9.4",
+      "char_len": 658,
+      "content_hash": "2637d1c812a45173",
+      "char_start": 40331,
+      "char_end": 40990,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0078",
+    "text": "EXAMPLE 9.4\nIterating a list-of-lists\nThe code below demonstrates how to iterate a list-of-lists.\nThe outer loop on line 9 goes element by element for the larger list. Each element in the larger list is a list.\nThe inner loop on line 10 iterates through each element in each nested list.\n1 \"\"\"Iterating a list-of-lists.\"\"\"\n2\n3 # Create a list of numbers\n4 list1 = [[1, 2, 3],\n5 [1, 4, 9],\n6 [1, 8, 27]]\n7\n8 # Iterating the list-of-lists\n9 for row in list1:\n10 for num in row:\n11 print(num, end=\" \")\n12 print()\nThe above code's output is:\n1 2 3\n1 4 9\n1 8 27",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 230,
+    "metadata": {
+      "pages": [
+        230,
+        231
+      ],
+      "book_pages": [
+        220,
+        221
+      ],
+      "chapter": 9,
+      "section": "9.4",
+      "char_len": 556,
+      "content_hash": "92c54380906c9c01",
+      "char_start": 40990,
+      "char_end": 41547,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0079",
+    "text": "CONCEPTS IN PRACTICE\nIterating a list-of-lists\nFor each question below, consider the following list:\nmy_list = [[7, 4, 5, 12],\n[24, 3, 9, 16],\n[12, 8, 91, -5]]\n4 . Which code prints each number in my_list starting from 7, then 4, and so on ending with -5?\na. for row in my_list:\nfor elem in row:\nprint(elem)\nb. for elem in my_list:\nprint(elem)\n5 . The range() function can also be used to iterate a list-of-lists. Which code prints each number in\nmy_list starting from 7, then 4, and so on, ending with -5, using counting for loops?\na. for column_index in range(0, len(my_list[0])):\nfor row_index in range (0, len(my_list)):\nprint(my_list[row_index][column_index])\nb. for row_index in range(0, len(my_list)):\nfor column_index in range (0, len(my_list)):",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 231,
+    "metadata": {
+      "pages": [
+        231
+      ],
+      "book_pages": [
+        221
+      ],
+      "chapter": 9,
+      "section": "9.4",
+      "char_len": 753,
+      "content_hash": "a7ec409e7f6f2783",
+      "char_start": 41547,
+      "char_end": 42301,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0080",
+    "text": "print(my_list[row_index][column_index])\nprint()\nc. for row_index in range(0, len(my_list)):\nfor column_index in range (0, len(my_list[0])):\nprint(my_list[row_index][column_index])\nMatrix multiplication\nWrite a program that calculates the matrix multiplication product of the matrices matW and matZ below\nand prints the result. The expected result is shown.\nIn the result matrix, each element is calculated according to the position of the element. The result at\nposition [i][j] is calculated using row i from the first matrix, W, and column j from the second matrix, Z.\nEx:\nresult[1][2] = (row 1 in W) times (column 2 in Z)\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n9-4-nested-lists)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 231,
+    "metadata": {
+      "pages": [
+        231,
+        232
+      ],
+      "book_pages": [
+        221,
+        222
+      ],
+      "chapter": 9,
+      "section": "9.4",
+      "char_len": 733,
+      "content_hash": "7aa8f7eca86b8441",
+      "char_start": 42301,
+      "char_end": 43035,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0081",
+    "text": "9.5 List comprehensions\nLearning objectives\nBy the end of this section you should be able to\n• Identify the different components of a list comprehension statement.\n• Implement filtering using list comprehension.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 232,
+    "metadata": {
+      "pages": [
+        232
+      ],
+      "book_pages": [
+        222
+      ],
+      "chapter": 9,
+      "section": "9.5",
+      "char_len": 211,
+      "content_hash": "1bf58f3cb84df8b8",
+      "char_start": 43035,
+      "char_end": 43247,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0082",
+    "text": "List comprehensions\nA list comprehension is a Python statement to compactly create a new list using a pattern.\nThe general form of a list comprehension statement is shown below.\nlist_name = [expression for loop_variable in iterable]\nlist_name refers to the name of a new list, which can be anything, and the for is the for loop keyword. An\nexpression defines what will become part of the new list. loop_variable is an iterator, and iterable is an\nobject that can be iterated, such as a list or string.\nTRY IT",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 232,
+    "metadata": {
+      "pages": [
+        232
+      ],
+      "book_pages": [
+        222
+      ],
+      "chapter": 9,
+      "section": "9.5",
+      "char_len": 508,
+      "content_hash": "d5a7663b24764740",
+      "char_start": 43247,
+      "char_end": 43756,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0083",
+    "text": "EXAMPLE 9.5\nCreating a new list with a list comprehension\nA list comprehension shown below in the second code has the same effect as the regular for loop shown in\nthe first code. The resultant list is [0, 1, 4, 9, 16, 25, 36, 49, 64, 81] in both cases.\nCreating a list of squares using a for loop.\n# Create an empty List.\nsquares_list = []\n# Add items to a list, as squares of numbers starting at 0 and ending at 9.\nfor i in range(10):\nsquares_list.append(i*i)\nCreating a list of squares using the list comprehension.\nsquare_list = [i*i for i in range(10)]\nThe expression i*i is applied for each value of the loop_variable i.\nEXAMPLE 9.6",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 233,
+    "metadata": {
+      "pages": [
+        233
+      ],
+      "book_pages": [
+        223
+      ],
+      "chapter": 9,
+      "section": "9.5",
+      "char_len": 637,
+      "content_hash": "1c862fa8f2bc98a4",
+      "char_start": 43756,
+      "char_end": 44394,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0084",
+    "text": "A Dr. Seuss poem\nA list comprehension can be used to create a list based on another list. In line 6, the for loop is written on\nthe list poem_lines.\n1 # Create a list of words\n2 words_list = [\"one\", \"two\", \"red\", \"blue\"]\n3\n4 # Use a list comprehension to create a new list called poem_lines\n5 # Inserting the word \"fish\" attached to each word in words_list\n6 poem_lines = [w + \" fish\" for w in words_list]\n7 for line in poem_lines:\n8 print(line)\nThe above code's output is:\none fish\ntwo fish\nred fish\nblue fish\nCONCEPTS IN PRACTICE",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 233,
+    "metadata": {
+      "pages": [
+        233,
+        234
+      ],
+      "book_pages": [
+        223,
+        224
+      ],
+      "chapter": 9,
+      "section": "9.5",
+      "char_len": 531,
+      "content_hash": "dfe0aa2d3511e6f6",
+      "char_start": 44394,
+      "char_end": 44926,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0085",
+    "text": "List comprehensions\n1 . The component of a list comprehension defining an element of the new list is the _____.\na. expression\nb. loop_variable\nc. container\n2 . What would be the contents of b_list after executing the code below?\na_list = [1, 2, 3, 4, 5]\nb_list = [i+2 for i in a_list]\na. [1, 2, 3, 4, 5]\nb. [0, 1, 2, 3, 4]\nc. [3, 4, 5, 6, 7]\n3 . What does new_list contain after executing the statement below?\nnew_list = [i//3 for i in range(1, 15, 3)]\na. [0.3333333333333333, 1.3333333333333333, 2.3333333333333335,\n3.3333333333333335, 4.333333333333333]\nb. [0, 1, 2, 3, 4]\nc. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]\nFiltering using list comprehensions\nList comprehensions can be used to filter items from a given list. A condition is added to the list\ncomprehension.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 234,
+    "metadata": {
+      "pages": [
+        234
+      ],
+      "book_pages": [
+        224
+      ],
+      "chapter": 9,
+      "section": "9.5",
+      "char_len": 776,
+      "content_hash": "f9e47d6d880a27df",
+      "char_start": 44926,
+      "char_end": 45703,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0086",
+    "text": "list_name = [expression for loop_variable in container if condition]\nIn a filter list comprehension, an element is added into list_name only if the condition is met.\nCHECKPOINT\nFiltering a list\nFiltering a list; ch 9, video 5 (https://www.openstax.org/r/filtering-list)\nCONCEPTS IN PRACTICE",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 234,
+    "metadata": {
+      "pages": [
+        234
+      ],
+      "book_pages": [
+        224
+      ],
+      "chapter": 9,
+      "section": "9.5",
+      "char_len": 290,
+      "content_hash": "4d90ae89404764b8",
+      "char_start": 45703,
+      "char_end": 45994,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0087",
+    "text": "Filtering using list comprehensions\nFor each code using list comprehension, select the correct resultant list in new_list.\n4 . my_list = [21, -1, 50, -9, 300, -50, 2]\nnew_list = [m for m in my_list if m < 0]\na. [21, 50, 300, 2]\nb. [21, -1, 50, -9, 300, -50, 2]\nc. [-1, -9, -50]\n5 . my_string = \"This is a home.\"\nnew_list = [i for i in my_string if i in 'aeiou']\na. [i, i, a, o, e]\nb. ['i', 'i'', 'a', 'o', 'e']\nc. Error",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 234,
+    "metadata": {
+      "pages": [
+        234,
+        235
+      ],
+      "book_pages": [
+        224,
+        225
+      ],
+      "chapter": 9,
+      "section": "9.5",
+      "char_len": 419,
+      "content_hash": "96c02fc04f90f0b4",
+      "char_start": 45994,
+      "char_end": 46414,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0088",
+    "text": "6 . new_list = [r for r in range (0, 21, 2) if r%2 != 0]\na. []\nb. [21]\nc. [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\nSelecting five-letter words\nWrite a program that creates a list of only five-letter words from the given list and prints the new list.\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/9-5-list-\ncomprehensions)\nBooks starting with \"A\"\nWrite a program that selects words that begin with an \"A\" in the given list. Make sure the new list is then\nsorted in dictionary order. Finally, print the new sorted list.\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/9-5-list-\ncomprehensions)",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 235,
+    "metadata": {
+      "pages": [
+        235
+      ],
+      "book_pages": [
+        225
+      ],
+      "chapter": 9,
+      "section": "9.5",
+      "char_len": 674,
+      "content_hash": "e41eac6647a8198a",
+      "char_start": 46414,
+      "char_end": 47089,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0089",
+    "text": "9.6 Chapter summary\nHighlights from this chapter include:\n• Lists are mutable and can be easily modified by using append(), remove(), and pop() operations.\n• Lists are iterable and can be iterated using an iterator or element indexes.\n• The sort() operation arranges the elements of a list in ascending order if all elements of the list are of\nthe same type.\nTRY IT",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 235,
+    "metadata": {
+      "pages": [
+        235
+      ],
+      "book_pages": [
+        225
+      ],
+      "chapter": 9,
+      "section": "9.6",
+      "char_len": 365,
+      "content_hash": "c657fdce9b0d9284",
+      "char_start": 47089,
+      "char_end": 47455,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0090",
+    "text": "TRY IT\n• The reverse() operation reverses a list.\n• The copy() method is used to create a copy of a list.\n• Lists have built-in functions for finding the maximum, minimum, and summation of a list for lists with only\nnumeric values.\n• Lists can be nested to represent multidimensional data.\n• A list comprehension is a compact way of creating a new list, which can be used to filter items from an\nexisting list.\nAt this point, you should be able to write programs using lists.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 235,
+    "metadata": {
+      "pages": [
+        235,
+        236
+      ],
+      "book_pages": [
+        225,
+        226
+      ],
+      "chapter": 9,
+      "section": "9.6",
+      "char_len": 475,
+      "content_hash": "f7d4ea07ec231b8e",
+      "char_start": 47455,
+      "char_end": 47931,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  },
+  {
+    "id": "B-openstax-intro-python-0091",
+    "text": "Function Description\nappend(element) Adds the specified element to the end of a list.\nremove(element) Removes the specified element from the list if the element exists.\npop() Removes the last element of a list.\nmax(list) Returns the maximum element of the list specified.\nmin(list) Returns the maximum element of the list specified.\nsum(list) Returns the summation of a list composed of numbers.\nsort() Sorts a list on which the method is called in ascending order.\nreverse() Reverses the order of elements in a list.\ncopy() Makes a complete copy of a list.\nTable 9.1 Chapter 9 reference.",
+    "source_id": "openstax-intro-python",
+    "source": "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Python_Programming-WEB.pdf",
+    "page": 236,
+    "metadata": {
+      "pages": [
+        236
+      ],
+      "book_pages": [
+        226
+      ],
+      "chapter": 9,
+      "section": "9.6",
+      "char_len": 588,
+      "content_hash": "1944ddc46d23bf7d",
+      "char_start": 47931,
+      "char_end": 48519,
+      "day6_index": "B",
+      "day6_embedding_model": "BAAI/bge-small-en-v1.5"
+    }
+  }
+]

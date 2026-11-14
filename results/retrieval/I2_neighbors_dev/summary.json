@@ -1,0 +1,27 @@
+{
+  "config": "I2_neighbors",
+  "method": "hybrid+rerank",
+  "split": "dev",
+  "N_answerable": 15,
+  "N_unanswerable": 2,
+  "hit1": 14,
+  "hit3": 14,
+  "context_hit": 14,
+  "avg_context_chars": 3537,
+  "avg_context_chunks": 5.82,
+  "median_ms_per_query": 92.0,
+  "setup_seconds": 7.41,
+  "cost_usd": 0,
+  "config_params": {
+    "kind": "improvement",
+    "method": "hybrid+rerank",
+    "top_k": 3,
+    "context_budget": 4000,
+    "neighbors": 1,
+    "rrf_k": 60,
+    "candidates": 20,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "hypothesis": "Day 6 B chunks split one topic across neighbours (Filtering intro 0085 vs syntax 0086, t01 explanation 0003 vs table 0004); adding same-section neighbours raises Context Evidence Rate without changing ranking.",
+    "based_on": "I1_hybrid_rerank"
+  }
+}

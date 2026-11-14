@@ -1,0 +1,6 @@
+{
+  "selected": "I3_rerank_maxseg",
+  "baseline": "M1_dense",
+  "locked_at": "2026-11-14, after dev retrieval + agent dev runs, before any test run",
+  "reason": "Highest dev Context Evidence Rate (retrieval 15/15, agent final context 15/15 vs I1 14/15, M1 12/15); agent behaviour tied (0/15 false abstentions, 2/2 correct abstentions); fewer Gemini requests than M1 (43 vs 47); extra retrieval latency (~187 ms vs ~93 ms) negligible next to ~9 s per question."
+}

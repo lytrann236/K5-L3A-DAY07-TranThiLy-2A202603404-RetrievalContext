@@ -1,0 +1,471 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "type": "direct",
+    "question": "What does find() return if the substring does not exist in the string?",
+    "expected_answer": "-1",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 207,
+        "evidence": "If the substring does not exist in the given string, the value of -1 is returned.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0022"
+        ]
+      },
+      {
+        "source_id": "openstax-intro-python",
+        "page": 219,
+        "evidence": "If the substring does not exist in the string, -1 is returned.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0055"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "type": "exception",
+    "question": "What happens if index() is called with a substring that is not in the string?",
+    "expected_answer": "It throws a ValueError (unlike find(), which returns -1).",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 207,
+        "evidence": "The index() method assumes that the substring exists in the given string; otherwise, throws a ValueError.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0023"
+        ]
+      },
+      {
+        "source_id": "openstax-intro-python",
+        "page": 219,
+        "evidence": "If the substring does not exist in the string, a ValueError is returned.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0055"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "type": "direct",
+    "question": "What value does count() return when the substring is not found?",
+    "expected_answer": "0",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 206,
+        "evidence": "If the given substring does not exist in the given string, the value 0 is returned.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0021"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Can I change one character of an existing string object directly?",
+    "expected_answer": "No. Strings are immutable; a new string must be created instead.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 202,
+        "evidence": "String objects are immutable meaning that string objects cannot be modified or changed once created.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0016"
+        ]
+      },
+      {
+        "source_id": "openstax-intro-python",
+        "page": 218,
+        "evidence": "String objects are immutable.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0054"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "type": "direct",
+    "question": "In slicing s[a:b], what are the defaults when a or b is omitted?",
+    "expected_answer": "a defaults to 0, b defaults to len(string).",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 201,
+        "evidence": "If a or b are not provided, the default values are 0 and len(string), respectively.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0012"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "type": "direct",
+    "question": "With negative indexing, what index does the right-most character of a string have?",
+    "expected_answer": "-1 (the left-most is -len(s)).",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 200,
+        "evidence": "the left-most character is indexed -len(s) and the right-most character is indexed -1",
+        "chunk_ids": [
+          "B-openstax-intro-python-0011"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Can the same labelled placeholder be used several times in one format template?",
+    "expected_answer": "Yes; a named replacement field can appear more than once and positional order is not needed.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 211,
+        "evidence": "a named replacement field can appear and be used more than once in the template",
+        "chunk_ids": [
+          "B-openstax-intro-python-0033"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "type": "conditional",
+    "question": "What happens when a string is shorter than the field width in a format specification?",
+    "expected_answer": "It is padded with space characters.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 213,
+        "evidence": "If the string is shorter than the given minimum length, the string will be padded by space characters.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0039"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "type": "direct",
+    "question": "Which characters specify left, right and centre alignment in a format field?",
+    "expected_answer": "< (left), > (right), ^ (centre), written after the colon.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 213,
+        "evidence": "The string alignment type is specified using <, >, or ^characters after the colon when field length is specified.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0040"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "type": "conditional",
+    "question": "What delimiter does split() use when called without arguments?",
+    "expected_answer": "Blank space characters (spaces, tabs, newlines).",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 216,
+        "evidence": "When no arguments are given to the split() method, blank space characters are used as delimiters.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0047"
+        ]
+      },
+      {
+        "source_id": "openstax-intro-python",
+        "page": 219,
+        "evidence": "If no separator string is provided, blank space characters are used as separators.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0056"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "type": "direct",
+    "question": "What is the difference between remove() and pop() on a list?",
+    "expected_answer": "remove() deletes a specified element; pop() removes the last item.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 221,
+        "evidence": "A remove() operation removes the specified element from a list. A pop() operation removes the last item of a list.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0059"
+        ]
+      },
+      {
+        "source_id": "openstax-intro-python",
+        "page": 236,
+        "evidence": "remove(element) Removes the specified element from the list if the element exists. pop() Removes the last element of a list.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0091"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "type": "exception",
+    "question": "Why might sort() put \"Gail\" before \"apple\"?",
+    "expected_answer": "sort() uses ASCII values, so uppercase characters come before lowercase.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 225,
+        "evidence": "For strings, ASCII values are used and uppercase characters come before lowercase characters, leading to unexpected results.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0068"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "type": "conditional",
+    "question": "Under what condition do max() and min() work on a list?",
+    "expected_answer": "When the elements in the list are comparable.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 227,
+        "evidence": "The max() and min() functions work for lists as long as elements within the list are comparable.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0071"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "type": "filter",
+    "question": "How do you loop over each element with a for loop using the in operator?",
+    "expected_answer": "for c in some_string: — each iteration reads one character as the loop variable.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 205,
+        "evidence": "The in operator can be used to iterate over characters in a string using a for loop.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0020"
+        ]
+      }
+    ],
+    "filter": {
+      "chapter": 8
+    }
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "type": "filter",
+    "question": "Can the contents of this kind of sequence be changed after it is created?",
+    "expected_answer": "Yes; list contents can be changed (lists are mutable).",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 221,
+        "evidence": "unlike strings, a list's contents can be changed",
+        "chunk_ids": [
+          "B-openstax-intro-python-0057"
+        ]
+      },
+      {
+        "source_id": "openstax-intro-python",
+        "page": 235,
+        "evidence": "Lists are mutable and can be easily modified by using append(), remove(), and pop() operations.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0089"
+        ]
+      }
+    ],
+    "filter": {
+      "chapter": 9
+    }
+  },
+  {
+    "id": "t01",
+    "split": "test",
+    "type": "filter",
+    "question": "How are two values compared when using operators such as < or >?",
+    "expected_answer": "Characters are compared one by one in order using their ASCII values until a decision is reached.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 197,
+        "evidence": "When comparing two string values, the matching characters in two string values are compared sequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical operators.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0003"
+        ]
+      }
+    ],
+    "filter": {
+      "chapter": 8
+    }
+  },
+  {
+    "id": "t02",
+    "split": "test",
+    "type": "conditional",
+    "question": "When does a filtering list comprehension add an element to the new list?",
+    "expected_answer": "Only if the condition is met.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 234,
+        "evidence": "In a filter list comprehension, an element is added into list_name only if the condition is met.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0086"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t03",
+    "split": "test",
+    "type": "direct",
+    "question": "What is a nested list?",
+    "expected_answer": "A list that is an element inside a larger list.",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 229,
+        "evidence": "When a list is an element inside a larger list, it is called a nested list.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0076"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t04",
+    "split": "test",
+    "type": "paraphrase",
+    "question": "What effect does putting + in a numeric format like {:+.2f} have?",
+    "expected_answer": "It adds a sign character to the output (e.g. +4.00).",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 215,
+        "evidence": "The + sign before the precision specification adds a sign character to the output.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0045"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t05",
+    "split": "test",
+    "type": "direct",
+    "question": "At what number does argument indexing start in numbered replacement fields?",
+    "expected_answer": "0",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "gold": [
+      {
+        "source_id": "openstax-intro-python",
+        "page": 212,
+        "evidence": "The indexing of the arguments starts from 0.",
+        "chunk_ids": [
+          "B-openstax-intro-python-0035"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "u01",
+    "split": "dev",
+    "question": "What does the strip() method do to a string?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Ch.8 (Strings) never mentions strip(); search of normalized text of all 39 counted pages: 'strip' = 0 hits."
+  },
+  {
+    "id": "u02",
+    "split": "dev",
+    "question": "What is the difference between the append() and extend() methods of a list?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "append() is covered (Ch.9) but extend() is never mentioned ('extend' = 0 hits), so the difference cannot be answered from the corpus."
+  },
+  {
+    "id": "u03",
+    "split": "test",
+    "question": "How do you reverse a string using slicing with a step value, such as s[::-1]?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Section 8.2 covers s[a:b] only; no third (step) slice argument: '::' = 0 hits, 'step' only appears inside the word 'stepping'."
+  },
+  {
+    "id": "u04",
+    "split": "test",
+    "question": "How do you insert an element at a specific index of a list using insert()?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Ch.9 lists append(), remove(), pop(), sort(), reverse(), copy() but not insert(): 'insert(' = 0 hits; 'insert' appears once only in an unrelated code comment."
+  }
+]
