@@ -1,0 +1,74 @@
+[
+  {
+    "query_id": "t01",
+    "config": "M1_dense",
+    "split": "test",
+    "citation_support": [
+      true,
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct and complete; both ideas (sequential char comparison + ASCII) in cited 0003 p.197, 0054 summary confirms; needed 2 searches; malformed combined marker [0003, 0054] in text"
+  },
+  {
+    "query_id": "t02",
+    "config": "M1_dense",
+    "split": "test",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct, verbatim match of evidence in cited 0086 p.234; gold chunk was rank 3 in first search so agent searched again (2 searches)"
+  },
+  {
+    "query_id": "t03",
+    "config": "M1_dense",
+    "split": "test",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct and complete; both sentences verbatim in cited 0076 p.229; 1 search (query 'nested list')"
+  },
+  {
+    "query_id": "t04",
+    "config": "M1_dense",
+    "split": "test",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct; verbatim evidence + example {:+.2f} -> +4.00 in cited 0045 p.215; agent's own query found gold at rank 1 (fixed-query dense had it at rank 3)"
+  },
+  {
+    "query_id": "t05",
+    "config": "M1_dense",
+    "split": "test",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct; evidence verbatim in cited 0035 p.211-212 with {1}{0} example; gold chunk was rank 2 in context (top1 0036 not about indexing) but model picked the right one"
+  },
+  {
+    "query_id": "u03",
+    "config": "M1_dense",
+    "split": "test",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "correctly abstained after 3 reformulated searches; stated excerpts do not cover step slicing; no unsupported claim (did not give s[::-1] from own knowledge)"
+  },
+  {
+    "query_id": "u04",
+    "config": "M1_dense",
+    "split": "test",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "correctly abstained after 3 searches (incl. bare keyword 'insert'); stated excerpts do not cover insert(); no claim from outside knowledge"
+  }
+]

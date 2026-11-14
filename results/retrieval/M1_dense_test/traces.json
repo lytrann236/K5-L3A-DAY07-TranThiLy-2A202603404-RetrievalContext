@@ -1,0 +1,388 @@
+[
+  {
+    "query_id": "t01",
+    "split": "test",
+    "answerable": true,
+    "question": "How are two values compared when using operators such as < or >?",
+    "query_sent": "How are two values compared when using operators such as < or >?",
+    "filter": {
+      "chapter": 8
+    },
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0004",
+        "score": 0.8522364497184753,
+        "pages": [
+          198
+        ],
+        "section": "8.1",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0003",
+        "score": 0.8478472828865051,
+        "pages": [
+          197,
+          198
+        ],
+        "section": "8.1",
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0054",
+        "score": 0.7828511725156815,
+        "pages": [
+          218
+        ],
+        "section": "8.6",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0004",
+      "B-openstax-intro-python-0003",
+      "B-openstax-intro-python-0054"
+    ],
+    "context_chars": 2173,
+    "context": "[B-openstax-intro-python-0004 | pdf page 198 | section 8.1]\n< or <=\nChecks whether the\nfirst string value is less\nthan (or less than or\nequal to) the second\nstring value.\n\"ab\" <\n\"ac\" True\nWhen comparing \"ab\" operand to \"ac\"\noperand, the first characters are the same,\nbut the second character of \"ab\" is less\nthan the second character in \"ac\" and as\nsuch \"ab\" < \"ac\".\n== Checks whether two\nstring values are equal.\n\"aa\" ==\n\"aa\" True\nSince all characters in the first operand and\nthe second operand are the same, the two\nstring values are equal.\n!=\nChecks whether two\nstring values are not\nequal.\n\"a\" !=\n\"b\" True\nThe two operands contain different string\nvalues (\"a\" vs. \"b\"), and the result of\nchecking whether the two are not the same\nevaluates to True.\nin\nChecks whether the\nsecond operand\ncontains the first\noperand.\n\n[B-openstax-intro-python-0003 | pdf page 197,198 | section 8.1]\nString comparison\nString values can be compared using logical operators (<, <=, >, >=, ==, !=) and membership operators (in and\nnot in). When comparing two string values, the matching characters in two string values are compared\nsequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical\noperators.\nStrings\n8\nOperator Description Example Output Explanation\n> or >=\nChecks whether the\nfirst string value is\ngreater than (or greater\nthan or equal to) the\nsecond string value.\n\"c\" >\n\"d\" False\nWhen comparing \"c\" operand to \"d\"\noperand, the ASCII value for \"c\" is smaller\nthan the ASCII value for \"d\". Therefore, \"c\"\n< \"d\". The expression \"c\" > \"d\"\nevaluates to False.\n\n[B-openstax-intro-python-0054 | pdf page 218 | section 8.6]\n8.6 Chapter summary\nHighlights from this chapter include:\n• A string is a sequence of characters.\n• Logical operators can be used to compare two string values. String comparison is done by comparing\ncorresponding ASCII values of characters in the order of appearance in the string.\n• String indexing is used to access a character or a sequence of characters in the string.\n• String objects are immutable.\n• String splicing.\nAt this point, you should be able to write programs dealing with string values.\nTRY IT",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 371.2
+  },
+  {
+    "query_id": "t02",
+    "split": "test",
+    "answerable": true,
+    "question": "When does a filtering list comprehension add an element to the new list?",
+    "query_sent": "When does a filtering list comprehension add an element to the new list?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0085",
+        "score": 0.845360118703834,
+        "pages": [
+          234
+        ],
+        "section": "9.5",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0086",
+        "score": 0.798333311279623,
+        "pages": [
+          234
+        ],
+        "section": "9.5",
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0087",
+        "score": 0.7899614352056812,
+        "pages": [
+          234,
+          235
+        ],
+        "section": "9.5",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0085",
+      "B-openstax-intro-python-0086",
+      "B-openstax-intro-python-0087"
+    ],
+    "context_chars": 1673,
+    "context": "[B-openstax-intro-python-0085 | pdf page 234 | section 9.5]\nList comprehensions\n1 . The component of a list comprehension defining an element of the new list is the _____.\na. expression\nb. loop_variable\nc. container\n2 . What would be the contents of b_list after executing the code below?\na_list = [1, 2, 3, 4, 5]\nb_list = [i+2 for i in a_list]\na. [1, 2, 3, 4, 5]\nb. [0, 1, 2, 3, 4]\nc. [3, 4, 5, 6, 7]\n3 . What does new_list contain after executing the statement below?\nnew_list = [i//3 for i in range(1, 15, 3)]\na. [0.3333333333333333, 1.3333333333333333, 2.3333333333333335,\n3.3333333333333335, 4.333333333333333]\nb. [0, 1, 2, 3, 4]\nc. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]\nFiltering using list comprehensions\nList comprehensions can be used to filter items from a given list. A condition is added to the list\ncomprehension.\n\n[B-openstax-intro-python-0086 | pdf page 234 | section 9.5]\nlist_name = [expression for loop_variable in container if condition]\nIn a filter list comprehension, an element is added into list_name only if the condition is met.\nCHECKPOINT\nFiltering a list\nFiltering a list; ch 9, video 5 (https://www.openstax.org/r/filtering-list)\nCONCEPTS IN PRACTICE\n\n[B-openstax-intro-python-0087 | pdf page 234,235 | section 9.5]\nFiltering using list comprehensions\nFor each code using list comprehension, select the correct resultant list in new_list.\n4 . my_list = [21, -1, 50, -9, 300, -50, 2]\nnew_list = [m for m in my_list if m < 0]\na. [21, 50, 300, 2]\nb. [21, -1, 50, -9, 300, -50, 2]\nc. [-1, -9, -50]\n5 . my_string = \"This is a home.\"\nnew_list = [i for i in my_string if i in 'aeiou']\na. [i, i, a, o, e]\nb. ['i', 'i'', 'a', 'o', 'e']\nc. Error",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 15.3
+  },
+  {
+    "query_id": "t03",
+    "split": "test",
+    "answerable": true,
+    "question": "What is a nested list?",
+    "query_sent": "What is a nested list?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0076",
+        "score": 0.7722410193753549,
+        "pages": [
+          229,
+          230
+        ],
+        "section": "9.4",
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0077",
+        "score": 0.7519601583480835,
+        "pages": [
+          230
+        ],
+        "section": "9.4",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0075",
+        "score": 0.7422569547738473,
+        "pages": [
+          229
+        ],
+        "section": "9.4",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0076",
+      "B-openstax-intro-python-0077",
+      "B-openstax-intro-python-0075"
+    ],
+    "context_chars": 1779,
+    "context": "[B-openstax-intro-python-0076 | pdf page 229,230 | section 9.4]\nList-of-lists\nLists can be made of any type of element. A list element can also be a list. Ex: [2, [3, 5], 17] is a valid list\nwith the list [3, 5] being the element at index 1.\nWhen a list is an element inside a larger list, it is called a nested list. Nested lists are useful for expressing\nmultidimensional data. When each of the elements of a larger list is a smaller list, the larger list is called a list-\nof-lists.\nEx: A table can be stored as a two-dimensional list-of-lists, where each row of data is a list in the list-of-lists.\nTRY IT\nCHECKPOINT\nList-of-lists\nList-of-lists; ch 9, video 4 (https://www.openstax.org/r/list-of-lists)\nCONCEPTS IN PRACTICE\n\n[B-openstax-intro-python-0077 | pdf page 230 | section 9.4]\nLists\nFor each of the questions below, consider the following matrix:\n1 . What would be the correct way to represent matA in Python?\na. [[7, 4, 5], [3, 9, 6], [1, 2, 8]]\nb. [7, 4, 5\n3, 9, 6\n1, 2, 8]\nc. [[7, 3, 1], [4, 9, 2], [1, 2, 8]\n2 . What would be the correct index for the number 6 in the above list?\na. [5]\nb. [2][1]\nc. [1][2]\n3 . What would be the result of the following code:\nprint(matA[0])\na. Error\nb. 7\nc. [7, 4, 5]\nUsing nested loops to iterate nested lists\nA nested loop structure can be used to iterate a list-of-lists. For a two-dimensional list-of-lists, an outer for\nloop can be used for rows, and an inner for loop can be used for columns.\n\n[B-openstax-intro-python-0075 | pdf page 229 | section 9.4]\n9.4 Nested lists\nLearning objectives\nBy the end of this section you should be able to\n• Demonstrate the use of a list-of-lists to structure data.\n• Demonstrate individual element addressing using multi-dimensional indexing.\n• Use nested loops to iterate a list-of-lists.",
+    "neighbors_added": [],
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 14.8
+  },
+  {
+    "query_id": "t04",
+    "split": "test",
+    "answerable": true,
+    "question": "What effect does putting + in a numeric format like {:+.2f} have?",
+    "query_sent": "What effect does putting + in a numeric format like {:+.2f} have?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0043",
+        "score": 0.7207895614128533,
+        "pages": [
+          214
+        ],
+        "section": "8.4",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0046",
+        "score": 0.7155675292015127,
+        "pages": [
+          215,
+          216
+        ],
+        "section": "8.4",
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0045",
+        "score": 0.7061770733489463,
+        "pages": [
+          215
+        ],
+        "section": "8.4",
+        "hit": true
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0043",
+      "B-openstax-intro-python-0046",
+      "B-openstax-intro-python-0045"
+    ],
+    "context_chars": 2193,
+    "context": "[B-openstax-intro-python-0043 | pdf page 214 | section 8.4]\ntemplate = \"{:5}\"\nprint(template.format(\"123456789\"))\na. 56789\nb. 123456\nc. 123456789\nFormatting numbers\nThe format() method can be used to format numerical values. Numerical values can be padded to have a\ngiven minimum length, precision, and sign character. The syntax for modifying numeric values follows the\n{[index]:[width][.precision][type]} structure. In the given syntax,\n• The index field refers to the index of the argument.\n• The width field refers to the minimum length of the string.\n• The precision field refers to the floating-point precision of the given number.\n\n[B-openstax-intro-python-0046 | pdf page 215,216 | section 8.4]\nTable 8.3 Numerical formatting options.\nCONCEPTS IN PRACTICE\nNumeric value formatting examples\n10 . What is the output of print('{0:.3f}'.format(3.141592))?\na. 3.141592\nb. 3.1\nc. 3.142\n11 . What is the output of print('{:1>3d}'.format(3))?\na. 113\nb. 311\nc. 3.000\n12 . What is the output of print('{:+d}'.format(123))?\na. 123\nb. +123\nc. :+123\nFormatting a list of numbers\nGiven a list of numbers (floating-point or integer), print numbers with two decimal place precision and at\nTRY IT\nleast six characters.\nInput: [12.5, 2]\nPrints: 012.50\n002:00\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-4-string-formatting)\n\n[B-openstax-intro-python-0045 | pdf page 215 | section 8.4]\nExample Output Explanation\nprint(\"{:+.2f}\".format(4)) +4.00\nThe format specification .2 shows the output\nmust have two decimal places. The f specification\nis an identifier of floating-point formatting. The +\nsign before the precision specification adds a sign\ncharacter to the output.\nprint(\"{:0>5d}\".format(5)) 00005\nThe format specification 0>5 defines the width\nfield as 5, and thus the output must have a\nminimum length of 5. And, if the number has\nfewer than five digits, the number must be\npadded with 0's from the left side. The d\nspecification is an identifier of a decimal number\nformatting.\nprint(\"{:.3s}\".format(\"12.50\")) 12.\nThe format specification .3 shows the output will\nhave three characters. The s specification is an\nidentifier of string formatting.",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 19.6
+  },
+  {
+    "query_id": "t05",
+    "split": "test",
+    "answerable": true,
+    "question": "At what number does argument indexing start in numbered replacement fields?",
+    "query_sent": "At what number does argument indexing start in numbered replacement fields?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0036",
+        "score": 0.8592702150344849,
+        "pages": [
+          212
+        ],
+        "section": "8.4",
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0035",
+        "score": 0.8005249500274658,
+        "pages": [
+          211,
+          212
+        ],
+        "section": "8.4",
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0037",
+        "score": 0.7491060495376587,
+        "pages": [
+          212
+        ],
+        "section": "8.4",
+        "hit": false
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0036",
+      "B-openstax-intro-python-0035",
+      "B-openstax-intro-python-0037"
+    ],
+    "context_chars": 1752,
+    "context": "[B-openstax-intro-python-0036 | pdf page 212 | section 8.4]\nNumbered replacement fields can use argument's values for multiple replacement fields by using the same\nargument index. The example below illustrates how an argument is used for more than one numbered\nreplacement field.\nEXAMPLE 8.8\n\n[B-openstax-intro-python-0035 | pdf page 211,212 | section 8.4]\ngreeting = \"Hi\"\nname = \"Jess\"\nprint(\"{greeting} {name}\".format(greeting = greeting, name = name))\na. greeting name\nb. Hi Jess\nc. Jess Hi\nNumbered replacement fields\nPython's string format() method can use positional ordering to match the numbered arguments. The\nreplacement fields that use the positional ordering of arguments are called numbered replacement fields.\nThe indexing of the arguments starts from 0. Ex: print(\"{1}{0}\".format(\"Home\", \"Welcome\")) outputs\nthe string value \"Welcome Home\" as the first argument. \"Home\" is at index 0, and the second argument,\n\"Welcome\", is at index 1. Replacing these arguments in the order of \"{1}{0}\" creates the string \"Welcome\nHome\".\n\n[B-openstax-intro-python-0037 | pdf page 212 | section 8.4]\nNumbered replacement field to build a phrase\nNumbered replacement fields are used in this example to build phrases like \"very very cold\" or \"very\nhot\".\ntemplate1 = \"{0} {0} {1}\"\ntemplate2 = \"{0} {1}\"\nprint(template1.format(\"very\", \"cold\"))\nprint(template2.format(\"very\", \"hot\"))\nThe above code's output is:\nvery very cold\nvery hot\nString length and alignment formatting\nFormatting the string length may be needed for standardizing the output style when multiple string values of\nthe same context are being created and printed. The example below shows a use case of string formatting in\nprinting a table with minimum-length columns and specific alignment.",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "elapsed_ms": 15.1
+  },
+  {
+    "query_id": "u03",
+    "split": "test",
+    "answerable": false,
+    "question": "How do you reverse a string using slicing with a step value, such as s[::-1]?",
+    "query_sent": "How do you reverse a string using slicing with a step value, such as s[::-1]?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0012",
+        "score": 0.7391282475514382,
+        "pages": [
+          201
+        ],
+        "section": "8.2",
+        "hit": null
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0015",
+        "score": 0.7205099463462881,
+        "pages": [
+          202
+        ],
+        "section": "8.2",
+        "hit": null
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0010",
+        "score": 0.7193655967712453,
+        "pages": [
+          200
+        ],
+        "section": "8.2",
+        "hit": null
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0012",
+      "B-openstax-intro-python-0015",
+      "B-openstax-intro-python-0010"
+    ],
+    "context_chars": 1532,
+    "context": "[B-openstax-intro-python-0012 | pdf page 201 | section 8.2]\nCONCEPTS IN PRACTICE\nAccessing characters in a string using indexing\n1 . Which character is at index 1 in the string \"hello\"?\na. \"h\"\nb. \"e\"\nc. \"o\"\n2 . What is the character at index -2 in the string \"Blue\"?\na. \"e\"\nb. \"u\"\nc. \"l\"\n3 . What is the output of the following code?\nword = \"chance\"\nprint(word[-1] == word[5])\na. True\nb. False\nString slicing\nString slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing\noperator can be used. When [a:b] is used with the name of a string variable, a sequence of characters\nstarting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. If a or b are not\nprovided, the default values are 0 and len(string), respectively.\nEXAMPLE 8.2\n\n[B-openstax-intro-python-0015 | pdf page 202 | section 8.2]\nCONCEPTS IN PRACTICE\nGetting a substring using string slicing\n4 . What is the output of the following code?\na_string = \"Hello world\"\nprint(a_string[2:4])\na. \"el\"\nb. \"ll\"\nc. \"llo\"\n5 . What is the output of the following code?\nlocation = \"classroom\"\nprint(location[-3:-1])\na. \"ro\"\nb. \"oo\"\nc. \"oom\"\n6 . What is the output of the following code?\n\n[B-openstax-intro-python-0010 | pdf page 200 | section 8.2]\n8.2 String slicing\nLearning objectives\nBy the end of this section you should be able to\n• Use string indexing to access characters in the string.\n• Use string slicing to get a substring from a string.\n• Identify immutability characteristics of strings.",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "elapsed_ms": 18.3
+  },
+  {
+    "query_id": "u04",
+    "split": "test",
+    "answerable": false,
+    "question": "How do you insert an element at a specific index of a list using insert()?",
+    "query_sent": "How do you insert an element at a specific index of a list using insert()?",
+    "filter": null,
+    "config": "M1_dense",
+    "method": "dense",
+    "top3": [
+      {
+        "rank": 1,
+        "id": "B-openstax-intro-python-0091",
+        "score": 0.7317791203194598,
+        "pages": [
+          236
+        ],
+        "section": "9.6",
+        "hit": null
+      },
+      {
+        "rank": 2,
+        "id": "B-openstax-intro-python-0062",
+        "score": 0.719667813768024,
+        "pages": [
+          222,
+          223
+        ],
+        "section": "9.1",
+        "hit": null
+      },
+      {
+        "rank": 3,
+        "id": "B-openstax-intro-python-0079",
+        "score": 0.7102743598900548,
+        "pages": [
+          231
+        ],
+        "section": "9.4",
+        "hit": null
+      }
+    ],
+    "context_ids": [
+      "B-openstax-intro-python-0091",
+      "B-openstax-intro-python-0062",
+      "B-openstax-intro-python-0079"
+    ],
+    "context_chars": 1932,
+    "context": "[B-openstax-intro-python-0091 | pdf page 236 | section 9.6]\nFunction Description\nappend(element) Adds the specified element to the end of a list.\nremove(element) Removes the specified element from the list if the element exists.\npop() Removes the last element of a list.\nmax(list) Returns the maximum element of the list specified.\nmin(list) Returns the maximum element of the list specified.\nsum(list) Returns the summation of a list composed of numbers.\nsort() Sorts a list on which the method is called in ascending order.\nreverse() Reverses the order of elements in a list.\ncopy() Makes a complete copy of a list.\nTable 9.1 Chapter 9 reference.\n\n[B-openstax-intro-python-0062 | pdf page 222,223 | section 9.1]\nModifying lists\n1 . Which operation can be used to add an element to the end of a list?\na. add()\nb. append()\nc. pop()\n2 . What is the correct syntax to remove the element 23 from a list called number_list?\na. remove()\nb. number_list.remove()\nc. number_list.remove(23)\n3 . Which operation can be used to remove an element from the end of a list?\na. only pop()\nb. only remove()\nc. either pop() or remove()\n\n[B-openstax-intro-python-0079 | pdf page 231 | section 9.4]\nCONCEPTS IN PRACTICE\nIterating a list-of-lists\nFor each question below, consider the following list:\nmy_list = [[7, 4, 5, 12],\n[24, 3, 9, 16],\n[12, 8, 91, -5]]\n4 . Which code prints each number in my_list starting from 7, then 4, and so on ending with -5?\na. for row in my_list:\nfor elem in row:\nprint(elem)\nb. for elem in my_list:\nprint(elem)\n5 . The range() function can also be used to iterate a list-of-lists. Which code prints each number in\nmy_list starting from 7, then 4, and so on, ending with -5, using counting for loops?\na. for column_index in range(0, len(my_list[0])):\nfor row_index in range (0, len(my_list)):\nprint(my_list[row_index][column_index])\nb. for row_index in range(0, len(my_list)):\nfor column_index in range (0, len(my_list)):",
+    "neighbors_added": [],
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "elapsed_ms": 15.9
+  }
+]

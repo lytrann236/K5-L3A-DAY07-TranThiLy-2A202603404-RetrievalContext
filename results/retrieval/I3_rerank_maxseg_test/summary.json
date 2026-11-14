@@ -1,0 +1,27 @@
+{
+  "config": "I3_rerank_maxseg",
+  "method": "hybrid+rerank_maxseg",
+  "split": "test",
+  "N_answerable": 5,
+  "N_unanswerable": 2,
+  "hit1": 5,
+  "hit3": 5,
+  "context_hit": 5,
+  "avg_context_chars": 1824,
+  "avg_context_chunks": 3,
+  "median_ms_per_query": 196.9,
+  "setup_seconds": 2.46,
+  "cost_usd": 0,
+  "config_params": {
+    "kind": "improvement",
+    "method": "hybrid+rerank_maxseg",
+    "top_k": 3,
+    "context_budget": 2400,
+    "neighbors": 0,
+    "rrf_k": 60,
+    "candidates": 20,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "segment_chars": 350,
+    "hypothesis": "Dev error q03: the gold chunk 0021 is a for-loop quiz with the count() definition only in its last lines (Day 6 chunking flaw); whole-chunk cross-encoder scores are diluted. Scoring 350-char segments and taking the max should keep such chunks in the top-3 without re-indexing."
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "query_id": "t01",
+    "config": "I3_rerank_maxseg",
+    "split": "test",
+    "citation_support": [
+      true,
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct and complete; evidence verbatim in cited 0003 p.197 (rank 1), 0054 summary confirms; only 1 search (baseline needed 2); same malformed combined marker [0003, 0054]"
+  },
+  {
+    "query_id": "t02",
+    "config": "I3_rerank_maxseg",
+    "split": "test",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct, verbatim evidence + syntax in cited 0086 p.234 (rank 1 after rerank); 1 search vs 2 for baseline"
+  },
+  {
+    "query_id": "t03",
+    "config": "I3_rerank_maxseg",
+    "split": "test",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct and complete; both sentences verbatim in cited 0076 p.229 (rank 1); identical to baseline"
+  },
+  {
+    "query_id": "t04",
+    "config": "I3_rerank_maxseg",
+    "split": "test",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct; verbatim evidence + example {:+.2f} -> +4.00 in cited 0045 p.215 (rank 1); 1 search"
+  },
+  {
+    "query_id": "t05",
+    "config": "I3_rerank_maxseg",
+    "split": "test",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "context_grade": 2,
+    "reason": "correct; evidence verbatim in cited 0035 p.211-212 with {1}{0} example; gold chunk rank 1 (baseline: rank 2)"
+  },
+  {
+    "query_id": "u03",
+    "config": "I3_rerank_maxseg",
+    "split": "test",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "correctly abstained after 3 reformulated searches; stated excerpts do not cover step slicing; no unsupported claim"
+  },
+  {
+    "query_id": "u04",
+    "config": "I3_rerank_maxseg",
+    "split": "test",
+    "citation_support": [],
+    "abstention_correct": true,
+    "reason": "correctly abstained after 3 searches; stated excerpts do not cover insert(); no claim from outside knowledge"
+  }
+]

@@ -1,0 +1,1161 @@
+[
+  {
+    "query_id": "t01",
+    "split": "test",
+    "question": "How are two values compared when using operators such as < or >?",
+    "filter": {
+      "chapter": 8
+    },
+    "retrieval_config": "M1_dense",
+    "model": "gemini-3.5-flash-lite",
+    "agent_params": {
+      "retrieval": "M1_dense",
+      "split": "test",
+      "limit": null,
+      "only": null,
+      "max_searches": 3,
+      "top_k": 3,
+      "budget": 4000
+    },
+    "status": "answered",
+    "answer": "When comparing two values (such as strings) using logical operators like `<` or `>`, the matching characters are compared sequentially until a decision is reached [B-openstax-intro-python-0003]. For comparing individual characters, ASCII values are used to apply the logical operators [B-openstax-intro-python-0003, B-openstax-intro-python-0054]. [B-openstax-intro-python-0054]",
+    "citations": [
+      "B-openstax-intro-python-0003",
+      "B-openstax-intro-python-0054"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "operators less than greater than compare values strings lists",
+        "filter": {
+          "chapter": 8
+        },
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0003",
+            "rank": 1,
+            "score": 0.7655594348907471,
+            "pages": [
+              197,
+              198
+            ],
+            "section": "8.1"
+          },
+          {
+            "id": "B-openstax-intro-python-0006",
+            "rank": 2,
+            "score": 0.7458794116973877,
+            "pages": [
+              198,
+              199
+            ],
+            "section": "8.1"
+          },
+          {
+            "id": "B-openstax-intro-python-0002",
+            "rank": 3,
+            "score": 0.7420139312744141,
+            "pages": [
+              197
+            ],
+            "section": "8.1"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0003",
+          "B-openstax-intro-python-0006",
+          "B-openstax-intro-python-0002"
+        ],
+        "context_chars": 1798
+      },
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "comparing two values operators list string comparison ASCII values",
+        "filter": {
+          "chapter": 8
+        },
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0003",
+            "rank": 1,
+            "score": 0.8519666283150552,
+            "pages": [
+              197,
+              198
+            ],
+            "section": "8.1"
+          },
+          {
+            "id": "B-openstax-intro-python-0054",
+            "rank": 2,
+            "score": 0.8094344962317352,
+            "pages": [
+              218
+            ],
+            "section": "8.6"
+          },
+          {
+            "id": "B-openstax-intro-python-0004",
+            "rank": 3,
+            "score": 0.7675684829015458,
+            "pages": [
+              198
+            ],
+            "section": "8.1"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0003",
+          "B-openstax-intro-python-0006",
+          "B-openstax-intro-python-0002",
+          "B-openstax-intro-python-0054",
+          "B-openstax-intro-python-0004"
+        ],
+        "context_chars": 3191
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "final_context": "[B-openstax-intro-python-0003 | pdf page 197,198 | section 8.1]\nString comparison\nString values can be compared using logical operators (<, <=, >, >=, ==, !=) and membership operators (in and\nnot in). When comparing two string values, the matching characters in two string values are compared\nsequentially until a decision is reached. For comparing two characters, ASCII values are used to apply logical\noperators.\nStrings\n8\nOperator Description Example Output Explanation\n> or >=\nChecks whether the\nfirst string value is\ngreater than (or greater\nthan or equal to) the\nsecond string value.\n\"c\" >\n\"d\" False\nWhen comparing \"c\" operand to \"d\"\noperand, the ASCII value for \"c\" is smaller\nthan the ASCII value for \"d\". Therefore, \"c\"\n< \"d\". The expression \"c\" > \"d\"\nevaluates to False.\n\n[B-openstax-intro-python-0006 | pdf page 198,199 | section 8.1]\nCONCEPTS IN PRACTICE\nUsing logical and membership operators to compare string values\n1 . What is the output of (\"aaa\" < \"aab\")?\na. True\nb. False\n2 . What is the output of (\"aa\" < \"a\")?\na. True\nb. False\n3 . What is the output of (\"aples\" in \"apples\")?\na. undefined\nb. True\nc. False\nlower() and upper()\nPython has many useful methods for modifying strings, two of which are lower() and upper() methods. The\nlower() method returns the converted alphabetical characters to lowercase, and the upper() method returns\nthe converted alphabetical characters to uppercase. Both the lower() and upper() methods do not modify\nthe string.\nEXAMPLE 8.1\n\n[B-openstax-intro-python-0002 | pdf page 197 | section 8.1]\n8.1 String operations\nLearning objectives\nBy the end of this section you should be able to\n• Compare strings using logical and membership operators.\n• Use lower() and upper() string methods to convert string values to lowercase and uppercase\ncharacters.\n\n[B-openstax-intro-python-0054 | pdf page 218 | section 8.6]\n8.6 Chapter summary\nHighlights from this chapter include:\n• A string is a sequence of characters.\n• Logical operators can be used to compare two string values. String comparison is done by comparing\ncorresponding ASCII values of characters in the order of appearance in the string.\n• String indexing is used to access a character or a sequence of characters in the string.\n• String objects are immutable.\n• String splicing.\nAt this point, you should be able to write programs dealing with string values.\nTRY IT\n\n[B-openstax-intro-python-0004 | pdf page 198 | section 8.1]\n< or <=\nChecks whether the\nfirst string value is less\nthan (or less than or\nequal to) the second\nstring value.\n\"ab\" <\n\"ac\" True\nWhen comparing \"ab\" operand to \"ac\"\noperand, the first characters are the same,\nbut the second character of \"ab\" is less\nthan the second character in \"ac\" and as\nsuch \"ab\" < \"ac\".\n== Checks whether two\nstring values are equal.\n\"aa\" ==\n\"aa\" True\nSince all characters in the first operand and\nthe second operand are the same, the two\nstring values are equal.\n!=\nChecks whether two\nstring values are not\nequal.\n\"a\" !=\n\"b\" True\nThe two operands contain different string\nvalues (\"a\" vs. \"b\"), and the result of\nchecking whether the two are not the same\nevaluates to True.\nin\nChecks whether the\nsecond operand\ncontains the first\noperand.",
+    "final_context_ids": [
+      "B-openstax-intro-python-0003",
+      "B-openstax-intro-python-0006",
+      "B-openstax-intro-python-0002",
+      "B-openstax-intro-python-0054",
+      "B-openstax-intro-python-0004"
+    ],
+    "raw_model_answer": "When comparing two values (such as strings) using logical operators like `<` or `>`, the matching characters are compared sequentially until a decision is reached [B-openstax-intro-python-0003]. For comparing individual characters, ASCII values are used to apply the logical operators [B-openstax-intro-python-0003, B-openstax-intro-python-0054].",
+    "n_searches": 2,
+    "model_calls": [
+      {
+        "latency_s": 1.17,
+        "retries": 0,
+        "prompt_tokens": 427,
+        "output_tokens": 24,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "operators less than greater than compare values strings lists"
+          }
+        }
+      },
+      {
+        "latency_s": 1.06,
+        "retries": 0,
+        "prompt_tokens": 939,
+        "output_tokens": 24,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "comparing two values operators list string comparison ASCII values"
+          }
+        }
+      },
+      {
+        "latency_s": 1.37,
+        "retries": 0,
+        "prompt_tokens": 1333,
+        "output_tokens": 147,
+        "decision": {
+          "tool": "final_answer",
+          "args": {
+            "answer": "When comparing two values (such as strings) using logical operators like `<` or `>`, the matching characters are compared sequentially until a decision is reached [B-openstax-intro-python-0003]. For comparing individual characters, ASCII values are used to apply the logical operators [B-openstax-intro-python-0003, B-openstax-intro-python-0054].",
+            "insufficient_evidence": false,
+            "citations": [
+              "B-openstax-intro-python-0003",
+              "B-openstax-intro-python-0054"
+            ]
+          }
+        },
+        "citation_markers_appended": [
+          "B-openstax-intro-python-0054"
+        ]
+      }
+    ],
+    "n_model_calls": 3,
+    "prompt_tokens": 2699,
+    "output_tokens": 195,
+    "retrieval_ms": [
+      144.2,
+      81.6
+    ],
+    "wall_seconds": 9.99,
+    "cost_usd": 0.0
+  },
+  {
+    "query_id": "t02",
+    "split": "test",
+    "question": "When does a filtering list comprehension add an element to the new list?",
+    "filter": null,
+    "retrieval_config": "M1_dense",
+    "model": "gemini-3.5-flash-lite",
+    "agent_params": {
+      "retrieval": "M1_dense",
+      "split": "test",
+      "limit": null,
+      "only": null,
+      "max_searches": 3,
+      "top_k": 3,
+      "budget": 4000
+    },
+    "status": "answered",
+    "answer": "In a filtering list comprehension, an element is added into the new list only if the condition is met. [B-openstax-intro-python-0086]",
+    "citations": [
+      "B-openstax-intro-python-0086"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "filtering list comprehension add an element new list condition",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0087",
+            "rank": 1,
+            "score": 0.820600005280972,
+            "pages": [
+              234,
+              235
+            ],
+            "section": "9.5"
+          },
+          {
+            "id": "B-openstax-intro-python-0085",
+            "rank": 2,
+            "score": 0.8111335264285233,
+            "pages": [
+              234
+            ],
+            "section": "9.5"
+          },
+          {
+            "id": "B-openstax-intro-python-0086",
+            "rank": 3,
+            "score": 0.8076112499700544,
+            "pages": [
+              234
+            ],
+            "section": "9.5"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0087",
+          "B-openstax-intro-python-0085",
+          "B-openstax-intro-python-0086"
+        ],
+        "context_chars": 1673
+      },
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "filtering list comprehension condition met element added",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0086",
+            "rank": 1,
+            "score": 0.8098577260971069,
+            "pages": [
+              234
+            ],
+            "section": "9.5"
+          },
+          {
+            "id": "B-openstax-intro-python-0085",
+            "rank": 2,
+            "score": 0.7950055003166199,
+            "pages": [
+              234
+            ],
+            "section": "9.5"
+          },
+          {
+            "id": "B-openstax-intro-python-0087",
+            "rank": 3,
+            "score": 0.790126395814039,
+            "pages": [
+              234,
+              235
+            ],
+            "section": "9.5"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0087",
+          "B-openstax-intro-python-0085",
+          "B-openstax-intro-python-0086"
+        ],
+        "context_chars": 1673
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "final_context": "[B-openstax-intro-python-0087 | pdf page 234,235 | section 9.5]\nFiltering using list comprehensions\nFor each code using list comprehension, select the correct resultant list in new_list.\n4 . my_list = [21, -1, 50, -9, 300, -50, 2]\nnew_list = [m for m in my_list if m < 0]\na. [21, 50, 300, 2]\nb. [21, -1, 50, -9, 300, -50, 2]\nc. [-1, -9, -50]\n5 . my_string = \"This is a home.\"\nnew_list = [i for i in my_string if i in 'aeiou']\na. [i, i, a, o, e]\nb. ['i', 'i'', 'a', 'o', 'e']\nc. Error\n\n[B-openstax-intro-python-0085 | pdf page 234 | section 9.5]\nList comprehensions\n1 . The component of a list comprehension defining an element of the new list is the _____.\na. expression\nb. loop_variable\nc. container\n2 . What would be the contents of b_list after executing the code below?\na_list = [1, 2, 3, 4, 5]\nb_list = [i+2 for i in a_list]\na. [1, 2, 3, 4, 5]\nb. [0, 1, 2, 3, 4]\nc. [3, 4, 5, 6, 7]\n3 . What does new_list contain after executing the statement below?\nnew_list = [i//3 for i in range(1, 15, 3)]\na. [0.3333333333333333, 1.3333333333333333, 2.3333333333333335,\n3.3333333333333335, 4.333333333333333]\nb. [0, 1, 2, 3, 4]\nc. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]\nFiltering using list comprehensions\nList comprehensions can be used to filter items from a given list. A condition is added to the list\ncomprehension.\n\n[B-openstax-intro-python-0086 | pdf page 234 | section 9.5]\nlist_name = [expression for loop_variable in container if condition]\nIn a filter list comprehension, an element is added into list_name only if the condition is met.\nCHECKPOINT\nFiltering a list\nFiltering a list; ch 9, video 5 (https://www.openstax.org/r/filtering-list)\nCONCEPTS IN PRACTICE",
+    "final_context_ids": [
+      "B-openstax-intro-python-0087",
+      "B-openstax-intro-python-0085",
+      "B-openstax-intro-python-0086"
+    ],
+    "raw_model_answer": "In a filtering list comprehension, an element is added into the new list only if the condition is met. [B-openstax-intro-python-0086]",
+    "n_searches": 2,
+    "model_calls": [
+      {
+        "latency_s": 0.96,
+        "retries": 0,
+        "prompt_tokens": 427,
+        "output_tokens": 24,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "filtering list comprehension add an element new list condition"
+          }
+        }
+      },
+      {
+        "latency_s": 1.9,
+        "retries": 0,
+        "prompt_tokens": 1206,
+        "output_tokens": 22,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "filtering list comprehension condition met element added"
+          }
+        }
+      },
+      {
+        "latency_s": 1.14,
+        "retries": 0,
+        "prompt_tokens": 1215,
+        "output_tokens": 78,
+        "decision": {
+          "tool": "final_answer",
+          "args": {
+            "citations": [
+              "B-openstax-intro-python-0086"
+            ],
+            "insufficient_evidence": false,
+            "answer": "In a filtering list comprehension, an element is added into the new list only if the condition is met. [B-openstax-intro-python-0086]"
+          }
+        }
+      }
+    ],
+    "n_model_calls": 3,
+    "prompt_tokens": 2848,
+    "output_tokens": 124,
+    "retrieval_ms": [
+      96.2,
+      142.2
+    ],
+    "wall_seconds": 12.68,
+    "cost_usd": 0.0
+  },
+  {
+    "query_id": "t03",
+    "split": "test",
+    "question": "What is a nested list?",
+    "filter": null,
+    "retrieval_config": "M1_dense",
+    "model": "gemini-3.5-flash-lite",
+    "agent_params": {
+      "retrieval": "M1_dense",
+      "split": "test",
+      "limit": null,
+      "only": null,
+      "max_searches": 3,
+      "top_k": 3,
+      "budget": 4000
+    },
+    "status": "answered",
+    "answer": "A nested list is a list that is an element inside a larger list [B-openstax-intro-python-0076]. Nested lists are useful for expressing multidimensional data [B-openstax-intro-python-0076].",
+    "citations": [
+      "B-openstax-intro-python-0076"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "nested list",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0076",
+            "rank": 1,
+            "score": 0.7706861266289347,
+            "pages": [
+              229,
+              230
+            ],
+            "section": "9.4"
+          },
+          {
+            "id": "B-openstax-intro-python-0077",
+            "rank": 2,
+            "score": 0.7699623841069722,
+            "pages": [
+              230
+            ],
+            "section": "9.4"
+          },
+          {
+            "id": "B-openstax-intro-python-0075",
+            "rank": 3,
+            "score": 0.7500417530486878,
+            "pages": [
+              229
+            ],
+            "section": "9.4"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0076",
+          "B-openstax-intro-python-0077",
+          "B-openstax-intro-python-0075"
+        ],
+        "context_chars": 1779
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "final_context": "[B-openstax-intro-python-0076 | pdf page 229,230 | section 9.4]\nList-of-lists\nLists can be made of any type of element. A list element can also be a list. Ex: [2, [3, 5], 17] is a valid list\nwith the list [3, 5] being the element at index 1.\nWhen a list is an element inside a larger list, it is called a nested list. Nested lists are useful for expressing\nmultidimensional data. When each of the elements of a larger list is a smaller list, the larger list is called a list-\nof-lists.\nEx: A table can be stored as a two-dimensional list-of-lists, where each row of data is a list in the list-of-lists.\nTRY IT\nCHECKPOINT\nList-of-lists\nList-of-lists; ch 9, video 4 (https://www.openstax.org/r/list-of-lists)\nCONCEPTS IN PRACTICE\n\n[B-openstax-intro-python-0077 | pdf page 230 | section 9.4]\nLists\nFor each of the questions below, consider the following matrix:\n1 . What would be the correct way to represent matA in Python?\na. [[7, 4, 5], [3, 9, 6], [1, 2, 8]]\nb. [7, 4, 5\n3, 9, 6\n1, 2, 8]\nc. [[7, 3, 1], [4, 9, 2], [1, 2, 8]\n2 . What would be the correct index for the number 6 in the above list?\na. [5]\nb. [2][1]\nc. [1][2]\n3 . What would be the result of the following code:\nprint(matA[0])\na. Error\nb. 7\nc. [7, 4, 5]\nUsing nested loops to iterate nested lists\nA nested loop structure can be used to iterate a list-of-lists. For a two-dimensional list-of-lists, an outer for\nloop can be used for rows, and an inner for loop can be used for columns.\n\n[B-openstax-intro-python-0075 | pdf page 229 | section 9.4]\n9.4 Nested lists\nLearning objectives\nBy the end of this section you should be able to\n• Demonstrate the use of a list-of-lists to structure data.\n• Demonstrate individual element addressing using multi-dimensional indexing.\n• Use nested loops to iterate a list-of-lists.",
+    "final_context_ids": [
+      "B-openstax-intro-python-0076",
+      "B-openstax-intro-python-0077",
+      "B-openstax-intro-python-0075"
+    ],
+    "raw_model_answer": "A nested list is a list that is an element inside a larger list [B-openstax-intro-python-0076]. Nested lists are useful for expressing multidimensional data [B-openstax-intro-python-0076].",
+    "n_searches": 1,
+    "model_calls": [
+      {
+        "latency_s": 1.91,
+        "retries": 0,
+        "prompt_tokens": 419,
+        "output_tokens": 17,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "nested list"
+          }
+        }
+      },
+      {
+        "latency_s": 1.19,
+        "retries": 0,
+        "prompt_tokens": 1048,
+        "output_tokens": 96,
+        "decision": {
+          "tool": "final_answer",
+          "args": {
+            "insufficient_evidence": false,
+            "answer": "A nested list is a list that is an element inside a larger list [B-openstax-intro-python-0076]. Nested lists are useful for expressing multidimensional data [B-openstax-intro-python-0076].",
+            "citations": [
+              "B-openstax-intro-python-0076"
+            ]
+          }
+        }
+      }
+    ],
+    "n_model_calls": 2,
+    "prompt_tokens": 1467,
+    "output_tokens": 113,
+    "retrieval_ms": [
+      69.9
+    ],
+    "wall_seconds": 8.66,
+    "cost_usd": 0.0
+  },
+  {
+    "query_id": "t04",
+    "split": "test",
+    "question": "What effect does putting + in a numeric format like {:+.2f} have?",
+    "filter": null,
+    "retrieval_config": "M1_dense",
+    "model": "gemini-3.5-flash-lite",
+    "agent_params": {
+      "retrieval": "M1_dense",
+      "split": "test",
+      "limit": null,
+      "only": null,
+      "max_searches": 3,
+      "top_k": 3,
+      "budget": 4000
+    },
+    "status": "answered",
+    "answer": "Putting a + sign before the precision specification in a numeric format (such as {:+.2f}) adds a sign character to the output. [B-openstax-intro-python-0045]",
+    "citations": [
+      "B-openstax-intro-python-0045"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "{:+.2f} plus sign numeric format",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0045",
+            "rank": 1,
+            "score": 0.7428310973350245,
+            "pages": [
+              215
+            ],
+            "section": "8.4"
+          },
+          {
+            "id": "B-openstax-intro-python-0043",
+            "rank": 2,
+            "score": 0.714932305510789,
+            "pages": [
+              214
+            ],
+            "section": "8.4"
+          },
+          {
+            "id": "B-openstax-intro-python-0046",
+            "rank": 3,
+            "score": 0.7084928502448976,
+            "pages": [
+              215,
+              216
+            ],
+            "section": "8.4"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0045",
+          "B-openstax-intro-python-0043",
+          "B-openstax-intro-python-0046"
+        ],
+        "context_chars": 2193
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "final_context": "[B-openstax-intro-python-0045 | pdf page 215 | section 8.4]\nExample Output Explanation\nprint(\"{:+.2f}\".format(4)) +4.00\nThe format specification .2 shows the output\nmust have two decimal places. The f specification\nis an identifier of floating-point formatting. The +\nsign before the precision specification adds a sign\ncharacter to the output.\nprint(\"{:0>5d}\".format(5)) 00005\nThe format specification 0>5 defines the width\nfield as 5, and thus the output must have a\nminimum length of 5. And, if the number has\nfewer than five digits, the number must be\npadded with 0's from the left side. The d\nspecification is an identifier of a decimal number\nformatting.\nprint(\"{:.3s}\".format(\"12.50\")) 12.\nThe format specification .3 shows the output will\nhave three characters. The s specification is an\nidentifier of string formatting.\n\n[B-openstax-intro-python-0043 | pdf page 214 | section 8.4]\ntemplate = \"{:5}\"\nprint(template.format(\"123456789\"))\na. 56789\nb. 123456\nc. 123456789\nFormatting numbers\nThe format() method can be used to format numerical values. Numerical values can be padded to have a\ngiven minimum length, precision, and sign character. The syntax for modifying numeric values follows the\n{[index]:[width][.precision][type]} structure. In the given syntax,\n• The index field refers to the index of the argument.\n• The width field refers to the minimum length of the string.\n• The precision field refers to the floating-point precision of the given number.\n\n[B-openstax-intro-python-0046 | pdf page 215,216 | section 8.4]\nTable 8.3 Numerical formatting options.\nCONCEPTS IN PRACTICE\nNumeric value formatting examples\n10 . What is the output of print('{0:.3f}'.format(3.141592))?\na. 3.141592\nb. 3.1\nc. 3.142\n11 . What is the output of print('{:1>3d}'.format(3))?\na. 113\nb. 311\nc. 3.000\n12 . What is the output of print('{:+d}'.format(123))?\na. 123\nb. +123\nc. :+123\nFormatting a list of numbers\nGiven a list of numbers (floating-point or integer), print numbers with two decimal place precision and at\nTRY IT\nleast six characters.\nInput: [12.5, 2]\nPrints: 012.50\n002:00\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-4-string-formatting)",
+    "final_context_ids": [
+      "B-openstax-intro-python-0045",
+      "B-openstax-intro-python-0043",
+      "B-openstax-intro-python-0046"
+    ],
+    "raw_model_answer": "Putting a + sign before the precision specification in a numeric format (such as {:+.2f}) adds a sign character to the output.",
+    "n_searches": 1,
+    "model_calls": [
+      {
+        "latency_s": 0.88,
+        "retries": 0,
+        "prompt_tokens": 430,
+        "output_tokens": 24,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "{:+.2f} plus sign numeric format"
+          }
+        }
+      },
+      {
+        "latency_s": 1.33,
+        "retries": 0,
+        "prompt_tokens": 1166,
+        "output_tokens": 69,
+        "decision": {
+          "tool": "final_answer",
+          "args": {
+            "answer": "Putting a + sign before the precision specification in a numeric format (such as {:+.2f}) adds a sign character to the output.",
+            "citations": [
+              "B-openstax-intro-python-0045"
+            ],
+            "insufficient_evidence": false
+          }
+        },
+        "citation_markers_appended": [
+          "B-openstax-intro-python-0045"
+        ]
+      }
+    ],
+    "n_model_calls": 2,
+    "prompt_tokens": 1596,
+    "output_tokens": 93,
+    "retrieval_ms": [
+      75.4
+    ],
+    "wall_seconds": 8.75,
+    "cost_usd": 0.0
+  },
+  {
+    "query_id": "t05",
+    "split": "test",
+    "question": "At what number does argument indexing start in numbered replacement fields?",
+    "filter": null,
+    "retrieval_config": "M1_dense",
+    "model": "gemini-3.5-flash-lite",
+    "agent_params": {
+      "retrieval": "M1_dense",
+      "split": "test",
+      "limit": null,
+      "only": null,
+      "max_searches": 3,
+      "top_k": 3,
+      "budget": 4000
+    },
+    "status": "answered",
+    "answer": "Argument indexing in numbered replacement fields starts from 0 [B-openstax-intro-python-0035].",
+    "citations": [
+      "B-openstax-intro-python-0035"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "argument indexing numbered replacement fields",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0036",
+            "rank": 1,
+            "score": 0.8684684038162231,
+            "pages": [
+              212
+            ],
+            "section": "8.4"
+          },
+          {
+            "id": "B-openstax-intro-python-0035",
+            "rank": 2,
+            "score": 0.809343695640564,
+            "pages": [
+              211,
+              212
+            ],
+            "section": "8.4"
+          },
+          {
+            "id": "B-openstax-intro-python-0037",
+            "rank": 3,
+            "score": 0.7683683037757874,
+            "pages": [
+              212
+            ],
+            "section": "8.4"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0036",
+          "B-openstax-intro-python-0035",
+          "B-openstax-intro-python-0037"
+        ],
+        "context_chars": 1752
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "final_context": "[B-openstax-intro-python-0036 | pdf page 212 | section 8.4]\nNumbered replacement fields can use argument's values for multiple replacement fields by using the same\nargument index. The example below illustrates how an argument is used for more than one numbered\nreplacement field.\nEXAMPLE 8.8\n\n[B-openstax-intro-python-0035 | pdf page 211,212 | section 8.4]\ngreeting = \"Hi\"\nname = \"Jess\"\nprint(\"{greeting} {name}\".format(greeting = greeting, name = name))\na. greeting name\nb. Hi Jess\nc. Jess Hi\nNumbered replacement fields\nPython's string format() method can use positional ordering to match the numbered arguments. The\nreplacement fields that use the positional ordering of arguments are called numbered replacement fields.\nThe indexing of the arguments starts from 0. Ex: print(\"{1}{0}\".format(\"Home\", \"Welcome\")) outputs\nthe string value \"Welcome Home\" as the first argument. \"Home\" is at index 0, and the second argument,\n\"Welcome\", is at index 1. Replacing these arguments in the order of \"{1}{0}\" creates the string \"Welcome\nHome\".\n\n[B-openstax-intro-python-0037 | pdf page 212 | section 8.4]\nNumbered replacement field to build a phrase\nNumbered replacement fields are used in this example to build phrases like \"very very cold\" or \"very\nhot\".\ntemplate1 = \"{0} {0} {1}\"\ntemplate2 = \"{0} {1}\"\nprint(template1.format(\"very\", \"cold\"))\nprint(template2.format(\"very\", \"hot\"))\nThe above code's output is:\nvery very cold\nvery hot\nString length and alignment formatting\nFormatting the string length may be needed for standardizing the output style when multiple string values of\nthe same context are being created and printed. The example below shows a use case of string formatting in\nprinting a table with minimum-length columns and specific alignment.",
+    "final_context_ids": [
+      "B-openstax-intro-python-0036",
+      "B-openstax-intro-python-0035",
+      "B-openstax-intro-python-0037"
+    ],
+    "raw_model_answer": "Argument indexing in numbered replacement fields starts from 0 [B-openstax-intro-python-0035].",
+    "n_searches": 1,
+    "model_calls": [
+      {
+        "latency_s": 1.29,
+        "retries": 0,
+        "prompt_tokens": 425,
+        "output_tokens": 20,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "argument indexing numbered replacement fields"
+          }
+        }
+      },
+      {
+        "latency_s": 1.08,
+        "retries": 0,
+        "prompt_tokens": 898,
+        "output_tokens": 67,
+        "decision": {
+          "tool": "final_answer",
+          "args": {
+            "insufficient_evidence": false,
+            "citations": [
+              "B-openstax-intro-python-0035"
+            ],
+            "answer": "Argument indexing in numbered replacement fields starts from 0 [B-openstax-intro-python-0035]."
+          }
+        }
+      }
+    ],
+    "n_model_calls": 2,
+    "prompt_tokens": 1323,
+    "output_tokens": 87,
+    "retrieval_ms": [
+      57.5
+    ],
+    "wall_seconds": 8.36,
+    "cost_usd": 0.0
+  },
+  {
+    "query_id": "u03",
+    "split": "test",
+    "question": "How do you reverse a string using slicing with a step value, such as s[::-1]?",
+    "filter": null,
+    "retrieval_config": "M1_dense",
+    "model": "gemini-3.5-flash-lite",
+    "agent_params": {
+      "retrieval": "M1_dense",
+      "split": "test",
+      "limit": null,
+      "only": null,
+      "max_searches": 3,
+      "top_k": 3,
+      "budget": 4000
+    },
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "reverse a string using slicing step value",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0012",
+            "rank": 1,
+            "score": 0.7319649835835561,
+            "pages": [
+              201
+            ],
+            "section": "8.2"
+          },
+          {
+            "id": "B-openstax-intro-python-0015",
+            "rank": 2,
+            "score": 0.7248722530863441,
+            "pages": [
+              202
+            ],
+            "section": "8.2"
+          },
+          {
+            "id": "B-openstax-intro-python-0010",
+            "rank": 3,
+            "score": 0.7131090376707704,
+            "pages": [
+              200
+            ],
+            "section": "8.2"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0012",
+          "B-openstax-intro-python-0015",
+          "B-openstax-intro-python-0010"
+        ],
+        "context_chars": 1532
+      },
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "step slicing reverse string negative step",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0015",
+            "rank": 1,
+            "score": 0.6855341979542865,
+            "pages": [
+              202
+            ],
+            "section": "8.2"
+          },
+          {
+            "id": "B-openstax-intro-python-0000",
+            "rank": 2,
+            "score": 0.6829226424051918,
+            "pages": [
+              197
+            ],
+            "section": "8.0"
+          },
+          {
+            "id": "B-openstax-intro-python-0012",
+            "rank": 3,
+            "score": 0.6764467148248345,
+            "pages": [
+              201
+            ],
+            "section": "8.2"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0012",
+          "B-openstax-intro-python-0015",
+          "B-openstax-intro-python-0010",
+          "B-openstax-intro-python-0000"
+        ],
+        "context_chars": 1866
+      },
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "slice step reverse string",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0015",
+            "rank": 1,
+            "score": 0.7099185681537278,
+            "pages": [
+              202
+            ],
+            "section": "8.2"
+          },
+          {
+            "id": "B-openstax-intro-python-0012",
+            "rank": 2,
+            "score": 0.6991745534019026,
+            "pages": [
+              201
+            ],
+            "section": "8.2"
+          },
+          {
+            "id": "B-openstax-intro-python-0000",
+            "rank": 3,
+            "score": 0.6902490031422569,
+            "pages": [
+              197
+            ],
+            "section": "8.0"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0012",
+          "B-openstax-intro-python-0015",
+          "B-openstax-intro-python-0010",
+          "B-openstax-intro-python-0000"
+        ],
+        "context_chars": 1866
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ],
+    "final_context": "[B-openstax-intro-python-0012 | pdf page 201 | section 8.2]\nCONCEPTS IN PRACTICE\nAccessing characters in a string using indexing\n1 . Which character is at index 1 in the string \"hello\"?\na. \"h\"\nb. \"e\"\nc. \"o\"\n2 . What is the character at index -2 in the string \"Blue\"?\na. \"e\"\nb. \"u\"\nc. \"l\"\n3 . What is the output of the following code?\nword = \"chance\"\nprint(word[-1] == word[5])\na. True\nb. False\nString slicing\nString slicing is used when a programmer must get access to a sequence of characters. Here, a string slicing\noperator can be used. When [a:b] is used with the name of a string variable, a sequence of characters\nstarting from index a (inclusive) up to index b (exclusive) is returned. Both a and b are optional. If a or b are not\nprovided, the default values are 0 and len(string), respectively.\nEXAMPLE 8.2\n\n[B-openstax-intro-python-0015 | pdf page 202 | section 8.2]\nCONCEPTS IN PRACTICE\nGetting a substring using string slicing\n4 . What is the output of the following code?\na_string = \"Hello world\"\nprint(a_string[2:4])\na. \"el\"\nb. \"ll\"\nc. \"llo\"\n5 . What is the output of the following code?\nlocation = \"classroom\"\nprint(location[-3:-1])\na. \"ro\"\nb. \"oo\"\nc. \"oom\"\n6 . What is the output of the following code?\n\n[B-openstax-intro-python-0010 | pdf page 200 | section 8.2]\n8.2 String slicing\nLearning objectives\nBy the end of this section you should be able to\n• Use string indexing to access characters in the string.\n• Use string slicing to get a substring from a string.\n• Identify immutability characteristics of strings.\n\n[B-openstax-intro-python-0000 | pdf page 197 | section 8.0]\nFigure 8.1 credit: modification of work \"Project 366 #65: 050316 A Night On The Tiles\", by Pete/Flickr, CC BY 2.0\nChapter Outline\n8.1 String operations\n8.2 String slicing\n8.3 Searching/testing strings\n8.4 String formatting\n8.5 Splitting/joining strings\n8.6 Chapter summary",
+    "final_context_ids": [
+      "B-openstax-intro-python-0012",
+      "B-openstax-intro-python-0015",
+      "B-openstax-intro-python-0010",
+      "B-openstax-intro-python-0000"
+    ],
+    "raw_model_answer": "The provided textbook excerpts do not cover how to reverse a string using slicing with a step value or negative steps like s[::-1].",
+    "n_searches": 3,
+    "model_calls": [
+      {
+        "latency_s": 0.94,
+        "retries": 0,
+        "prompt_tokens": 432,
+        "output_tokens": 22,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "reverse a string using slicing step value"
+          }
+        }
+      },
+      {
+        "latency_s": 1.16,
+        "retries": 0,
+        "prompt_tokens": 935,
+        "output_tokens": 21,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "step slicing reverse string negative step"
+          }
+        }
+      },
+      {
+        "latency_s": 1.24,
+        "retries": 0,
+        "prompt_tokens": 1063,
+        "output_tokens": 19,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "slice step reverse string"
+          }
+        }
+      },
+      {
+        "latency_s": 1.05,
+        "retries": 0,
+        "prompt_tokens": 1078,
+        "output_tokens": 51,
+        "decision": {
+          "tool": "final_answer",
+          "args": {
+            "citations": [],
+            "insufficient_evidence": true,
+            "answer": "The provided textbook excerpts do not cover how to reverse a string using slicing with a step value or negative steps like s[::-1]."
+          }
+        }
+      }
+    ],
+    "n_model_calls": 4,
+    "prompt_tokens": 3508,
+    "output_tokens": 113,
+    "retrieval_ms": [
+      95.4,
+      79.8,
+      79.2
+    ],
+    "wall_seconds": 17.19,
+    "cost_usd": 0.0
+  },
+  {
+    "query_id": "u04",
+    "split": "test",
+    "question": "How do you insert an element at a specific index of a list using insert()?",
+    "filter": null,
+    "retrieval_config": "M1_dense",
+    "model": "gemini-3.5-flash-lite",
+    "agent_params": {
+      "retrieval": "M1_dense",
+      "split": "test",
+      "limit": null,
+      "only": null,
+      "max_searches": 3,
+      "top_k": 3,
+      "budget": 4000
+    },
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "insert element specific index list insert",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0091",
+            "rank": 1,
+            "score": 0.6795308184903385,
+            "pages": [
+              236
+            ],
+            "section": "9.6"
+          },
+          {
+            "id": "B-openstax-intro-python-0062",
+            "rank": 2,
+            "score": 0.6657631596468008,
+            "pages": [
+              222,
+              223
+            ],
+            "section": "9.1"
+          },
+          {
+            "id": "B-openstax-intro-python-0076",
+            "rank": 3,
+            "score": 0.6474752233184833,
+            "pages": [
+              229,
+              230
+            ],
+            "section": "9.4"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0091",
+          "B-openstax-intro-python-0062",
+          "B-openstax-intro-python-0076"
+        ],
+        "context_chars": 1846
+      },
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "insert index list python openstax",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0088",
+            "rank": 1,
+            "score": 0.7569704941546381,
+            "pages": [
+              235
+            ],
+            "section": "9.5"
+          },
+          {
+            "id": "B-openstax-intro-python-0018",
+            "rank": 2,
+            "score": 0.7365433887787646,
+            "pages": [
+              203,
+              204
+            ],
+            "section": "8.2"
+          },
+          {
+            "id": "B-openstax-intro-python-0053",
+            "rank": 3,
+            "score": 0.7032077666273445,
+            "pages": [
+              218
+            ],
+            "section": "8.5"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0091",
+          "B-openstax-intro-python-0062",
+          "B-openstax-intro-python-0076",
+          "B-openstax-intro-python-0088",
+          "B-openstax-intro-python-0018",
+          "B-openstax-intro-python-0053"
+        ],
+        "context_chars": 3306
+      },
+      {
+        "event": "search",
+        "tool": "search_book",
+        "query": "insert",
+        "filter": null,
+        "results": [
+          {
+            "id": "B-openstax-intro-python-0052",
+            "rank": 1,
+            "score": 0.615390585018331,
+            "pages": [
+              218
+            ],
+            "section": "8.5"
+          },
+          {
+            "id": "B-openstax-intro-python-0059",
+            "rank": 2,
+            "score": 0.6013385174265186,
+            "pages": [
+              221,
+              222
+            ],
+            "section": "9.1"
+          },
+          {
+            "id": "B-openstax-intro-python-0062",
+            "rank": 3,
+            "score": 0.5983937265403639,
+            "pages": [
+              222,
+              223
+            ],
+            "section": "9.1"
+          }
+        ],
+        "context_ids": [
+          "B-openstax-intro-python-0091",
+          "B-openstax-intro-python-0062",
+          "B-openstax-intro-python-0076",
+          "B-openstax-intro-python-0088",
+          "B-openstax-intro-python-0018",
+          "B-openstax-intro-python-0053",
+          "B-openstax-intro-python-0059"
+        ],
+        "context_chars": 3660
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ],
+    "final_context": "[B-openstax-intro-python-0091 | pdf page 236 | section 9.6]\nFunction Description\nappend(element) Adds the specified element to the end of a list.\nremove(element) Removes the specified element from the list if the element exists.\npop() Removes the last element of a list.\nmax(list) Returns the maximum element of the list specified.\nmin(list) Returns the maximum element of the list specified.\nsum(list) Returns the summation of a list composed of numbers.\nsort() Sorts a list on which the method is called in ascending order.\nreverse() Reverses the order of elements in a list.\ncopy() Makes a complete copy of a list.\nTable 9.1 Chapter 9 reference.\n\n[B-openstax-intro-python-0062 | pdf page 222,223 | section 9.1]\nModifying lists\n1 . Which operation can be used to add an element to the end of a list?\na. add()\nb. append()\nc. pop()\n2 . What is the correct syntax to remove the element 23 from a list called number_list?\na. remove()\nb. number_list.remove()\nc. number_list.remove(23)\n3 . Which operation can be used to remove an element from the end of a list?\na. only pop()\nb. only remove()\nc. either pop() or remove()\n\n[B-openstax-intro-python-0076 | pdf page 229,230 | section 9.4]\nList-of-lists\nLists can be made of any type of element. A list element can also be a list. Ex: [2, [3, 5], 17] is a valid list\nwith the list [3, 5] being the element at index 1.\nWhen a list is an element inside a larger list, it is called a nested list. Nested lists are useful for expressing\nmultidimensional data. When each of the elements of a larger list is a smaller list, the larger list is called a list-\nof-lists.\nEx: A table can be stored as a two-dimensional list-of-lists, where each row of data is a list in the list-of-lists.\nTRY IT\nCHECKPOINT\nList-of-lists\nList-of-lists; ch 9, video 4 (https://www.openstax.org/r/list-of-lists)\nCONCEPTS IN PRACTICE\n\n[B-openstax-intro-python-0088 | pdf page 235 | section 9.5]\n6 . new_list = [r for r in range (0, 21, 2) if r%2 != 0]\na. []\nb. [21]\nc. [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\nSelecting five-letter words\nWrite a program that creates a list of only five-letter words from the given list and prints the new list.\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/9-5-list-\ncomprehensions)\nBooks starting with \"A\"\nWrite a program that selects words that begin with an \"A\" in the given list. Make sure the new list is then\nsorted in dictionary order. Finally, print the new sorted list.\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/9-5-list-\ncomprehensions)\n\n[B-openstax-intro-python-0018 | pdf page 203,204 | section 8.2]\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\nTRY IT\n8-2-string-slicing)\nEditing the string at specified locations\nGiven a string variable, string_variable, and a list of indexes, remove characters at the specified indexes\nand print the resulting string.\nInput:\nstring_variable = \"great\"\nindices = [0, 1]\nPrints:\neat\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-2-string-slicing)\n\n[B-openstax-intro-python-0053 | pdf page 218 | section 8.5]\nAccess multimedia content (http://openstax.org/books/introduction-python-programming/pages/\n8-5-splitting-joining-strings)\n\n[B-openstax-intro-python-0059 | pdf page 221,222 | section 9.1]\nUsing list operations to modify a list\nAn append() operation is used to add an element to the end of a list. In programming, append means add to\nthe end. A remove() operation removes the specified element from a list. A pop() operation removes the last\nitem of a list.\nLists\n9\nEXAMPLE 9.1",
+    "final_context_ids": [
+      "B-openstax-intro-python-0091",
+      "B-openstax-intro-python-0062",
+      "B-openstax-intro-python-0076",
+      "B-openstax-intro-python-0088",
+      "B-openstax-intro-python-0018",
+      "B-openstax-intro-python-0053",
+      "B-openstax-intro-python-0059"
+    ],
+    "raw_model_answer": "The provided book excerpts do not cover how to use `insert()` to insert an element at a specific index of a list.",
+    "n_searches": 3,
+    "model_calls": [
+      {
+        "latency_s": 1.05,
+        "retries": 0,
+        "prompt_tokens": 429,
+        "output_tokens": 21,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "insert element specific index list insert"
+          }
+        }
+      },
+      {
+        "latency_s": 1.85,
+        "retries": 0,
+        "prompt_tokens": 1012,
+        "output_tokens": 22,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "insert index list python openstax"
+          }
+        }
+      },
+      {
+        "latency_s": 1.01,
+        "retries": 0,
+        "prompt_tokens": 1506,
+        "output_tokens": 16,
+        "decision": {
+          "tool": "search_book",
+          "args": {
+            "query": "insert"
+          }
+        }
+      },
+      {
+        "latency_s": 1.12,
+        "retries": 0,
+        "prompt_tokens": 1624,
+        "output_tokens": 50,
+        "decision": {
+          "tool": "final_answer",
+          "args": {
+            "insufficient_evidence": true,
+            "answer": "The provided book excerpts do not cover how to use `insert()` to insert an element at a specific index of a list.",
+            "citations": []
+          }
+        }
+      }
+    ],
+    "n_model_calls": 4,
+    "prompt_tokens": 4571,
+    "output_tokens": 109,
+    "retrieval_ms": [
+      74.9,
+      75.6,
+      83.7
+    ],
+    "wall_seconds": 17.29,
+    "cost_usd": 0.0
+  }
+]
